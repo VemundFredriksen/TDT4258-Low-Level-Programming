@@ -126,47 +126,48 @@ _reset:
 	*/
 	
 	
-	MOV R1, #0x1A
-	LSL R1, #8
-	STR R1, [R7]
+	MOV R1, #0xff						//Sets all bits in the LED-array high (because of active-low)
+	LSL R1, #8							//Left shift 8 because LEDs are in the range [8, 15] in the GPIO_PA_DOUT
+	STR R1, [R7]						//Updates memorylocation of GPIO_PA_DOUT
 	
 	
 		.thumb_func
 polling_func:
 	
-	LDR R0, [R8]						//Button state
-	AND R2, R0, #0x20
-	CMP R2, #0x0
-	BEQ add_dot
-	AND R2, R0, #0x80
-	CMP R2, #0x0
-	BEQ remove_dot
+	LDR R0, [R8]						//Buttons state
+	
+	AND R2, R0, #0x20					//Checks if Up-button is pressed
+	CMP R2, #0x0						//
+	BEQ add_dot							//If up is pressed
+	AND R2, R0, #0x80					//Checks if Down-button is pressed
+	CMP R2, #0x0						//
+	BEQ remove_dot						//if down is pressed
 	
 	
 	B polling_func
 
-add_dot:
-	LSR R1, #8
-	MOV R2, #0x10
+add_dot:					//Adds a dot to the 5th bit on the LED-array
+	LSR R1, #8				//Rightshifts the array so we can work on bit 0 to 7
+	MOV R2, #0x10			//Sets the 5 bit
 	
-	EOR R1, R1, #0xff
+	EOR R1, R1, #0xff		//Flips all the bits
 	
-	ORR R1, R1, R2
-	EOR R1, R1, #0xff
-	LSL R1, #8
-	STR R1, [R7]
+	ORR R1, R1, R2			//Enables bit 5 in addition to other enabled bits in the LED-array
+	EOR R1, R1, #0xff		//Flips the bits because LEDs are active low
+	LSL R1, #8				//Left shift because LEDs are controlled on bit 8 to 15
+	STR R1, [R7]			//Updates the LEDs memory location
 	
 	B polling_func
 
-remove_dot:
+remove_dot:					//Removes a dot from the 5th bit in the LED-array
 
-	LSR R1, #8
-	MOV R2, #0x10
+	LSR R1, #8				//Rightshifts the array so we can work on bit 0 to 7
+	MOV R2, #0x10			//Sets the 5 bit
 	
-	ORR R1, R1, R2
+	ORR R1, R1, R2			//Set bit 5 and keep others state intact, set the bit because of active-low
 	
-	LSL R1, #8
-	STR R1, [R7]
+	LSL R1, #8				//Shifts the LED-array left again
+	STR R1, [R7]			//Updates the state in the memory location
 
 	B polling_func	
 
