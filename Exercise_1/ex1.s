@@ -130,11 +130,12 @@ _reset:
 	LSL R1, #8							//Left shift 8 because LEDs are in the range [8, 15] in the GPIO_PA_DOUT
 	STR R1, [R7]						//Updates memorylocation of GPIO_PA_DOUT
 	
-	
+
 		.thumb_func
 polling_func:
 	
 	LDR R0, [R8]						//Buttons state
+	
 	
 	AND R2, R0, #0x20					//Checks if Up-button is pressed
 	CMP R2, #0x0						//
@@ -142,7 +143,17 @@ polling_func:
 	AND R2, R0, #0x80					//Checks if Down-button is pressed
 	CMP R2, #0x0						//
 	BEQ remove_dot						//if down is pressed
+	AND R2, R0, #0x40					//Checks if Right-button is pressed
+	CMP R2, #0x0						//
+	BEQ shift_right						//if right is pressed 
+	AND R2, R0, #0x10					//Checks if Right-button is pressed
+	CMP R2, #0x0						//
+	BEQ shift_left						//if left is pressed
 	
+	B polling_final_func
+	
+polling_final_func:						//Should be the last call before starting the loop again
+	MOV R3, R0							//Last button state
 	
 	B polling_func
 
@@ -157,7 +168,7 @@ add_dot:					//Adds a dot to the 5th bit on the LED-array
 	LSL R1, #8				//Left shift because LEDs are controlled on bit 8 to 15
 	STR R1, [R7]			//Updates the LEDs memory location
 	
-	B polling_func
+	B polling_final_func
 
 remove_dot:					//Removes a dot from the 5th bit in the LED-array
 
@@ -169,14 +180,29 @@ remove_dot:					//Removes a dot from the 5th bit in the LED-array
 	LSL R1, #8				//Shifts the LED-array left again
 	STR R1, [R7]			//Updates the state in the memory location
 
-	B polling_func	
+	B polling_final_func	
 
-	/////////////////////////////////////////////////////////////////////////////
-	//
-    // GPIO handler
-    // The CPU will jump here when there is a GPIO interrupt
-	//
-	/////////////////////////////////////////////////////////////////////////////
+shift_right:
+	CMP R0, R3				//Checks if last state is same
+	BEQ polling_final_func	//Branches if button state is not updated
+	
+	LSR R1, #7				//Right-shifts 8 minus the one the dot should move
+	ORR R1, 0x1				//Since the rightshift will add a 0 to the end, a 1 must be added
+	LSL R1, #8				//Left shifts back into the [8, 15] range
+	STR R1, [R7]			//Updates the LEDs
+
+	B polling_final_func
+	
+shift_left:
+	CMP R0, R3				//Checks if last state is same
+	BEQ polling_final_func	//Branches if button state is not updated
+	LSR R1, #9				//Right-shifts 8 minus the one the dot should move
+	ORR R1, 0x80			//Since the rightshift will add a 0 to the end, a 1 must be added
+	LSL R1, #8				//Left shifts back into the [8, 15] range
+	STR R1, [R7]			//Updates the LEDs
+	
+	
+	B polling_final_func
 
 	
         .thumb_func
