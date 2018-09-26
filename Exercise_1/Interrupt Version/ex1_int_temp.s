@@ -83,6 +83,8 @@
         .thumb_func
 _reset:
 	
+	
+	
 	LDR R1, =CMU_BASE					//Loads the adress of the CMU_BASE
 	LDR R2, [R1, #CMU_HFPERCLKEN0]		//Loads the content of the CMU_HFPERCLKNO memory
 	
@@ -100,7 +102,7 @@ _reset:
 
 	ADD R7, R0, #GPIO_DOUT				//GPIO_PA_DOUT Constant for writing LEDs
 
-	ADDS R1, R0, #GPIO_MODEH				//Sets Port A to output
+	ADD R1, R0, #GPIO_MODEH				//Sets Port A to output
 	LDR R2, =0x55555555					//
 	STR R2, [R1]						//
 	
@@ -115,47 +117,72 @@ _reset:
 	ADD R1, R0, #GPIO_DOUT
 	STR R2, [R1]
 	
+	MOV R1, #0xff						//Sets all bits in the LED-array high (because of active-low)
+	LSL R1, #8							//Left shift 8 because LEDs are in the range [8, 15] in the GPIO_PA_DOUT
+	STR R1, [R7]						//Updates memorylocation of GPIO_PA_DOUT
+	
+	LDR R0, =GPIO_BASE					//Clears interruptflags
+	LDR R2, [R0, #GPIO_IF]
+	STR R2, [R0, #GPIO_IFC]
+	
+	ADD R2, R0, #GPIO_EXTIPSELL			//Sets GPIO_EXTIPSELL to 0x22222222
+	LDR R1, =0x22222222					//
+	STR R1, [R2]						//
+	
+	ADD R2, R0, #GPIO_EXTIFALL			//Enabled interrupt on falling edge
+	MOV R1, #0xff						//
+	STR R1, [R2]						//
+	
+	ADD R2, R0, #GPIO_EXTIRISE
+	MOV R1, #0xff
+	STR R1, [R2]
+	
+	ADD R2, R0, #GPIO_IEN				//Enabled GPIO_IEN
+	MOV R1, #0xff						//
+	STR R1, [R2]						//
 	
 	
-	/*
-	ADD R1, R0, #GPIO_DOUT		
-		//Led-test
-	MOV R2, 0x1A						//
-	LSL R2, #8							//
-	STR R2, [R1]						//
-	*/
 	
+	LDR R2, =ISER0						//Enables interrupt handling
+	LDR R1, =0x802						//
+	STR R1, [R2]						//
 	
 	MOV R1, #0xff						//Sets all bits in the LED-array high (because of active-low)
 	LSL R1, #8							//Left shift 8 because LEDs are in the range [8, 15] in the GPIO_PA_DOUT
 	STR R1, [R7]						//Updates memorylocation of GPIO_PA_DOUT
 	
+	B main
+	
+	
+main:
+	B main
 
-		.thumb_func
-polling_func:
+
 	
-	LDR R0, [R8]						//Buttons state
+        .thumb_func
+gpio_handler:  
+
+		LDR R0, =GPIO_BASE					//Clears interruptflags
+		LDR R2, [R0, #GPIO_IF]
+		STR R2, [R0, #GPIO_IFC]
+
+	    LDR R0, [R8]						//Buttons state
 	
 	
-	AND R2, R0, #0x20					//Checks if Up-button is pressed
-	CMP R2, #0x0						//
-	BEQ add_dot							//If up is pressed
-	AND R2, R0, #0x80					//Checks if Down-button is pressed
-	CMP R2, #0x0						//
-	BEQ remove_dot						//if down is pressed
-	AND R2, R0, #0x40					//Checks if Right-button is pressed
-	CMP R2, #0x0						//
-	BEQ shift_right						//if right is pressed 
-	AND R2, R0, #0x10					//Checks if Right-button is pressed
-	CMP R2, #0x0						//
-	BEQ shift_left						//if left is pressed
-	
-	B polling_final_func
-	
-polling_final_func:						//Should be the last call before starting the loop again
-	MOV R3, R0							//Last button state
-	
-	B polling_func
+		AND R2, R0, #0x20					//Checks if Up-button is pressed
+		CMP R2, #0x0						//
+		BEQ add_dot							//If up is pressed
+		AND R2, R0, #0x80					//Checks if Down-button is pressed
+		CMP R2, #0x0						//
+		BEQ remove_dot						//if down is pressed
+		AND R2, R0, #0x40					//Checks if Right-button is pressed
+		CMP R2, #0x0						//
+		BEQ shift_right						//if right is pressed 
+		AND R2, R0, #0x10					//Checks if Right-button is pressed
+		CMP R2, #0x0						//
+		BEQ shift_left						//if left is pressed
+		
+		B main
 
 add_dot:					//Adds a dot to the 5th bit on the LED-array
 	LSR R1, #8				//Rightshifts the array so we can work on bit 0 to 7
@@ -168,7 +195,7 @@ add_dot:					//Adds a dot to the 5th bit on the LED-array
 	LSL R1, #8				//Left shift because LEDs are controlled on bit 8 to 15
 	STR R1, [R7]			//Updates the LEDs memory location
 	
-	B polling_final_func
+	B main
 
 remove_dot:					//Removes a dot from the 5th bit in the LED-array
 
@@ -180,39 +207,30 @@ remove_dot:					//Removes a dot from the 5th bit in the LED-array
 	LSL R1, #8				//Shifts the LED-array left again
 	STR R1, [R7]			//Updates the state in the memory location
 
-	B polling_final_func	
-
+	B main
 shift_right:
-	CMP R0, R3				//Checks if last state is same
-	BEQ polling_final_func	//Branches if button state is not updated
+	
 	
 	LSR R1, #7				//Right-shifts 8 minus the one the dot should move
 	ORR R1, 0x1				//Since the rightshift will add a 0 to the end, a 1 must be added
 	LSL R1, #8				//Left shifts back into the [8, 15] range
 	STR R1, [R7]			//Updates the LEDs
 
-	B polling_final_func
+	B main
 	
 shift_left:
-	CMP R0, R3				//Checks if last state is same
-	BEQ polling_final_func	//Branches if button state is not updated
+	
 	LSR R1, #9				//Right-shifts 8 minus the one the dot should move
 	ORR R1, 0x80			//Since the rightshift will add a 0 to the end, a 1 must be added
 	LSL R1, #8				//Left shifts back into the [8, 15] range
 	STR R1, [R7]			//Updates the LEDs
 	
 	
-	B polling_final_func
+	B main
 
-	
-        .thumb_func
-gpio_handler:  
-
-	      b .  // do nothing
-	
 	/////////////////////////////////////////////////////////////////////////////
 	
 	.thumb_func
 dummy_handler:  
-        b .  // do nothing	
+        B main	
 

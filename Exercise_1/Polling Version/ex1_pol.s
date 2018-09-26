@@ -100,7 +100,7 @@ _reset:
 
 	ADD R7, R0, #GPIO_DOUT				//GPIO_PA_DOUT Constant for writing LEDs
 
-	ADDS R1, R0, #GPIO_MODEH				//Sets Port A to output
+	ADD R1, R0, #GPIO_MODEH				//Sets Port A to output
 	LDR R2, =0x55555555					//
 	STR R2, [R1]						//
 	

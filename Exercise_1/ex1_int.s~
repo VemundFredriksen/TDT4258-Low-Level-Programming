@@ -100,7 +100,7 @@ _reset:
 
 	ADD R7, R0, #GPIO_DOUT				//GPIO_PA_DOUT Constant for writing LEDs
 
-	ADDS R1, R0, #GPIO_MODEH				//Sets Port A to output
+	ADD R1, R0, #GPIO_MODEH				//Sets Port A to output
 	LDR R2, =0x55555555					//
 	STR R2, [R1]						//
 	
@@ -115,16 +115,16 @@ _reset:
 	ADD R1, R0, #GPIO_DOUT
 	STR R2, [R1]
 	
+	LDR R0, =GPIO_BASE					//Sets GPIO_EXTIPSELL to 0x22222222
+	ADD R2, R0, #GPIO_EXTIPSELL			//
+	LDR R1, =0x22222222					//
+	STR R1, [R2]						//
+	
+	ADD R2, R0, #GPIO_EXTIFALL
 	
 	
-	/*
-	ADD R1, R0, #GPIO_DOUT		
-		//Led-test
-	MOV R2, 0x1A						//
-	LSL R2, #8							//
-	STR R2, [R1]						//
-	*/
 	
+
 	
 	MOV R1, #0xff						//Sets all bits in the LED-array high (because of active-low)
 	LSL R1, #8							//Left shift 8 because LEDs are in the range [8, 15] in the GPIO_PA_DOUT

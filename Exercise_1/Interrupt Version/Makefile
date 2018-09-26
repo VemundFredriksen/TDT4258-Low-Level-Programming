@@ -12,15 +12,6 @@ ASFLAGS=-mcpu=cortex-m3 -mthumb -g
 LINKERSCRIPT=efm32gg.ld
 
 
-ex1_pol.bin : ex1_pol.elf
-	${OBJCOPY} -j .text -O binary $< $@
-
-ex1_pol.elf : ex1_pol.o 
-	${LD} -T ${LINKERSCRIPT} $^ -o $@ ${LDFLAGS}
-
-ex1_pol.o : ex1_pol.s
-	${AS} ${ASFLAGS} $< -o $@
-
 ex1_int.bin : ex1_int.elf
 	${OBJCOPY} -j .text -O binary $< $@
 
@@ -33,7 +24,7 @@ ex1_int.o : ex1_int.s
 
 .PHONY : upload
 upload :
-	-eACommander.sh -r --address 0x00000000 -f "ex1_pol.bin" -r
+	-eACommander.sh -r --address 0x00000000 -f "ex1_int.bin" -r
 
 .PHONY : clean
 clean :

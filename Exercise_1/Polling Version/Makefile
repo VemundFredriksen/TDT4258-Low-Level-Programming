@@ -21,15 +21,6 @@ ex1_pol.elf : ex1_pol.o
 ex1_pol.o : ex1_pol.s
 	${AS} ${ASFLAGS} $< -o $@
 
-ex1_int.bin : ex1_int.elf
-	${OBJCOPY} -j .text -O binary $< $@
-
-ex1_int.elf : ex1_int.o 
-	${LD} -T ${LINKERSCRIPT} $^ -o $@ ${LDFLAGS}
-
-ex1_int.o : ex1_int.s
-	${AS} ${ASFLAGS} $< -o $@
-
 
 .PHONY : upload
 upload :
