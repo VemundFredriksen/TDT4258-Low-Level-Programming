@@ -116,7 +116,7 @@ _reset:
 	
 	LDR R4, =0xF8FF						//Clears the 8th, 9th and 10th bit
 	AND R6, R6, R4						//
-	LDR R4, =0x0400						// Enables 28Mhz Clock
+	LDR R4, =0x0500						// Enables 28Mhz Clock
 	ORR R6, R6, R4						//
 	
 	STR R6, [R5, #CMU_HFRCOCTRL]

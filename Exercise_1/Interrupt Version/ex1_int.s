@@ -206,11 +206,6 @@ main:
 	.thumb_func
 _gpio_handler:
 	
-	LDR R3, =0x400000
-	loop:
-	SUBS R3, R3, #1
-	BNE loop
-	
 	LDR R3, [R9, #GPIO_IF]				//Clears the interrupt flag
 	STR R3, [R9, #GPIO_IFC]				//
 	
