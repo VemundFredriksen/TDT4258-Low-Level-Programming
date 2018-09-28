@@ -3,10 +3,10 @@
 	      .include "efm32gg.s"
 
 	/////////////////////////////////////////////////////////////////////////////
-	//																			
-    // Exception vector table
-    // This table contains addresses for all exception handlers
-	//
+	//																		   //													
+    // Exception vector table												   //
+    // This table contains addresses for all exception handlers				   //
+	//																		   //
 	/////////////////////////////////////////////////////////////////////////////
 	
         .section .vectors
@@ -127,21 +127,21 @@ _reset:
 	LDR R3, [R9, #GPIO_IF]				//Clear interrupt flags
 	STR R3, [R9, #GPIO_IFC]				//
 	
-	LDR R3, =0x22222222
+	LDR R3, =0x22222222					
 	STR R3, [R9, #GPIO_EXTIPSELL]
 	
 	MOV R3, #0xFF
 	STR R3, [R9, #GPIO_EXTIFALL]		//Enables interrupt on falling edge
 	STR R3, [R9, #GPIO_EXTIRISE]		//Enables interrupt on rising edge
-	STR R3, [R9, #GPIO_IEN]				
+	STR R3, [R9, #GPIO_IEN]				//
 	
 	MOV R2, #0xFF						//Turns the LEDs off
 	LSL R2, #8							//
 	STR R2, [R8]						//
 	
-	LDR R2, =ISER0
-	LDR R3, =0x802
-	STR R3, [R2]
+	LDR R2, =ISER0						//Enables Interrupt Handling
+	LDR R3, =0x802						//
+	STR R3, [R2]						//
 	
 	B main
 
@@ -168,10 +168,10 @@ main:
 	.thumb_func
 _gpio_handler:
 	
-	LDR R3, [R9, #GPIO_IF]
-	STR R3, [R9, #GPIO_IFC]
+	LDR R3, [R9, #GPIO_IF]				//Clears the interrupt flag
+	STR R3, [R9, #GPIO_IFC]				//
 	
-	LDR R0, [R7]						//Buttons state
+	LDR R0, [R7]						//Loads button state into R0
 	
 	ANDS R2, R0, #0x20					//Checks if Up-button is pressed
 	BEQ add_dot							//If up is pressed
@@ -182,59 +182,84 @@ _gpio_handler:
 	ANDS R2, R0, #0x10					//Checks if Right-button is pressed
 	BEQ shift_left						//if left is pressed	
 	
-	bx lr
+	BX LR
+
+
+	//////////////////////////////////////////////////
+	//  Adds a dot to the 5th bit of the LED-array  //
+	//////////////////////////////////////////////////
 
 	.thumb_func
-add_dot:					//Adds a dot to the 5th bit on the LED-array
+add_dot:
 		
-	LDR R1, [R8]
-	LSR R1, #8				//Rightshifts the array so we can work on bit 0 to 7
-	MOV R2, #0x10			//Sets the 5 bit
-	EOR R1, R1, #0xff		//Flips all the bits
+	LDR R1, [R8]						//Loads LED-state into R1
 	
-	ORR R1, R1, R2			//Enables bit 5 in addition to other enabled bits in the LED-array
-	EOR R1, R1, #0xff		//Flips the bits because LEDs are active low
-	LSL R1, #8				//Left shift because LEDs are controlled on bit 8 to 15
-	STR R1, [R8]			//Updates the LEDs memory location
+	LSR R1, #8							//Rightshifts the array so we can work on bit 0 to 7
+	MOV R2, #0xEF						//Sets all bits except bit 5
+	AND R1, R1, R2						//Clears LED 5 in the LED array
 	
-	bx lr
+	LSL R1, #8							//Left shift because LEDs are controlled on bit 8 to 15
+	STR R1, [R8]						//Updates the LEDs memory location
+	
+	BX LR
+	
+	
+	///////////////////////////////////////////////////////
+	//  Removes the dot of the 5th bit of the LED-array  //
+	///////////////////////////////////////////////////////
+	
 	
 	.thumb_func
-remove_dot:					//Removes a dot from the 5th bit in the LED-array
+remove_dot:								//Removes a dot from the 5th bit in the LED-array
 	
-	LDR R1, [R8]
-	LSR R1, #8				//Rightshifts the array so we can work on bit 0 to 7
-	MOV R2, #0x10			//Sets the 5 bit
+	LDR R1, [R8]						//Loads LED-state into R1
 	
-	ORR R1, R1, R2			//Set bit 5 and keep others state intact, set the bit because of active-low
+	LSR R1, #8							//Rightshifts the array so we can work on bit 0 to 7
+	MOV R2, #0x10						//Sets the 5 bit
 	
-	LSL R1, #8				//Shifts the LED-array left again
-	STR R1, [R8]			//Updates the state in the memory location
+	ORR R1, R1, R2						//Set bit 5 and keep others state intact, set the bit because of active-low
+	
+	LSL R1, #8							//Shifts the LED-array left again
+	STR R1, [R8]						//Updates the state in the memory location
 
-	bx lr
+	BX LR
+	
+	//////////////////////////////////////////////////
+	//  Shifts the LED-array left 				    //
+	//////////////////////////////////////////////////
 	
 	.thumb_func
 shift_right:
 	
-	LDR R1, [R8]			
-	LSR R1, #7				//Right-shifts 8 minus the one the dot should move
-	ORR R1, 0x1				//Since the rightshift will add a 0 to the end, a 1 must be added
-	LSL R1, #8				//Left shifts back into the [8, 15] range
-	STR R1, [R8]			//Updates the LEDs
+	LDR R1, [R8]						//Loads LED-state into R1
+		
+	LSR R1, #7							//Right-shifts 8 minus the one the dot should move
+	ORR R1, 0x1							//Since the rightshift will add a 0 to the end, a 1 must be added
+	LSL R1, #8							//Left shifts back into the [8, 15] range
+	STR R1, [R8]						//Updates the LEDs
 
-	bx lr
+	BX LR
 	
 	.thumb_func	
 	
+	//////////////////////////////////////////////////
+	//  Shifts the LED-array right  			    //
+	//////////////////////////////////////////////////
+	
 shift_left:
 
-	LDR R1, [R8]
-	LSR R1, #9				//Right-shifts 8 minus the one the dot should move
-	ORR R1, 0x80			//Since the rightshift will add a 0 to the end, a 1 must be added
-	LSL R1, #8				//Left shifts back into the [8, 15] range
-	STR R1, [R8]			//Updates the LEDs
+	LDR R1, [R8]						//Loads LED-state into R1
 	
-	bx lr
+	LSR R1, #9							//Right-shifts 8 minus the one the dot should move
+	ORR R1, 0x80						//Since the rightshift will add a 0 to the end, a 1 must be added
+	LSL R1, #8							//Left shifts back into the [8, 15] range
+	STR R1, [R8]						//Updates the LEDs
+	
+	BX LR
+	
+	//////////////////////////////////////////////////////////////////////
+	//  Dummy Handler for other interrupts that may happen			    //
+	//////////////////////////////////////////////////////////////////////
 	
 	.thumb_func
 dummy_handler:  
