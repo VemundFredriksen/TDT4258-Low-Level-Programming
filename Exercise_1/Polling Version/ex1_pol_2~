@@ -89,7 +89,6 @@ _reset:
 	//Constant Registers
 	ADD R7, R1, #GPIO_DIN				//MemoryLocation of ButtonInput: 	R7
 	ADD R8, R0, #GPIO_DOUT				//MemoryLocation of LEDOutput:		R8
-	// R3								//Last Button State					R3
 	
 	
 	//=========== ENABLE CMU CLOCK FOR PERIPHIRALS ============//
@@ -127,15 +126,12 @@ _reset:
 	LSL R2, #8							//
 	STR R2, [R8]						//
 	
-	B polling_func
+	B main
 	
 		.thumb_func
 polling_func:
 	
 	LDR R0, [R7]						//Loads button state into R0
-	
-	CMP R0, R3						//Checks if button state are changed
-	BEQ polling_final_func			//If button state are not changed
 	
 	ANDS R2, R0, #0x20					//Checks if Up-button is pressed
 	BEQ add_dot							//If up is pressed
@@ -150,12 +146,11 @@ polling_func:
 	B polling_final_func
 	
 polling_final_func:						//Should be the last call before starting the loop again
-	
 	MOV R3, R0							//Last button state
 	
 	B polling_func
 
-add_dot:								//Adds a dot to the 5th bit on the LED-array
+add_dot:					//Adds a dot to the 5th bit on the LED-array
 	LDR R1, [R8]						//Loads LED-state into R1
 	
 	LSR R1, #8							//Rightshifts the array so we can work on bit 0 to 7
@@ -203,7 +198,14 @@ shift_left:
 	B polling_final_func
 
 	
+        .thumb_func
+gpio_handler:  
+
+	      b .  // do nothing
+	
+	/////////////////////////////////////////////////////////////////////////////
+	
 	.thumb_func
 dummy_handler:  
-        B polling_final_func
+        b .  // do nothing	
 
