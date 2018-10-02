@@ -114,9 +114,14 @@ _reset:
 	LDR R5, =CMU_BASE
 	LDR R6, [R5, #CMU_HFRCOCTRL]
 	
-	LDR R4, =0xF8FF						//Clears the 8th, 9th and 10th bit
+	LDR R4, =0xF800						//Clears bit 0 to 10, (BAND and TUNING)
 	AND R6, R6, R4						//
-	LDR R4, =0x0500						// Enables 28Mhz Clock
+	
+	LDR R3, =HFRCO_CALIB_BAND_28		//Gets the correct tuning according to 28MHz clock frequency
+	LDR R3, [R3]
+	
+	LDR R4, =0x0500					    // Enables 28Mhz Clock Band
+	ORR R4, R4, R3						// Sets the correct tuning for 28MHz
 	ORR R6, R6, R4						//
 	
 	STR R6, [R5, #CMU_HFRCOCTRL]
