@@ -1,0 +1,11 @@
+*.zip
+*.s~
+*.c~
+*.gdb
+
+*.o
+*.elf
+*.bin
+*.hex
+
+.gitignore~
