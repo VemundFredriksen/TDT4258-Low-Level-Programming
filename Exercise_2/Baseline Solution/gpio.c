@@ -9,13 +9,12 @@
 void setupGPIO()
 {
 	/*
-	 * Example of HW access from C code: turn on joystick LEDs D4-D8 check 
-	 * efm32gg.h for other useful register definitions 
+	 * Enable GPIO clock
 	 */
-	*CMU_HFPERCLKEN0 |= CMU2_HFPERCLKEN0_GPIO;	/* enable GPIO clock */
+	*CMU_HFPERCLKEN0 |= CMU2_HFPERCLKEN0_GPIO;
 	
 	/*
-	 * Set up gamepad LED lights as output 
+	 * Set up gamepad LED lights as output
 	 */
 	*GPIO_PA_CTRL = 2;	/* set high drive strength */
 	*GPIO_PA_MODEH = 0x55555555;	/* set pins A8-15 as output */

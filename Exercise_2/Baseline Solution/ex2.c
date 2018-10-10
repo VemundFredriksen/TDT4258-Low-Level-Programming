@@ -1,5 +1,6 @@
 #include <stdint.h>
 #include <stdbool.h>
+#include <math.h>
 
 #include "efm32gg.h"
 
@@ -37,12 +38,28 @@ int main(void)
 	 * Enable interrupt handling 
 	 */
 	setupNVIC();
-
-	/*
-	 * TODO for higher energy efficiency, sleep while waiting for
-	 * interrupts instead of infinite loop for busy-waiting 
-	 */
-	while (1) ;
+    
+    /*
+     * Set up sound wave
+     */
+    int sample;
+    
+    
+    /*
+     * Test DAC
+     */
+    int timerVal = 0;
+    double x = 0;
+    while(1) {
+        sample = sin(x);
+        if (timerVal > *TIMER1_CNT) {
+            *DAC0_CH0DATA = sample;
+            *DAC0_CH1DATA = sample;
+        }
+        
+        x += 0.002;
+        timerVal = *TIMER1_CNT;
+    }
 
 	return 0;
 }

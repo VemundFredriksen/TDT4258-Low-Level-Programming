@@ -17,8 +17,7 @@ void setupDAC()
 	 */
 	
 	//Enable DAC Clock 
-	uint32_t dacEnable = 1 << 17;
-	*CMU_HFPERCLKEN0 |= dacEnable;
+	*CMU_HFPERCLKEN0 |= CMU2_HFPERCLKEN0_DAC0;
 	
 	//Select appropriate prescale
 	uint32_t dacPrescale = 0x50010;
@@ -27,7 +26,4 @@ void setupDAC()
 	//Enable left and right sound channel	
 	*DAC0_CH0CTRL = 1;
 	*DAC0_CH1CTRL = 1;
-	 
 }
-
-
