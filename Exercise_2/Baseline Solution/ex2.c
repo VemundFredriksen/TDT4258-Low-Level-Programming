@@ -3,6 +3,12 @@
 
 #include "efm32gg.h"
 
+#include "math.h"
+#include "songs.c"
+#include "tones.h"
+
+
+
 /*
  * TODO calculate the appropriate sample period for the sound wave(s) you 
  * want to generate. The core clock (which the timer clock is derived
@@ -12,14 +18,15 @@
 /*
  * The period between sound samples, in clock cycles 
  */
-#define   SAMPLE_PERIOD   0
-
+#define   SAMPLE_PERIOD 317
 /*
  * Declaration of peripheral setup functions 
  */
 void setupTimer(uint32_t period);
+void setupGPIO();
 void setupDAC();
 void setupNVIC();
+
 
 /*
  * Your code will start executing here 
@@ -42,7 +49,35 @@ int main(void)
 	 * TODO for higher energy efficiency, sleep while waiting for
 	 * interrupts instead of infinite loop for busy-waiting 
 	 */
-	while (1) ;
+	
+	//Disable instruction cache
+	int notes[] = {C6, C6, C6, Shh, Shh, Shh, C7, C7, C7,A5, A5, A5};
+	int transformed[2];
+	transformed[0] = (44100/notes[0]);
+	int roundVal = 1;
+	int clockVal = *TIMER1_CNT;
+	int sample = 0;
+	/*
+	while(1){
+		if(*TIMER1_CNT < clockVal){
+			
+			if(roundVal % transformed[0] == 0){
+				
+				if(sample == 150){
+					sample = 0;
+				} else {
+					sample= 150;
+				}
+				
+			}
+			roundVal++;
+			*DAC0_CH0DATA = sample;
+			*DAC0_CH1DATA = sample;
+		}
+	}
+		*/
+
+	playSong(120, notes, sizeof(notes)/sizeof(int));
 
 	return 0;
 }
@@ -58,6 +93,7 @@ void setupNVIC()
 	 * assignment. 
 	 */
 }
+
 
 /*
  * if other interrupt handlers are needed, use the following names:
