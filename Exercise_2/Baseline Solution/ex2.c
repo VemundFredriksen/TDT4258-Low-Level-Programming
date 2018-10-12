@@ -1,5 +1,6 @@
 #include <stdint.h>
 #include <stdbool.h>
+#include <math.h>
 
 #include "efm32gg.h"
 
@@ -44,6 +45,7 @@ int main(void)
 	 * Enable interrupt handling 
 	 */
 	setupNVIC();
+<<<<<<< HEAD
 
 	/*
 	 * TODO for higher energy efficiency, sleep while waiting for
