@@ -19,7 +19,8 @@
 int happyBirthday[] = { C4, R, C4, D4, D4, D4, C4, C4, C4, F4, F4, F4, E4, E4, E4, E4, E4, R, C4, R, C4, D4, D4, D4, C4, C4, C4, G4, G4, G4, F4, F4, F4, F4, F4, R, C4, R, C4, C5, C5, C5, A4, A4, A4, F4, R, F4, E4, E4, E4, D4, D4, D4, B4, R, B4, A4, A4, A4, F4, F4, F4, G4, G4, G4, F4, F4, F4, F4 };
 
 int acidSong[] = {C6, C6, R, A6, A6, R, A6, A6, R, C6, C6, E5};
-	
+int lostLife[] = {E4, F4, Fs4, G4, A4, G4, F4, Ds4};
+int temp[] = {C5, C5, C5, C5, C5, G4, G4, G4, G4, E4, E4, E4, E4, C4, C4, C4, C4, C4 };
 
 /*
  * Declaration of peripheral setup functions 
@@ -63,5 +64,11 @@ void handleInput(int buttonValues)
 	}
 	else if(CHECK_BTN(buttonValues, 6)){
 		playSong(acidSong, sizeof(acidSong)/sizeof(int));
+	}
+	else if(CHECK_BTN(buttonValues, 7)){
+		playSong(lostLife, sizeof(lostLife)/sizeof(int));
+	}
+	else if(CHECK_BTN(buttonValues, 4)){
+		playSong(temp, sizeof(temp)/sizeof(int));
 	}
 }

@@ -25,7 +25,7 @@ void playNote(int frequency){
 	int clockVal = *TIMER1_CNT;						//Keeps track of the timer count
 	int roundVal = 1;								//Keeps track of number of interrupts
 	int sample = 0;
-	while(roundVal < 4100){
+	while(roundVal < 2100){
 		if(*TIMER1_CNT < clockVal){					//If the new timercount is less than the previous, then "a interrupt is triggered"
 			*TIMER1_CMD = 2;						//Stops the timer while doing the most tidious work in the loop
 			if(roundVal % frequency == 0){			//If the roundval corresponds to the right number of interrupts associtated with the tone being played
