@@ -1,87 +1,46 @@
 #include "efm32gg.h"
 
-void playSong(int tempo, int* notes, int noteCount){
-	
-	int notePos = 0;
-	tempo = 44100/(tempo/60);
-	
-	
-	int transformed[noteCount];
-	
-	for(int i = 0; i < noteCount; i++){
-		transformed[i] = (44100/notes[i]);
-	}
-	
-	for(int i = 0; i < noteCount; i++){
-		playNote(transformed[i]);
-	}
-	
-	/*
-	for(int i = 0; i < 500000; i++){
-		*DAC0_CH0DATA = 0;
-		*DAC0_CH1DATA = 0;
-	}
-	int tone = transformed[notePos];
+void playNote(int frequency);
 
-	while (notePos < noteCount){
+void playSong(int* notes, int noteCount){
 	
-		if(*TIMER1_CNT < clockVal){
-			if(roundVal % tempo == 0){
-				roundVal = 1;
-				notePos++;
-			}
-			if(roundVal % transformed[notePos] == 0){
-				
-				if(sample == 150){
-					sample = 0;
-				} else {
-					sample= 150;
-				}
-				
-			}
-			roundVal++;
-			*DAC0_CH0DATA = sample;
-			*DAC0_CH1DATA = sample;
-		}
-		clockVal = *TIMER1_CNT;
-	}
 	
+	//Transforms the tones from Hz to number of interrupts to pass before writing new value
+	int interruptFreq[noteCount];
 	for(int i = 0; i < noteCount; i++){
-		playNote(transformed[i]);
+		interruptFreq[i] = (10000/notes[i]);
 	}
 	
-	int n = 0;
-	playNote(transformed[0]);
-	playNote(transformed[0]);
-	playNote(transformed[noteCount - 1]);
-	playNote(transformed[noteCount - 1]);
-	playNote(transformed[0]);
-	playNote(transformed[0]);
-	*/
+	//Plays through the whole song
+	for(int i = 0; i < noteCount; i++){
+		playNote(interruptFreq[i]);
+	}
+	
 	*DAC0_CH0DATA = 0;
 	*DAC0_CH1DATA = 0;
 	
 }
 
 void playNote(int frequency){
-	int clockVal = *TIMER1_CNT;
-	int roundVal = 1;
+	int clockVal = *TIMER1_CNT;						//Keeps track of the timer count
+	int roundVal = 1;								//Keeps track of number of interrupts
 	int sample = 0;
-	while(roundVal < 44100){
-		if(*TIMER1_CNT < clockVal){
-			
-			if(roundVal % frequency == 0){
-				
+	while(roundVal < 4100){
+		if(*TIMER1_CNT < clockVal){					//If the new timercount is less than the previous, then "a interrupt is triggered"
+			*TIMER1_CMD = 2;						//Stops the timer while doing the most tidious work in the loop
+			if(roundVal % frequency == 0){			//If the roundval corresponds to the right number of interrupts associtated with the tone being played
+													//Then change the DAC value
 				if(sample == 70){
 					sample = 0;
 				} else {
 					sample= 70;
 				}
 			}
-			roundVal++;
+			roundVal++;								
 			*DAC0_CH0DATA = sample;
 			*DAC0_CH1DATA = sample;
+			*TIMER1_CMD = 1;						//Start the timer count before entering the loop again
 		}
-		clockVal = *TIMER1_CNT;
+		clockVal = *TIMER1_CNT;						//Continuously read the timer count
 	}
 }

@@ -1,7 +1,17 @@
 #include <stdint.h>
 
 //TONES
-#define Shh 0
+#define R 0
+#define C4 262
+#define Cs4 277
+#define D4 294
+#define Ds4 311
+#define E4 330
+#define F4 349
+#define Fs4 370
+#define G4 392
+#define A4 440
+#define B4 494
 #define C5 523
 #define Cs5 554
 #define D5 587
