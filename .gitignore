@@ -1,6 +1,7 @@
 *.zip
 *.s~
 *.c~
+*.h~
 *.gdb
 
 *.o
@@ -8,4 +9,5 @@
 *.bin
 *.hex
 
+Makefile~
 .gitignore~
