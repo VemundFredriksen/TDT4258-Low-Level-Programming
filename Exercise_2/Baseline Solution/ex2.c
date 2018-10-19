@@ -60,15 +60,15 @@ int main(void)
 void handleInput(int buttonValues)
 {
 	if(CHECK_BTN(buttonValues, 5)){ //If button 6 is pressed
-		playSong(happyBirthday, sizeof(happyBirthday)/sizeof(int));
+		playSong(happyBirthday, sizeof(happyBirthday)/sizeof(int), 2500);
 	}
 	else if(CHECK_BTN(buttonValues, 6)){
-		playSong(acidSong, sizeof(acidSong)/sizeof(int));
+		playSong(acidSong, sizeof(acidSong)/sizeof(int), 1000);
 	}
 	else if(CHECK_BTN(buttonValues, 7)){
-		playSong(lostLife, sizeof(lostLife)/sizeof(int));
+		playSong(lostLife, sizeof(lostLife)/sizeof(int), 1000);
 	}
 	else if(CHECK_BTN(buttonValues, 4)){
-		playSong(temp, sizeof(temp)/sizeof(int));
+		playSong(temp, sizeof(temp)/sizeof(int), 1000);
 	}
 }

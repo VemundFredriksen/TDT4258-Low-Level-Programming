@@ -1,9 +1,8 @@
 #include "efm32gg.h"
 
-void playNote(int frequency);
+void playNote(int frequency, int noteLength);
 
-void playSong(int* notes, int noteCount){
-	
+void playSong(int* notes, int noteCount, int noteLength){	
 	
 	//Transforms the tones from Hz to number of interrupts to pass before writing new value
 	int interruptFreq[noteCount];
@@ -13,7 +12,7 @@ void playSong(int* notes, int noteCount){
 	
 	//Plays through the whole song
 	for(int i = 0; i < noteCount; i++){
-		playNote(interruptFreq[i]);
+		playNote(interruptFreq[i], noteLength);
 	}
 	
 	*DAC0_CH0DATA = 0;
@@ -21,11 +20,11 @@ void playSong(int* notes, int noteCount){
 	
 }
 
-void playNote(int frequency){
+void playNote(int frequency, int noteLength){
 	int clockVal = *TIMER1_CNT;						//Keeps track of the timer count
 	int roundVal = 1;								//Keeps track of number of interrupts
 	int sample = 0;
-	while(roundVal < 2100){
+	while(roundVal < noteLength){
 		if(*TIMER1_CNT < clockVal){					//If the new timercount is less than the previous, then "a interrupt is triggered"
 			*TIMER1_CMD = 2;						//Stops the timer while doing the most tidious work in the loop
 			if(roundVal % frequency == 0){			//If the roundval corresponds to the right number of interrupts associtated with the tone being played
