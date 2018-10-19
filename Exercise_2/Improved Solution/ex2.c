@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <stdbool.h>
-
 #include "efm32gg.h"
+#include "timer.h"
 
 /*
  * TODO calculate the appropriate sample period for the sound wave(s) you 
@@ -12,12 +12,9 @@
 /*
  * The period between sound samples, in clock cycles 
  */
-#define   SAMPLE_PERIOD   0
+#define   SAMPLE_PERIOD   317
 
-/*
- * Declaration of peripheral setup functions 
- */
-void setupTimer(uint32_t period);
+void setupGPIO();
 void setupDAC();
 void setupNVIC();
 
@@ -33,6 +30,7 @@ int main(void)
 	setupDAC();
 	setupTimer(SAMPLE_PERIOD);
 
+
 	/*
 	 * Enable interrupt handling 
 	 */
@@ -42,7 +40,7 @@ int main(void)
 	 * TODO for higher energy efficiency, sleep while waiting for
 	 * interrupts instead of infinite loop for busy-waiting 
 	 */
-	while (1) ;
+	while (1);
 
 	return 0;
 }
@@ -57,6 +55,9 @@ void setupNVIC()
 	 * need TIMER1, GPIO odd and GPIO even interrupt handling for this
 	 * assignment. 
 	 */
+	 
+	 //Enable interrupts
+	 *ISER0 = 0x1802;
 }
 
 /*
