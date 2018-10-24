@@ -1,7 +1,9 @@
 #ifndef songs
 #define songs
 
-void playSong(int* notes, int noteCount, int noteLength);
-void playNote(int frequency, int noteLength);
+int* happyBirthday[70];
+int* acidSong[20];
+int* acidSound[24];
+int* explosion[48];
 
 #endif

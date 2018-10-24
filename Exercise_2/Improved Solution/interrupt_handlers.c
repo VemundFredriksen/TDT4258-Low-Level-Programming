@@ -2,30 +2,26 @@
 #include <stdbool.h>
 #include "songs.h"
 #include "efm32gg.h"
-#include "tones.h"
 #include "timer.h"
 
-#define CHECK_BTN(input,btn) (~(input) & (1<<(btn)))		//Used to see if a button is pressed (active low)
+//Used to see if a button is pressed (active low)
+#define CHECK_BTN(input,btn) (~(input) & (1<<(btn)))		
 
 void handleInput();
-//void playSong(int* notes, int noteCount, int noteLength);
 
-int interruptCount = 0;
-int amplitude = 70;
-int note = 0;
-int song[] = { C4, R, C4, D4, D4, D4, C4, C4, C4, F4, F4, F4, E4, E4, E4, E4, E4, R, C4, R, C4, D4, D4, D4, C4, C4, C4, G4, G4, G4, F4, F4, F4, F4, F4, R, C4, R, C4, C5, C5, C5, A4, A4, A4, F4, R, F4, E4, E4, E4, D4, D4, D4, B4, R, B4, A4, A4, A4, F4, F4, F4, G4, G4, G4, F4, F4, F4, F4 };
-int noteLength = 5000;
-int songLength = sizeof(song)/sizeof(int);
+int interruptCount = 0;		//Counts the number of interrupts
+int amplitude = 70;			//The maximum amplitude
+int note = 0;				//Keeps track of the note position in a song/sound
+int *song;					//A pointer to the song currently being played
+int noteLength;				//How long each note should last
+int songLength;				//Number of notes in a song/sound
+
 /*
  * TIMER1 interrupt handler 
  */
 void __attribute__ ((interrupt)) TIMER1_IRQHandler()
 {
 	*TIMER1_IFC = 1;
-	/*
-	 * TODO feed new samples to the DAC remember to clear the pending
-	 * interrupt by writing 1 to TIMER1_IFC 
-	 */
 	interruptCount++;
 	
 	if(interruptCount > noteLength){
@@ -34,6 +30,7 @@ void __attribute__ ((interrupt)) TIMER1_IRQHandler()
 	}
 	if(note >= songLength){
 		stopTimer();
+		*GPIO_PA_DOUT = 0xFF << 8; //Clears the LEDlights
 		note = 0;
 		*DAC0_CH0DATA = 0;
 		*DAC0_CH1DATA = 0;
@@ -52,8 +49,6 @@ void __attribute__ ((interrupt)) TIMER1_IRQHandler()
 		*DAC0_CH0DATA = amplitude;
 		*DAC0_CH1DATA = amplitude;
 	}
-	
-	 
 }
 
 /*
@@ -61,13 +56,7 @@ void __attribute__ ((interrupt)) TIMER1_IRQHandler()
  */
 void __attribute__ ((interrupt)) GPIO_EVEN_IRQHandler()
 {
-	*GPIO_IFC = *GPIO_IF;
-	/*
-	 * TODO handle button pressed event, remember to clear pending
-	 * interrupt 
-	 */
-	 handleInput();
-	 
+	 handleInput(); 
 }
 
 /*
@@ -75,32 +64,48 @@ void __attribute__ ((interrupt)) GPIO_EVEN_IRQHandler()
  */
 void __attribute__ ((interrupt)) GPIO_ODD_IRQHandler()
 {
-	*GPIO_IFC = *GPIO_IF;
-	/*
-	 * TODO handle button pressed event, remember to clear pending
-	 * interrupt 
-	 */
 	 handleInput();
 }
 
-int happyBirthday[] = { C4, R, C4, D4, D4, D4, C4, C4, C4, F4, F4, F4, E4, E4, E4, E4, E4, R, C4, R, C4, D4, D4, D4, C4, C4, C4, G4, G4, G4, F4, F4, F4, F4, F4, R, C4, R, C4, C5, C5, C5, A4, A4, A4, F4, R, F4, E4, E4, E4, D4, D4, D4, B4, R, B4, A4, A4, A4, F4, F4, F4, G4, G4, G4, F4, F4, F4, F4 };
-
+//Handles the interrupts from the controller
 void handleInput()
 {
+	*GPIO_IFC = *GPIO_IF;
 	int buttonValues = *GPIO_PC_DIN;
+	
+	
 	if(CHECK_BTN(buttonValues, 5)){ //If button 6 is pressed
-		*GPIO_PA_DOUT = buttonValues << 8;
-		playSong(happyBirthday, sizeof(happyBirthday)/sizeof(int), 1000);
-	}
-	else if(CHECK_BTN(buttonValues, 6)){
-		//playSong(acidSong, sizeof(acidSong)/sizeof(int), 1000);
+		*GPIO_PA_DOUT = ~(1 << 13);
+		note = 0;
+		song = explosion;
+		noteLength = 500;
+		songLength = sizeof(explosion)/sizeof(int);
 		startTimer();
 	}
+	else if(CHECK_BTN(buttonValues, 6)){
+		*GPIO_PA_DOUT = ~(1 << 14);
+		note = 0;
+		song = happyBirthday;
+		noteLength = 5000;
+		songLength = sizeof(happyBirthday)/sizeof(int);
+		startTimer();
+		
+	}
 	else if(CHECK_BTN(buttonValues, 7)){
-		//playSong(lostLife, sizeof(lostLife)/sizeof(int), 1000);
+		*GPIO_PA_DOUT = ~(1 << 15);
+		note = 0;
+		song = acidSong;
+		noteLength = 2500;
+		songLength = sizeof(acidSong)/sizeof(int);
+		startTimer();
 	}
 	else if(CHECK_BTN(buttonValues, 4)){
-		//playSong(temp, sizeof(temp)/sizeof(int), 1000);
+		*GPIO_PA_DOUT = ~(1 << 12);
+		note = 0;
+		song = acidSound;
+		noteLength = 500;
+		songLength = sizeof(acidSound)/sizeof(int);
+		startTimer();
 	}
 }
 
