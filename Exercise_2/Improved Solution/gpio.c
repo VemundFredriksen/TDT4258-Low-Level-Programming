@@ -37,12 +37,15 @@ void setupGPIO()
 	  
 	  // -----
 	  *GPIO_EXTIPSELL = 0x22222222;
+	  *GPIO_IFC = *GPIO_IF;
 	  
 	  //Enables interrupt on falling edge
 	  *GPIO_EXTIFALL = 0xFF;
+	  *GPIO_IFC = *GPIO_IF;
 	  
 	  //Enables interrupt on GPIO
 	  *GPIO_IEN = 0xFF;
+	  *GPIO_IFC = *GPIO_IF;
 	  
 }
 

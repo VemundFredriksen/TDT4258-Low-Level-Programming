@@ -68,6 +68,7 @@ void __attribute__ ((interrupt)) GPIO_ODD_IRQHandler()
 void handleInput()
 {
 	*GPIO_IFC = *GPIO_IF;
+	*SCR = 2;
 	int buttonValues = *GPIO_PC_DIN;
 	
 	if(CHECK_BTN(buttonValues, 5)){ //If button 6 is pressed
@@ -87,17 +88,21 @@ void handleInput()
 		*GPIO_PA_DOUT = ~(1 << 12);
 		setSong(acidSound, sizeof(acidSound)/sizeof(int), 500);
 	}
+	else{
+		*SCR = 6;
+	}
+	return;
 }
 
 void setSong(int appliedSong[], int lengthOfSong, int lengthOfNotes)
 {
-		*SCR = 2;
 		note = 0;
 		song = appliedSong;
 		noteLength = lengthOfNotes;
 		songLength = lengthOfSong;
 		setupDAC();
 		startTimer();
+		return;
 }
 
 void onEndedSong()
@@ -109,5 +114,6 @@ void onEndedSong()
 		*DAC0_CH0DATA = 0;
 		*DAC0_CH1DATA = 0;
 		*SCR = 6;
+		return;
 }
 

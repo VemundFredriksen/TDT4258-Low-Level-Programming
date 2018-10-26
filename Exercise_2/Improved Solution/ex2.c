@@ -19,8 +19,7 @@ int main(void)
 	setupDeepSleep();
 	
 	//Enter deep sleep (Wait For Interrupt)
-	__asm__("WFI");	
-
+	__asm__("WFI");
 	
 	return 0;
 }
