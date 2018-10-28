@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include "efm32gg.h"
 #include "common.h"
+#include "songs.c"
 
 
 /*
