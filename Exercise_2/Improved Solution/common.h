@@ -25,7 +25,7 @@ void startTimer();
 void stopTimer();
 
 //========== ex2.c ==========//
-void setupDeepSleep();
+void toSleep(int energyMode);
 
 /*
  *	Macro declarations

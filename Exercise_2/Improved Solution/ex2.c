@@ -14,7 +14,7 @@ int main(void)
 	setupGPIO();
 	setupTimer(SAMPLE_PERIOD);
 	setupNVIC();
-	setupDeepSleep();
+	toSleep(6);
 	
 	//Enter deep sleep (Wait For Interrupt)
 	__asm__("WFI");
@@ -29,7 +29,7 @@ void setupNVIC()
 }
 
 //Enables energymode = deepsleep
-void setupDeepSleep()
+void toSleep(int energyMode)
 {
-	*SCR = 6;
+	*SCR = energyMode;
 }

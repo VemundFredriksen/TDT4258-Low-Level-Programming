@@ -59,7 +59,7 @@ void __attribute__ ((interrupt)) GPIO_ODD_IRQHandler()
 void handleInput()
 {
 	*GPIO_IFC = *GPIO_IF;				//Clears interruptflag 
-	*SCR = 2;							//Enters energy mode 2 (sleep on exit, not deepsleep)
+	toSleep(2);						//Enters energy mode 2 (sleep on exit, not deepsleep)
 	int buttonValues = *GPIO_PC_DIN;
 	
 	if(CHECK_BTN(buttonValues, 5)){ 	//If button 6 is pressed
@@ -80,7 +80,7 @@ void handleInput()
 		setSong(acidSound, sizeof(acidSound)/sizeof(int), 500);
 	}
 	else{
-		setupDeepSleep();
+		toSleep(6);
 	}
 }
 
@@ -99,6 +99,6 @@ void onEndedSong()
 		stopTimer();				
 		deactivateDAC();
 		*GPIO_PA_DOUT = 0xFF << 8; 	//Clears the LEDlights
-		setupDeepSleep();
+		toSleep(6);
 }
 
