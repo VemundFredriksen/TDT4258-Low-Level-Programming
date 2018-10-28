@@ -1,14 +1,12 @@
 #include <stdint.h>
 #include <stdbool.h>
-#include "songs.h"
 #include "efm32gg.h"
-#include "timer.h"
-#include "dac.h"
+#include "common.h"	
 
-//Returns true if given button is pressed
-#define CHECK_BTN(input,btn) (~(input) & (1<<(btn)))		
-
+//========== Local Function declaration ==========//
 void handleInput();
+void setSong(int appliedSong[], int lengthOfSong, int lengthOfNotes);
+void onEndedSong();
 
 int interruptCount = 0;		//Counts the number of interrupts
 int amplitude = 70;			//The maximum amplitude
@@ -22,29 +20,22 @@ int songLength;				//Number of notes in a song/sound
  */
 void __attribute__ ((interrupt)) TIMER1_IRQHandler()
 {
-	*TIMER1_IFC = 1;
+	*TIMER1_IFC = 1;					//Clears interruptflag
 	interruptCount++;
 	
-	if(interruptCount > noteLength){
+	if(interruptCount > noteLength){	//When to increment to next note
 		note++;
 		interruptCount = 0;
 	}
-	if(note >= songLength){
+	if(note >= songLength){				//When all notes are played
 		onEndedSong();
 		return;
 	}
 	
 	if(interruptCount % (22100/song[note]) == 0){
 	
-		if(amplitude == 70){
-			amplitude = 0;
-		}
-		else{
-		
-			amplitude = 70;
-		}
-		*DAC0_CH0DATA = amplitude;
-		*DAC0_CH1DATA = amplitude;
+		amplitude = (amplitude == 70) ? 0 : 70;
+		writeToDAC(amplitude);
 	}
 }
 
@@ -67,11 +58,11 @@ void __attribute__ ((interrupt)) GPIO_ODD_IRQHandler()
 //Handles the interrupts from the controller
 void handleInput()
 {
-	*GPIO_IFC = *GPIO_IF;
-	*SCR = 2;
+	*GPIO_IFC = *GPIO_IF;				//Clears interruptflag 
+	*SCR = 2;							//Enters energy mode 2 (sleep on exit, not deepsleep)
 	int buttonValues = *GPIO_PC_DIN;
 	
-	if(CHECK_BTN(buttonValues, 5)){ //If button 6 is pressed
+	if(CHECK_BTN(buttonValues, 5)){ 	//If button 6 is pressed
 		*GPIO_PA_DOUT = ~(1 << 13);
 		setSong(explosion, sizeof(explosion)/sizeof(int), 5000);
 	}
@@ -89,9 +80,8 @@ void handleInput()
 		setSong(acidSound, sizeof(acidSound)/sizeof(int), 500);
 	}
 	else{
-		*SCR = 6;
+		setupDeepSleep();
 	}
-	return;
 }
 
 void setSong(int appliedSong[], int lengthOfSong, int lengthOfNotes)
@@ -102,18 +92,13 @@ void setSong(int appliedSong[], int lengthOfSong, int lengthOfNotes)
 		songLength = lengthOfSong;
 		setupDAC();
 		startTimer();
-		return;
 }
 
 void onEndedSong()
 {
-		stopTimer();
+		stopTimer();				
 		deactivateDAC();
-		*GPIO_PA_DOUT = 0xFF << 8; //Clears the LEDlights
-		note = 0;
-		*DAC0_CH0DATA = 0;
-		*DAC0_CH1DATA = 0;
-		*SCR = 6;
-		return;
+		*GPIO_PA_DOUT = 0xFF << 8; 	//Clears the LEDlights
+		setupDeepSleep();
 }
 

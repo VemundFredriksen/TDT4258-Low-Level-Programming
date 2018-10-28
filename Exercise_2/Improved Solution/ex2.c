@@ -1,13 +1,11 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "efm32gg.h"
-#include "timer.h"
-#include "dac.h"
+#include "common.h"
 
-
-//The period between sound samples, in clock cycles 
-#define   SAMPLE_PERIOD   317
-
+/*
+ *	Local Function Declarations
+ */
 void setupGPIO();
 void setupNVIC();
 
