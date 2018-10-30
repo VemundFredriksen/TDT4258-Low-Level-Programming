@@ -14,7 +14,7 @@ LINKERSCRIPT=lib/efm32gg.ld
 ex2.bin : ex2.elf
 	${OBJCOPY} -O binary $< $@
 
-ex2.elf : ex2.o timer.o dac.o gpio.o interrupt_handlers.o songs.o
+ex2.elf : ex2.o timer.o dac.o gpio.o interrupt_handlers.o songs.o 
 	${LD} -T ${LINKERSCRIPT} $^ -o $@ ${LDFLAGS}
 
 %.o : %.c
@@ -22,7 +22,7 @@ ex2.elf : ex2.o timer.o dac.o gpio.o interrupt_handlers.o songs.o
 
 .PHONY : pretty
 pretty :
-	-indent *.c *.h
+	-indent *.c *.h -kr -i8
 
 .PHONY : upload
 upload :
@@ -30,4 +30,4 @@ upload :
 
 .PHONY : clean
 clean :
-	-rm -rf *.o *.elf *.bin *.hex 
+	-rm -rf *.o *.elf *.bin *.hex

@@ -15,7 +15,7 @@ ex2.bin : ex2.elf
 	${OBJCOPY} -O binary $< $@
 
 ex2.elf : ex2.o timer.o dac.o gpio.o interrupt_handlers.o
-	${LD} -T ${LINKERSCRIPT} $^ -o $@ ${LDFLAGS} 
+	${LD} -T ${LINKERSCRIPT} $^ -o $@ ${LDFLAGS} -lm
 
 %.o : %.c
 	${CC} ${CFLAGS} -c $< -o $@

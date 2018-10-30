@@ -1,22 +1,31 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "efm32gg.h"
-#include "timer.h"
-#include "dac.h"
+#include "common.h"
 
-
-//The period between sound samples, in clock cycles 
-#define   SAMPLE_PERIOD   317
-
+/*
+ *	Local Function Declarations
+ */
 void setupGPIO();
 void setupNVIC();
+int *instantiateSong(int songIndex);
+
+int* happySamples;
+int* acid1Samples;
+int* acid2Samples;
+int* explosionSamples;
 
 int main(void)
 {
 	setupGPIO();
 	setupTimer(SAMPLE_PERIOD);
 	setupNVIC();
-	setupDeepSleep();
+	toSleep(6);
+	
+	happySamples = instantiateSong(0);
+	acid1Samples = instantiateSong(1);
+	acid2Samples = instantiateSong(2);
+	explosionSamples = instantiateSong(3);
 	
 	//Enter deep sleep (Wait For Interrupt)
 	__asm__("WFI");
@@ -31,7 +40,7 @@ void setupNVIC()
 }
 
 //Enables energymode = deepsleep
-void setupDeepSleep()
+void toSleep(int energyMode)
 {
-	*SCR = 6;
+	*SCR = energyMode;
 }

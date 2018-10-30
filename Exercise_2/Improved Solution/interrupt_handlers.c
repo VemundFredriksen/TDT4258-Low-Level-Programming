@@ -1,20 +1,18 @@
 #include <stdint.h>
 #include <stdbool.h>
-#include "songs.h"
 #include "efm32gg.h"
-#include "timer.h"
-#include "dac.h"
+#include "common.h"	
 
-//Returns true if given button is pressed
-#define CHECK_BTN(input,btn) (~(input) & (1<<(btn)))		
-
+//========== Local Function declaration ==========//
 void handleInput();
+void setSong(int appliedSong[], int lenghtOfNotes[], int lengthOfSong);
+void onEndedSong();
 
 int interruptCount = 0;		//Counts the number of interrupts
 int amplitude = 70;			//The maximum amplitude
 int note = 0;				//Keeps track of the note position in a song/sound
 int *song;					//A pointer to the song currently being played
-int noteLength;				//How long each note should last
+int *noteLengths;			//How long each note should last
 int songLength;				//Number of notes in a song/sound
 
 /*
@@ -22,29 +20,22 @@ int songLength;				//Number of notes in a song/sound
  */
 void __attribute__ ((interrupt)) TIMER1_IRQHandler()
 {
-	*TIMER1_IFC = 1;
+	*TIMER1_IFC = 1;						//Clears interruptflag
 	interruptCount++;
 	
-	if(interruptCount > noteLength){
+	if(interruptCount > noteLengths[note]){	//When to increment to next note
 		note++;
 		interruptCount = 0;
 	}
-	if(note >= songLength){
+	
+	if (note >= songLength) {				//When all notes are played
 		onEndedSong();
 		return;
 	}
 	
-	if(interruptCount % (22100/song[note]) == 0){
-	
-		if(amplitude == 70){
-			amplitude = 0;
-		}
-		else{
-		
-			amplitude = 70;
-		}
-		*DAC0_CH0DATA = amplitude;
-		*DAC0_CH1DATA = amplitude;
+	if (interruptCount % (22100/song[note]) == 0) {
+		amplitude = (amplitude == 70) ? 0 : 70;
+		writeToDAC(amplitude);
 	}
 }
 
@@ -67,53 +58,50 @@ void __attribute__ ((interrupt)) GPIO_ODD_IRQHandler()
 //Handles the interrupts from the controller
 void handleInput()
 {
-	*GPIO_IFC = *GPIO_IF;
-	*SCR = 2;
+	*GPIO_IFC = *GPIO_IF;				//Clears interruptflag 
+	toSleep(2);						//Enters energy mode 2 (sleep on exit, not deepsleep)
 	int buttonValues = *GPIO_PC_DIN;
 	
-	if(CHECK_BTN(buttonValues, 5)){ //If button 6 is pressed
-		*GPIO_PA_DOUT = ~(1 << 13);
-		setSong(explosion, sizeof(explosion)/sizeof(int), 5000);
-	}
-	else if(CHECK_BTN(buttonValues, 6)){
-		*GPIO_PA_DOUT = ~(1 << 14);
-		setSong(happyBirthday, sizeof(happyBirthday)/sizeof(int), 5000);
-		
-	}
-	else if(CHECK_BTN(buttonValues, 7)){
-		*GPIO_PA_DOUT = ~(1 << 15);
-		setSong(acidSong, sizeof(acidSong)/sizeof(int), 5000);
-	}
-	else if(CHECK_BTN(buttonValues, 4)){
+	if (CHECK_BTN(buttonValues, 4)) { // If button 5 is pressed
+/*		int* happySamples = instantiateSong(0);*/
 		*GPIO_PA_DOUT = ~(1 << 12);
-		setSong(acidSound, sizeof(acidSound)/sizeof(int), 500);
+		setSong(happy, happySamples, sizeof(happy)/sizeof(int));
 	}
-	else{
-		*SCR = 6;
+	else if (CHECK_BTN(buttonValues, 5)) {
+/*		int* acid1Samples = instantiateSong(1);*/
+		*GPIO_PA_DOUT = ~(1 << 13);
+		setSong(acid1, acid1Samples, sizeof(acid1)/sizeof(int));
 	}
-	return;
+	else if (CHECK_BTN(buttonValues, 6)) {
+/*		int* acid2Samples = instantiateSong(2);*/
+		*GPIO_PA_DOUT = ~(1 << 14);
+		setSong(acid2, acid2Samples, sizeof(acid2)/sizeof(int));
+	}
+	else if (CHECK_BTN(buttonValues, 7)) {
+/*		int* explosionSamples = instantiateSong(3);*/
+		*GPIO_PA_DOUT = ~(1 << 15);
+		setSong(explosion, explosionSamples, sizeof(explosion)/sizeof(int));
+	}
+	else {
+		toSleep(6);
+	}
 }
 
-void setSong(int appliedSong[], int lengthOfSong, int lengthOfNotes)
+void setSong(int appliedSong[], int lengthOfNotes[], int lengthOfSong)
 {
-		note = 0;
-		song = appliedSong;
-		noteLength = lengthOfNotes;
-		songLength = lengthOfSong;
-		setupDAC();
-		startTimer();
-		return;
+	note = 0;
+	song = appliedSong;
+	noteLengths = lengthOfNotes;
+	songLength = lengthOfSong;
+	setupDAC();
+	startTimer();
 }
 
 void onEndedSong()
 {
-		stopTimer();
-		deactivateDAC();
-		*GPIO_PA_DOUT = 0xFF << 8; //Clears the LEDlights
-		note = 0;
-		*DAC0_CH0DATA = 0;
-		*DAC0_CH1DATA = 0;
-		*SCR = 6;
-		return;
+	stopTimer();				
+	deactivateDAC();
+	*GPIO_PA_DOUT = 0xFF << 8; 	//Clears the LEDlights
+	toSleep(6);
 }
 

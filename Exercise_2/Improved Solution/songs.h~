@@ -1,5 +1,0 @@
-#ifndef songs.h
-#define songs.h
-void playSong(int* notes, int noteCount, int noteLength);
-void playNote(int frequency, int noteLength);
-#endif

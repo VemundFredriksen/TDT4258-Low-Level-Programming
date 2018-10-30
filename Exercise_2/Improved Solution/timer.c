@@ -1,6 +1,5 @@
 #include <stdint.h>
 #include <stdbool.h>
-#include "timer.h"
 #include "efm32gg.h"
 
 /*
@@ -25,14 +24,14 @@ void setupTimer(uint16_t period)
 	 *TIMER1_IEN = 1;
 }
 
-inline void startTimer()
+void startTimer()
 {
 	 *CMU_HFPERCLKEN0 |= (1 << 6);
 	 *TIMER1_IEN = 1;
 	 *TIMER1_CMD = 1;
 }
 
-inline void stopTimer()
+void stopTimer()
 {
 	 *CMU_HFPERCLKEN0 &= ~(1 << 6);
 	 *TIMER1_IEN = 0;
