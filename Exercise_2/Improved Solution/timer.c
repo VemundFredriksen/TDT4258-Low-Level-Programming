@@ -2,39 +2,28 @@
 #include <stdbool.h>
 #include "efm32gg.h"
 
-/*
- * function to setup the timer 
- */
 void setupTimer(uint16_t period)
 {
+	// Enable timer clock
+	*CMU_HFPERCLKEN0 |= (1 << 6);
 
-	 // This will cause a timer interrupt to be generated every (period)
-	 // cycles. Remember to configure the NVIC as well, otherwise the
-	 // interrupt handler will not be invoked. 
-	 
-	 
-	 //Enable timer clock
-	 uint32_t timerEnable = 1 << 6;
-	 *CMU_HFPERCLKEN0 |= timerEnable;
-	 
-	 //Writes the period to the timer
-	 *TIMER1_TOP = period;
-	 
-	 //Enable timer interrupt generation
-	 *TIMER1_IEN = 1;
+	// Writes the period to the timer
+	*TIMER1_TOP = period;
+	
+	// Disable timer clock
+	*CMU_HFPERCLKEN0 &= ~(1 << 6);
 }
 
 void startTimer()
 {
-	 *CMU_HFPERCLKEN0 |= (1 << 6);
-	 *TIMER1_IEN = 1;
-	 *TIMER1_CMD = 1;
+	*CMU_HFPERCLKEN0 |= (1 << 6);
+	*TIMER1_IEN = 1;
+	*TIMER1_CMD = 1;
 }
 
 void stopTimer()
 {
-	 *CMU_HFPERCLKEN0 &= ~(1 << 6);
-	 *TIMER1_IEN = 0;
-	 *TIMER1_CMD = 2;
+	*CMU_HFPERCLKEN0 &= ~(1 << 6);
+	*TIMER1_IEN = 0;
+	*TIMER1_CMD = 2;
 }
-

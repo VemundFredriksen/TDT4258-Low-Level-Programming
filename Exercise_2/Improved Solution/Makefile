@@ -1,5 +1,3 @@
-# Example Makefile
-#
 # Exercise 2, TDT4258
 
 CC=arm-none-eabi-gcc

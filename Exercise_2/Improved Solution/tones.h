@@ -18,7 +18,7 @@
 #define Cs4 277
 #define D4  294
 #define Ds4 311
-#define E4  330	
+#define E4  330
 #define F4  349
 #define Fs4 370
 #define G4  392
