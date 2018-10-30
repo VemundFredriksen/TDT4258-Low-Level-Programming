@@ -16,3 +16,9 @@ void setupDAC()
 	*DAC0_CH0CTRL = 1;
 	*DAC0_CH1CTRL = 1;
 }
+
+void writeToDAC(int sample)
+{
+	*DAC0_CH0DATA = sample;
+	*DAC0_CH1DATA = sample;
+}

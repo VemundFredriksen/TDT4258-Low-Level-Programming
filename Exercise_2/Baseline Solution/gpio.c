@@ -8,28 +8,21 @@
  */
 void setupGPIO()
 {
-	/*
-	 * Enable GPIO clock
-	 */
+	// Enable GPIO clock
 	*CMU_HFPERCLKEN0 |= CMU2_HFPERCLKEN0_GPIO;
 	
-	/*
-	 * Set up gamepad LED lights as output
-	 */
-	*GPIO_PA_CTRL = 2;	/* set high drive strength */
-	*GPIO_PA_MODEH = 0x55555555;	/* set pins A8-15 as output */
-	*GPIO_PA_DOUT = 0xFFFFFFFF;		//Turns the LED lights of
+	// Set up gamepad LED lights as output
+	*GPIO_PA_CTRL = 2;				// set high drive strength
+	*GPIO_PA_MODEH = 0x55555555;	// set pins A8-15 as output
+	*GPIO_PA_DOUT = 0xFFFFFFFF;		// turn the LED lights off
 	
-	/*
-	 * Set up gamepad buttons as input
-	 */
-	*GPIO_PC_MODEL = 0x33333333;	/* set pins D0-7 as input */
+	// Set up gamepad buttons as input
+	*GPIO_PC_MODEL = 0x33333333;	// set pins D0-7 as input
 	
-	/*
-	 * Enables pullup resistors on buttons
-	 */
-	 *GPIO_PC_DOUT = 0xFF;
+	// Enables pullup resistors on buttons
+	*GPIO_PC_DOUT = 0xFF;
 }
+
 int readButtons()
 {
 	return *GPIO_PC_DIN;

@@ -1,5 +1,3 @@
-# Example Makefile
-#
 # Exercise 2, TDT4258
 
 CC=arm-none-eabi-gcc
@@ -14,15 +12,15 @@ LINKERSCRIPT=lib/efm32gg.ld
 ex2.bin : ex2.elf
 	${OBJCOPY} -O binary $< $@
 
-ex2.elf : ex2.o timer.o dac.o gpio.o
-	${LD} -T ${LINKERSCRIPT} $^ -o $@ ${LDFLAGS} -lm
+ex2.elf : ex2.o timer.o dac.o gpio.o songs.o
+	${LD} -T ${LINKERSCRIPT} $^ -o $@ ${LDFLAGS}
 
 %.o : %.c
 	${CC} ${CFLAGS} -c $< -o $@
 
 .PHONY : pretty
 pretty :
-	-indent *.c *.h
+	-indent *.c *.h -kr -i8
 
 .PHONY : upload
 upload :
