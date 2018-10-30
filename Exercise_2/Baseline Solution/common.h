@@ -9,7 +9,7 @@
 
 //========== Songs.c ==========//
 void playNote(int frequency, int noteLength);
-void playSong(int* notes, int noteCount, int noteLength);
+void playSong(int* notes, int* noteLengths, int noteCount);
 
 //========== DAC.c ==========//
 void setupDAC();

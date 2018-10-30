@@ -4,7 +4,6 @@
 #include "common.h"
 #include "songs.c"
 
-
 /*
  * Your code will start executing here 
  */
@@ -16,6 +15,11 @@ int main(void)
 	setupGPIO();
 	setupDAC();
 	setupTimer(SAMPLE_PERIOD);
+	
+	happySamples = instantiateSong(0);
+	acid1Samples = instantiateSong(1);
+	acid2Samples = instantiateSong(2);
+	explosionSamples = instantiateSong(3);
 	
 	//Polling loop
 	while(1){ 
@@ -32,16 +36,16 @@ int main(void)
 */
 void handleInput(int buttonValues)
 {
-	if(CHECK_BTN(buttonValues, 5)){ //If button 6 is pressed
-		playSong(explosion, sizeof(explosion)/sizeof(int), 2500);
+	if (CHECK_BTN(buttonValues, 4)) { //If button 5 is pressed
+		playSong(happy, happySamples, sizeof(happy)/sizeof(int));
 	}
-	else if(CHECK_BTN(buttonValues, 6)){
-		playSong(happyBirthday, sizeof(happyBirthday)/sizeof(int), 1000);
+	else if (CHECK_BTN(buttonValues, 5)) {
+		playSong(acid1, acid1Samples, sizeof(acid1)/sizeof(int));
 	}
-	else if(CHECK_BTN(buttonValues, 7)){
-		playSong(acidSong, sizeof(acidSong)/sizeof(int), 1000);
+	else if (CHECK_BTN(buttonValues, 6)) {
+		playSong(acid2, acid2Samples, sizeof(acid2)/sizeof(int));
 	}
-	else if(CHECK_BTN(buttonValues, 4)){
-		playSong(acidSound, sizeof(acidSound)/sizeof(int), 1000);
+	else if (CHECK_BTN(buttonValues, 7)) {
+		playSong(explosion, explosionSamples, sizeof(explosion)/sizeof(int));
 	}
 }
