@@ -6,12 +6,12 @@
 /*
  *	Function Declaration
  */
-//========== Songs.c ==========//
+//========== songs.c ==========//
 void playNote(int frequency, int noteLength);
 void playSong(int *notes, int *noteLengths, int noteCount);
 int *instantiateSong(int songIndex);
 
-//========== DAC.c ==========//
+//========== dac.c ==========//
 void setupDAC();
 void writeToDAC(int sample);
 

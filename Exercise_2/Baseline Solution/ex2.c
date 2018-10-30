@@ -10,7 +10,7 @@
  */
 void handleInput(int buttonValues)
 {
-	if (CHECK_BTN(buttonValues, 4)) {	// If button 5 is pressed
+	if (CHECK_BTN(buttonValues, 4)) {	// If button SW5 is pressed
 		playSong(happy, happySamples, sizeof(happy) / sizeof(int));
 	} else if (CHECK_BTN(buttonValues, 5)) {
 		playSong(acid1, acid1Samples, sizeof(acid1) / sizeof(int));
