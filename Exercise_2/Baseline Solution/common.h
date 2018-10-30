@@ -8,7 +8,7 @@
  */
 //========== Songs.c ==========//
 void playNote(int frequency, int noteLength);
-void playSong(int* notes, int* noteLengths, int noteCount);
+void playSong(int *notes, int *noteLengths, int noteCount);
 int *instantiateSong(int songIndex);
 
 //========== DAC.c ==========//
@@ -26,7 +26,7 @@ void setupTimer();
 /*
  *	Macro declarations
  */
-#define CHECK_BTN(input,btn) (~(input) & (1<<(btn)))		// Used to see if a button is pressed (active low)
+#define CHECK_BTN(input,btn) (~(input) & (1<<(btn)))	// Used to see if a button is pressed (active low)
 
 
 /*
@@ -37,10 +37,10 @@ int acid1[20];
 int acid2[24];
 int explosion[48];
 
-int* happySamples;
-int* acid1Samples;
-int* acid2Samples;
-int* explosionSamples;
+int *happySamples;
+int *acid1Samples;
+int *acid2Samples;
+int *explosionSamples;
 
 
 #endif
