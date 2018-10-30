@@ -5,10 +5,16 @@
 #define   SAMPLE_PERIOD   317
 
 //========== Song declarations ==========//
-int happyBirthday[70];
-int acidSong[20];
-int acidSound[24];
+int happy[31];
+int acid1[20];
+int acid2[24];
 int explosion[48];
+
+int* happySamples;
+int* acid1Samples;
+int* acid2Samples;
+int* explosionSamples;
+
 
 /*
  *	Function declarations

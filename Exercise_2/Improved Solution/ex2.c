@@ -8,6 +8,12 @@
  */
 void setupGPIO();
 void setupNVIC();
+int *instantiateSong(int songIndex);
+
+int* happySamples;
+int* acid1Samples;
+int* acid2Samples;
+int* explosionSamples;
 
 int main(void)
 {
@@ -15,6 +21,11 @@ int main(void)
 	setupTimer(SAMPLE_PERIOD);
 	setupNVIC();
 	toSleep(6);
+	
+	happySamples = instantiateSong(0);
+	acid1Samples = instantiateSong(1);
+	acid2Samples = instantiateSong(2);
+	explosionSamples = instantiateSong(3);
 	
 	//Enter deep sleep (Wait For Interrupt)
 	__asm__("WFI");
