@@ -14,4 +14,5 @@ Exercise 2 is mainly about writing readable and effective code in the programmin
 
 ## Exercise 3
 **C, Linux Kernal, Programming a hardware driver, Graphics, Game**
+
 In exercise 3 the assignment was to create a game. The game is written in the language C, but this time, instead of bare bone C like in exercise 2, the program is running on top of a linux kernal. Part of the assignment is to create a driver for the game pad, in the game code the communication with the external controller will be executed through the driver created by the group. As always, good practice regarding code is weighted as well as power consumption tweaks where possible.
