@@ -1,0 +1,14 @@
+ptxd_install_run preinst
+ptxd_install_file '-' '/lib/modules/3.12.0-rc4/modules.dep.bin' '0' '0' '0644' 'k'
+ptxd_install_file '-' '/lib/modules/3.12.0-rc4/modules.alias.bin' '0' '0' '0644' 'k'
+ptxd_install_file '-' '/lib/modules/3.12.0-rc4/modules.alias' '0' '0' '0644' 'k'
+ptxd_install_file '-' '/lib/modules/3.12.0-rc4/modules.builtin.bin' '0' '0' '0644' 'k'
+ptxd_install_file '-' '/lib/modules/3.12.0-rc4/modules.devname' '0' '0' '0644' 'k'
+ptxd_install_file '-' '/lib/modules/3.12.0-rc4/modules.order' '0' '0' '0644' 'k'
+ptxd_install_file '-' '/lib/modules/3.12.0-rc4/modules.symbols' '0' '0' '0644' 'k'
+ptxd_install_file '-' '/lib/modules/3.12.0-rc4/modules.builtin' '0' '0' '0644' 'k'
+ptxd_install_file '-' '/lib/modules/3.12.0-rc4/modules.dep' '0' '0' '0644' 'k'
+ptxd_install_file '-' '/lib/modules/3.12.0-rc4/modules.symbols.bin' '0' '0' '0644' 'k'
+ptxd_install_file '-' '/lib/modules/3.12.0-rc4/extra/driver-gamepad.ko' '0' '0' '0644' 'k'
+ptxd_install_file '-' '/lib/modules/3.12.0-rc4/modules.softdep' '0' '0' '0644' 'k'
+ptxd_install_run postinst

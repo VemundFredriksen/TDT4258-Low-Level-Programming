@@ -1,0 +1,9 @@
+Package:	game
+Priority:	optional
+Version:	1.0
+Section:  	base
+Architecture:	arm
+Maintainer:	""
+Depends:	
+Source: 	http://www.ptxdist.org/
+Description:	missing

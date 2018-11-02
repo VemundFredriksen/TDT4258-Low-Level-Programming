@@ -1,0 +1,9 @@
+Package:	os-release
+Priority:	optional
+Version:	1.0
+Section:  	base
+Architecture:	arm
+Maintainer:	"Michael Olbrich <m.olbrich@pengutronix.de>"
+Depends:	
+Source: 	http://www.ptxdist.org/
+Description:	missing

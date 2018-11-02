@@ -1,0 +1,58 @@
+/*
+ * Device tree for EFM32GG-DK3750 development board.
+ *
+ * Documentation available from
+ * http://www.silabs.com/Support%20Documents/TechnicalDocs/efm32gg-dk3750-ug.pdf
+ */
+
+/dts-v1/;
+#include "efm32gg.dtsi"
+
+/ {
+	model = "Energy Micro Giant Gecko Development Kit";
+	compatible = "efm32,dk3750";
+
+	chosen {
+		bootargs = "console=ttyefm4,115200 init=/linuxrc ignore_loglevel ihash_entries=64 dhash_entries=64 earlyprintk uclinux.physaddr=0x18400000 root=/dev/mtdblock0";
+	};
+
+	memory {
+		reg = <0x16000000 0x3da000>;
+	};
+
+	soc {
+		adc@40002000 {
+			status = "ok";
+		};
+
+		i2c@4000a000 {
+			location = <3>;
+			status = "ok";
+
+			temp@48 {
+				compatible = "st,stds75";
+				reg = <0x48>;
+			};
+
+			eeprom@50 {
+				compatible = "microchip,24c02";
+				reg = <0x50>;
+				pagesize = <16>;
+			};
+		};
+
+		uart4: uart@4000e400 { /* UART1 */
+			location = <2>;
+			status = "ok";
+		};
+	};
+
+ 	framebuffer {
+		compatible = "dk3750_fb";
+		reg = <0x84000000 0x4000000>;
+ 		width = <320>;
+ 		height = <240>;
+		stride = <(320 * 2)>;
+		format = "r5g6b5";
+	};
+};

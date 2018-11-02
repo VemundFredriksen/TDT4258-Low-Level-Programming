@@ -1,0 +1,9 @@
+Package:	fbtest
+Priority:	optional
+Version:	20041102+1
+Section:  	base
+Architecture:	arm
+Maintainer:	"Robert Schwebel <r.schwebel@pengutronix.de>"
+Depends:	
+Source: 	http://www.ptxdist.org/
+Description:	missing

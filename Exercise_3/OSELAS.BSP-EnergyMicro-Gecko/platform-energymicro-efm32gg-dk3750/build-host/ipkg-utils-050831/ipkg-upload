@@ -1,0 +1,60 @@
+#!/usr/bin/env python
+
+import sys, os, os.path, re
+
+# User-configurable options
+
+url='http://handhelds.org/~familiar/cgi-bin/upload-package.cgi'
+feed='unstable'
+
+def error(*msgs):
+    for m in msgs:
+        sys.stderr.write(m)
+        sys.stderr.write('\n')
+    sys.exit(1)
+
+# The actual script
+
+if len(sys.argv) == 1:
+    error(("Usage: %s file.ipk [file2.ipk ...]\n" % sys.argv[0]) ,
+          ("Uploads packages to Familiar's %s feed at handhelds.org" % feed))
+
+if os.system('which curl >/dev/null 2>&1') != 0:
+    error("Sorry: %s requires curl which appears to not be available." % sys.argv[0])
+
+for pkg in sys.argv[1:]:
+    if not os.path.exists(pkg):
+        error("%s: No such file or directory")
+    if not os.path.exists(pkg + '.asc'):
+        os.system('gpg -sb --armor %s' % pkg)
+
+
+for pkg in sys.argv[1:]:
+    print "Uploading %s to %s feed" % (pkg, feed)
+    m = re.match('.*.batch', pkg)
+    dict = {'feed': feed, 'pkg': pkg, 'url': url}
+    if m:
+        dict['tarfile'] = ('/tmp/ipkg-upload.%d.tar' % os.getpid())
+	os.system('rm -rf %(tarfile)s' % dict)
+        os.system('tar cf %(tarfile)s `awk \'{ print $2 }\' < %(pkg)s`' % dict)
+        os.system('curl \
+			-F feedname=%(feed)s \
+			-F datafilename=@%(tarfile)s \
+			-F batchfilename=@%(pkg)s \
+			-F signaturefilename=@%(pkg)s.asc \
+			$url 2>&1 | tee %(pkg)s.upload.html | egrep "(Error|Warning):" | sed \'s:</*p>::g;s:</*b>::g\''
+                  % dict)
+        os.system('rm -f %(tarfile)s' % dict)
+        os.system('grep -i signature %(pkg)s.upload.html' % dict)
+    else:
+        os.system('curl \
+            		-F feedname=%(feed)s \
+			-F filename=@%(pkg)s \
+			-F signaturefilename=@%(pkg)s.asc \
+		        -F sourcefilename="" \
+			%(url)s 2>&1 | tee %(pkg)s.upload.html | egrep "(Error|Warning):" | sed "s:</*p>::g;s:</*b>::g"'
+                  % dict)
+        os.system('grep -i signature %(pkg)s.upload.html' % dict)
+    print ("Done. See complete results in %(pkg)s.upload.html" % dict)
+
+

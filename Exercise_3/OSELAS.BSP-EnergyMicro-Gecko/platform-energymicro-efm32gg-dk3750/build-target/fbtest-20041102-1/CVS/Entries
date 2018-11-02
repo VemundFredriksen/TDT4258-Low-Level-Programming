@@ -1,0 +1,20 @@
+/COPYING/1.1.1.1/Mon Apr 23 16:42:09 2001//
+/Makefile/1.5/Mon Jan 20 12:58:47 2003//
+/Rules.make/1.4/Mon Jan 20 12:58:47 2003//
+/clut.c/1.5/Sun Oct  6 20:14:20 2002//
+/color.c/1.5/Mon Jan 20 13:07:39 2003//
+/colormap.c/1.2/Sun Oct  6 20:14:20 2002//
+/console.c/1.4/Tue Jan 21 18:01:47 2003//
+/fb.c/1.10/Fri Apr  4 12:07:55 2003//
+/main.c/1.8/Fri Apr  4 11:07:50 2003//
+/pixmap.c/1.3/Mon Jan 20 13:07:39 2003//
+/tests.c/1.10/Mon Jan 20 13:07:39 2003//
+/util.c/1.5/Mon Jan 20 13:07:39 2003//
+/visual.c/1.3/Tue May  1 14:39:20 2001//
+D/drawops////
+D/fonts////
+D/images////
+D/include////
+D/pnmtohex////
+D/tests////
+D/visops////

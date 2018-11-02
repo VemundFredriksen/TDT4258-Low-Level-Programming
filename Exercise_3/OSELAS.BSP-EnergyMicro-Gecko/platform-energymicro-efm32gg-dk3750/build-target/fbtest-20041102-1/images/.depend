@@ -1,0 +1,2 @@
+penguin.o: penguin.c ../include/image.h
+penguin.o: penguin.c ../include/image.h

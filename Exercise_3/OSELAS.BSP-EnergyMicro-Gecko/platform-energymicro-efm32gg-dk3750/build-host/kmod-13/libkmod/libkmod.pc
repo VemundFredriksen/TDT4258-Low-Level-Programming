@@ -1,0 +1,11 @@
+prefix=
+exec_prefix=
+libdir=/lib
+includedir=/include
+
+Name: libkmod
+Description: Library to deal with kernel modules
+Version: 13
+Libs: -L${libdir} -lkmod
+Libs.private:  
+Cflags: -I${includedir}

@@ -1,0 +1,7 @@
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/boot/dts/efm32gg-dk3750.dts.tmp: \
+ /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/boot/dts/efm32gg-dk3750.dts \
+ /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/boot/dts/efm32gg.dtsi \
+ /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/boot/dts/armv7-m.dtsi \
+ /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/boot/dts/skeleton.dtsi \
+ /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/boot/dts/include/dt-bindings/clock/efm32-cmu.h
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/images/efm32gg-dk3750.dtb: $(wildcard /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/boot/dts/efm32gg-dk3750.dts.tmp)

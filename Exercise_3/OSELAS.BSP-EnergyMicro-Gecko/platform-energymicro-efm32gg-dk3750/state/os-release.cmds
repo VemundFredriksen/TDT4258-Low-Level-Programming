@@ -1,0 +1,10 @@
+ptxd_install_run preinst
+ptxd_install_alternative '/etc/os-release' '' '0' '0' '0644' ''
+ptxd_install_replace '/etc/os-release' '@VENDOR@' 'EnergyMicro'
+ptxd_install_replace '/etc/os-release' '@PROJECT@' 'Gecko'
+ptxd_install_replace '/etc/os-release' '@PRJVERSION@' '-2012.10.0+'
+ptxd_install_replace '/etc/os-release' '@PLATFORM@' 'energymicro-efm32gg-dk3750'
+ptxd_install_replace '/etc/os-release' '@PLATVERSION@' '-2012.10.0+'
+ptxd_install_replace '/etc/os-release' '@PTXDIST_VERSION@' '2013.07.1'
+ptxd_install_replace '/etc/os-release' '@DATE@' '2018-11-02T13:00:49+0100'
+ptxd_install_run postinst

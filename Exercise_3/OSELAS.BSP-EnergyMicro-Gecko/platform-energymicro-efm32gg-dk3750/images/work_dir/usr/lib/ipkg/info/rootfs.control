@@ -1,0 +1,9 @@
+Package:	rootfs
+Priority:	optional
+Version:	1.0.0
+Section:  	base
+Architecture:	arm
+Maintainer:	"Robert Schwebel <r.schwebel@pengutronix.de>"
+Depends:	
+Source: 	http://www.ptxdist.org/
+Description:	missing

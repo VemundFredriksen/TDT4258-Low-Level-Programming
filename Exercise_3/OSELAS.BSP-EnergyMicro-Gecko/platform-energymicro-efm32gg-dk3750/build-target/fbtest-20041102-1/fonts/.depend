@@ -1,0 +1,3 @@
+pearl8x8.o: pearl8x8.c ../include/font.h
+sun12x22.o: sun12x22.c ../include/font.h
+vga8x16.o: vga8x16.c ../include/font.h

@@ -1,0 +1,262 @@
+test001.o: test001.c \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/unistd.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/features.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/uClibc_config.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/sys/cdefs.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/posix_opt.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/wordsize.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/lib/gcc/arm-cortexm3-uclinuxeabi/4.7.2/include/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/typesizes.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/confname.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/getopt.h \
+ ../include/types.h ../include/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/int-ll64.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/i2c.h \
+ ../include/drawops.h ../include/visual.h ../include/test.h \
+ ../include/util.h
+test002.o: test002.c \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/unistd.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/features.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/uClibc_config.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/sys/cdefs.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/posix_opt.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/wordsize.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/lib/gcc/arm-cortexm3-uclinuxeabi/4.7.2/include/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/typesizes.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/confname.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/getopt.h \
+ ../include/types.h ../include/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/int-ll64.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/i2c.h \
+ ../include/drawops.h ../include/visual.h ../include/test.h \
+ ../include/util.h
+test003.o: test003.c \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/unistd.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/features.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/uClibc_config.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/sys/cdefs.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/posix_opt.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/wordsize.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/lib/gcc/arm-cortexm3-uclinuxeabi/4.7.2/include/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/typesizes.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/confname.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/getopt.h \
+ ../include/types.h ../include/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/int-ll64.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/i2c.h \
+ ../include/drawops.h ../include/visual.h ../include/test.h \
+ ../include/clut.h ../include/util.h
+test004.o: test004.c \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/unistd.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/features.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/uClibc_config.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/sys/cdefs.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/posix_opt.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/wordsize.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/lib/gcc/arm-cortexm3-uclinuxeabi/4.7.2/include/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/typesizes.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/confname.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/getopt.h \
+ ../include/types.h ../include/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/int-ll64.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/i2c.h \
+ ../include/color.h ../include/drawops.h ../include/image.h \
+ ../include/pixmap.h ../include/visual.h ../include/visops.h \
+ ../include/test.h ../include/util.h
+test005.o: test005.c \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/unistd.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/features.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/uClibc_config.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/sys/cdefs.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/posix_opt.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/wordsize.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/lib/gcc/arm-cortexm3-uclinuxeabi/4.7.2/include/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/typesizes.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/confname.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/getopt.h \
+ ../include/types.h ../include/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/int-ll64.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/i2c.h \
+ ../include/drawops.h ../include/visual.h ../include/test.h \
+ ../include/clut.h ../include/util.h
+test006.o: test006.c \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/unistd.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/features.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/uClibc_config.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/sys/cdefs.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/posix_opt.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/wordsize.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/lib/gcc/arm-cortexm3-uclinuxeabi/4.7.2/include/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/typesizes.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/confname.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/getopt.h \
+ ../include/types.h ../include/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/int-ll64.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/i2c.h \
+ ../include/drawops.h ../include/visual.h ../include/test.h \
+ ../include/clut.h ../include/util.h
+test007.o: test007.c \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/unistd.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/features.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/uClibc_config.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/sys/cdefs.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/posix_opt.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/wordsize.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/lib/gcc/arm-cortexm3-uclinuxeabi/4.7.2/include/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/typesizes.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/confname.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/getopt.h \
+ ../include/types.h ../include/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/int-ll64.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/i2c.h \
+ ../include/drawops.h ../include/visual.h ../include/test.h \
+ ../include/util.h
+test008.o: test008.c \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/unistd.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/features.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/uClibc_config.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/sys/cdefs.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/posix_opt.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/wordsize.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/lib/gcc/arm-cortexm3-uclinuxeabi/4.7.2/include/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/typesizes.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/confname.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/getopt.h \
+ ../include/types.h ../include/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/int-ll64.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/i2c.h \
+ ../include/drawops.h ../include/visual.h ../include/visops.h \
+ ../include/color.h ../include/test.h ../include/util.h
+test009.o: test009.c \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/unistd.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/features.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/uClibc_config.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/sys/cdefs.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/posix_opt.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/wordsize.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/lib/gcc/arm-cortexm3-uclinuxeabi/4.7.2/include/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/typesizes.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/confname.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/getopt.h \
+ ../include/types.h ../include/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/int-ll64.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/i2c.h \
+ ../include/color.h ../include/drawops.h ../include/image.h \
+ ../include/pixmap.h ../include/visual.h ../include/visops.h \
+ ../include/test.h ../include/util.h
+test010.o: test010.c \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/unistd.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/features.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/uClibc_config.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/sys/cdefs.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/posix_opt.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/wordsize.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/lib/gcc/arm-cortexm3-uclinuxeabi/4.7.2/include/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/typesizes.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/confname.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/bits/getopt.h \
+ ../include/types.h ../include/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/fb.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/int-ll64.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/bitsperlong.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/stddef.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/asm-generic/posix_types.h \
+ /opt/ex3/OSELAS.Toolchain-2012.12.0/arm-cortexm3-uclinuxeabi/gcc-4.7.2-uclibc-0.9.33.2-binutils-2.22-kernel-3.6-sanitized/sysroot-arm-cortexm3-uclinuxeabi/usr/include/linux/i2c.h \
+ ../include/font.h ../include/console.h ../include/visual.h \
+ ../include/test.h ../include/util.h

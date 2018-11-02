@@ -1,0 +1,136 @@
+#!/bin/sh
+#
+# <zaurus@bredband.net>
+# Modified by Aman Gupta <oz@themastermind1.net>
+# Modified by Matthias Hentges to adjust to changes in OZ <oe@hentges.net>
+
+usage () {
+	echo "Usage: "
+	echo "    $0 add    packagename (links \"packagename\" to root filesystem)"
+	echo "    $0 remove packagename (unlinks \"packagename\" from root filesystem)"
+	echo "    $0 list   mountpoint  (lists packages on \"mountpoint\", e.g. '/mnt/card')"
+	echo "    $0 mount  mountpoint  (links all packages on \"mountpoint\", e.g. '/mnt/card')"
+	echo "    $0 umount mountpoint  (unlinks all packages on \"mountpoint\", e.g. '/mnt/card')"
+	exit
+}
+
+findpackage () {
+	echo "*** Locating package"
+		
+	if test -e /etc/ipkg.conf
+	then
+		valid_mount_points=`cat /etc/ipkg.conf| grep ^dest| awk '{print $3}'|sed "s/\/$//"`
+	else
+		valid_mount_points="/mnt/card /mnt/cf /mnt/ram /media/card /media/cf /media/ram"
+	fi
+	
+	for mount_point in $valid_mount_points
+	do
+		if [ -e "$mount_point/usr/lib/ipkg/info/$PACKAGE.list" ]; then
+			PREFIX="$mount_point"
+			files=`cat "$PREFIX/usr/lib/ipkg/info/$PACKAGE.list" |sed -e "s#$mount_point##g"`
+		fi
+	done
+	
+	
+	if test -z "$files"
+	then
+		echo "Package \"$PACKAGE\" not found."
+		exit
+	else	
+		echo "*** Found package on $PREFIX"
+	fi
+}
+
+add () {
+	echo "*** Adding $PACKAGE"
+	echo "$files" |
+	while read line; do
+		test -L "$line" && rm "$line"
+		if [ ! -e "$line" ]; then
+			# Only if it doesn't already exist.
+			if [ -d "$PREFIX$line" ]; then
+				# It's a directory.
+				`mkdir "$line"`
+			else
+				# It's a file.
+				[ ! -d `dirname $line` ] && mkdir -p `dirname $line`
+				`ln -s "$PREFIX$line" "$line"`
+			fi
+		fi
+	done
+}
+
+remove () {
+	echo "*** Removing $PACKAGE"
+
+	echo "$files" |
+	while read line; do
+		if [ -e "$line" ]; then
+			# File/Directory exists.
+			if [ -d "$line" ]; then
+				# Directory.
+				contents=$(ls -1 "$line")
+				if [ ! "$contents" ]; then
+					# Empty directory
+					rmdir "$line"
+				fi
+			elif [ -L "$line" ]; then
+				rm "$line"
+			fi
+		fi
+	done
+}
+
+list () {
+	filelist=""
+	files=`ls -1 $LOCATION/usr/lib/ipkg/info/*.list`
+	for filename in $files; do
+		filename=${filename##*/}
+		filename=${filename%%.list}
+		filelist="$filelist $filename"
+	done
+}
+
+COMMAND=$1
+PACKAGE=$2
+LOCATION=$2
+
+if [ $# -ne 2 ]
+then
+	usage
+fi
+
+echo "*** Command: $COMMAND"
+case "$COMMAND" in
+	"add" )
+		findpackage
+		add
+		;;
+	"remove" )
+		findpackage
+		remove
+		;;
+	"list" )
+		list
+		for file in $filelist; do
+			echo $file
+		done
+		;;
+	"mount" )
+		list
+		for file in $filelist; do
+			$0 add $file
+		done
+		;;
+	"umount" )
+		list
+		for file in $filelist; do
+			$0 remove $file
+		done
+esac
+
+echo "*** Done."
+echo ""
+exit
+

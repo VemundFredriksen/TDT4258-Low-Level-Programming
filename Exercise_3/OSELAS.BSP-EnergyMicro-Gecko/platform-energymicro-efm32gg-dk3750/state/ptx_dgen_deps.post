@@ -1,0 +1,1576 @@
+$(STATEDIR)/host-fontconfig.get: $(HOST_FONTCONFIG_SOURCES)
+$(STATEDIR)/host-generatorrunner.get: $(HOST_GENERATORRUNNER_SOURCES)
+$(STATEDIR)/xorg-font-isas-misc.get: $(XORG_FONT_ISAS_MISC_SOURCES)
+$(STATEDIR)/argtable2.get: $(ARGTABLE2_SOURCES)
+$(STATEDIR)/xorg-font-jis-misc.get: $(XORG_FONT_JIS_MISC_SOURCES)
+$(STATEDIR)/host-acl.get: $(HOST_ACL_SOURCES)
+$(STATEDIR)/libmpeg2.get: $(LIBMPEG2_SOURCES)
+$(STATEDIR)/gst-plugins-gl.get: $(GST_PLUGINS_GL_SOURCES)
+$(STATEDIR)/ethtool.get: $(ETHTOOL_SOURCES)
+$(STATEDIR)/bustle.get: $(BUSTLE_SOURCES)
+$(STATEDIR)/host-system-ruby.get: $(HOST_SYSTEM_RUBY_SOURCES)
+$(STATEDIR)/liblist.get: $(LIBLIST_SOURCES)
+$(STATEDIR)/ustr.get: $(USTR_SOURCES)
+$(STATEDIR)/xorg-fonts.get: $(XORG_FONTS_SOURCES)
+$(STATEDIR)/scummvm.get: $(SCUMMVM_SOURCES)
+$(STATEDIR)/glib.get: $(GLIB_SOURCES)
+$(STATEDIR)/lsh.get: $(LSH_SOURCES)
+$(STATEDIR)/xorg-lib-xdmcp.get: $(XORG_LIB_XDMCP_SOURCES)
+$(STATEDIR)/keyutils.get: $(KEYUTILS_SOURCES)
+$(STATEDIR)/libpcap.get: $(LIBPCAP_SOURCES)
+$(STATEDIR)/ddrescue.get: $(DDRESCUE_SOURCES)
+$(STATEDIR)/host-system-jdk.get: $(HOST_SYSTEM_JDK_SOURCES)
+$(STATEDIR)/xorg-font-micro-misc.get: $(XORG_FONT_MICRO_MISC_SOURCES)
+$(STATEDIR)/mplayer.get: $(MPLAYER_SOURCES)
+$(STATEDIR)/host-libnih.get: $(HOST_LIBNIH_SOURCES)
+$(STATEDIR)/tcpdump.get: $(TCPDUMP_SOURCES)
+$(STATEDIR)/cross-insight.get: $(CROSS_INSIGHT_SOURCES)
+$(STATEDIR)/libnetfilter_log.get: $(LIBNETFILTER_LOG_SOURCES)
+$(STATEDIR)/iptables.get: $(IPTABLES_SOURCES)
+$(STATEDIR)/fbterm.get: $(FBTERM_SOURCES)
+$(STATEDIR)/xorg-proto-randr.get: $(XORG_PROTO_RANDR_SOURCES)
+$(STATEDIR)/host-ipkg.get: $(HOST_IPKG_SOURCES)
+$(STATEDIR)/libcgicc.get: $(LIBCGICC_SOURCES)
+$(STATEDIR)/xorg-lib-xi.get: $(XORG_LIB_XI_SOURCES)
+$(STATEDIR)/hpanel.get: $(HPANEL_SOURCES)
+$(STATEDIR)/xorg-font-bh-75dpi.get: $(XORG_FONT_BH_75DPI_SOURCES)
+$(STATEDIR)/fam.get: $(FAM_SOURCES)
+$(STATEDIR)/glew.get: $(GLEW_SOURCES)
+$(STATEDIR)/xorg-lib-xp.get: $(XORG_LIB_XP_SOURCES)
+$(STATEDIR)/json-c.get: $(JSON_C_SOURCES)
+$(STATEDIR)/libical.get: $(LIBICAL_SOURCES)
+$(STATEDIR)/xorg-lib-xt.get: $(XORG_LIB_XT_SOURCES)
+$(STATEDIR)/xorg-lib-xv.get: $(XORG_LIB_XV_SOURCES)
+$(STATEDIR)/module-init-tools.get: $(MODULE_INIT_TOOLS_SOURCES)
+$(STATEDIR)/host-xz.get: $(HOST_XZ_SOURCES)
+$(STATEDIR)/screen.get: $(SCREEN_SOURCES)
+$(STATEDIR)/db.get: $(DB_SOURCES)
+$(STATEDIR)/atkmm.get: $(ATKMM_SOURCES)
+$(STATEDIR)/ifplugd.get: $(IFPLUGD_SOURCES)
+$(STATEDIR)/hexedit.get: $(HEXEDIT_SOURCES)
+$(STATEDIR)/tk.get: $(TK_SOURCES)
+$(STATEDIR)/strongswan.get: $(STRONGSWAN_SOURCES)
+$(STATEDIR)/host-xorg-proto-xcmisc.get: $(HOST_XORG_PROTO_XCMISC_SOURCES)
+$(STATEDIR)/host-dbus-glib.get: $(HOST_DBUS_GLIB_SOURCES)
+$(STATEDIR)/libdaemon.get: $(LIBDAEMON_SOURCES)
+$(STATEDIR)/host-cmake.get: $(HOST_CMAKE_SOURCES)
+$(STATEDIR)/libpng.get: $(LIBPNG_SOURCES)
+$(STATEDIR)/xorg-font-xfree86-type1.get: $(XORG_FONT_XFREE86_TYPE1_SOURCES)
+$(STATEDIR)/links.get: $(LINKS_SOURCES)
+$(STATEDIR)/rsync3.get: $(RSYNC3_SOURCES)
+$(STATEDIR)/xorg-proto-video.get: $(XORG_PROTO_VIDEO_SOURCES)
+$(STATEDIR)/xorg-app-xev.get: $(XORG_APP_XEV_SOURCES)
+$(STATEDIR)/libmad.get: $(LIBMAD_SOURCES)
+$(STATEDIR)/libgd.get: $(LIBGD_SOURCES)
+$(STATEDIR)/xorg-proto-x.get: $(XORG_PROTO_X_SOURCES)
+$(STATEDIR)/xorg-font-bitstream-speedo.get: $(XORG_FONT_BITSTREAM_SPEEDO_SOURCES)
+$(STATEDIR)/sepolgen.get: $(SEPOLGEN_SOURCES)
+$(STATEDIR)/pv.get: $(PV_SOURCES)
+$(STATEDIR)/xorg-font-bh-lucidatypewriter-75dpi.get: $(XORG_FONT_BH_LUCIDATYPEWRITER_75DPI_SOURCES)
+$(STATEDIR)/dt.get: $(DT_SOURCES)
+$(STATEDIR)/nettle.get: $(NETTLE_SOURCES)
+$(STATEDIR)/xz.get: $(XZ_SOURCES)
+$(STATEDIR)/figlet.get: $(FIGLET_SOURCES)
+$(STATEDIR)/libgsf.get: $(LIBGSF_SOURCES)
+$(STATEDIR)/initramfs-user-spec.get: $(INITRAMFS_USER_SPEC_SOURCES)
+$(STATEDIR)/lrzsz.get: $(LRZSZ_SOURCES)
+$(STATEDIR)/x-load.get: $(X_LOAD_SOURCES)
+$(STATEDIR)/host-squashfs-tools.get: $(HOST_SQUASHFS_TOOLS_SOURCES)
+$(STATEDIR)/gdk-pixbuf.get: $(GDK_PIXBUF_SOURCES)
+$(STATEDIR)/libsoup.get: $(LIBSOUP_SOURCES)
+$(STATEDIR)/mono.get: $(MONO_SOURCES)
+$(STATEDIR)/host-system-python.get: $(HOST_SYSTEM_PYTHON_SOURCES)
+$(STATEDIR)/xorg-font-bitstream-75dpi.get: $(XORG_FONT_BITSTREAM_75DPI_SOURCES)
+$(STATEDIR)/dri2proto.get: $(DRI2PROTO_SOURCES)
+$(STATEDIR)/classpath.get: $(CLASSPATH_SOURCES)
+$(STATEDIR)/libdrm.get: $(LIBDRM_SOURCES)
+$(STATEDIR)/uclibc.get: $(UCLIBC_SOURCES)
+$(STATEDIR)/host-opkg.get: $(HOST_OPKG_SOURCES)
+$(STATEDIR)/host-xorg-proto-x.get: $(HOST_XORG_PROTO_X_SOURCES)
+$(STATEDIR)/cross-pkg-config-wrapper.get: $(CROSS_PKG_CONFIG_WRAPPER_SOURCES)
+$(STATEDIR)/arm-memspeed.get: $(ARM_MEMSPEED_SOURCES)
+$(STATEDIR)/base.get: $(BASE_SOURCES)
+$(STATEDIR)/xorg-lib-xrandr.get: $(XORG_LIB_XRANDR_SOURCES)
+$(STATEDIR)/host-mtools.get: $(HOST_MTOOLS_SOURCES)
+$(STATEDIR)/bash.get: $(BASH_SOURCES)
+$(STATEDIR)/libpthread-stubs.get: $(LIBPTHREAD_STUBS_SOURCES)
+$(STATEDIR)/ltp_base.get: $(LTP_BASE_SOURCES)
+$(STATEDIR)/flac.get: $(FLAC_SOURCES)
+$(STATEDIR)/diffutils.get: $(DIFFUTILS_SOURCES)
+$(STATEDIR)/devicekit-disks.get: $(DEVICEKIT_DISKS_SOURCES)
+$(STATEDIR)/file.get: $(FILE_SOURCES)
+$(STATEDIR)/ltp-ballista.get: $(LTP_BALLISTA_SOURCES)
+$(STATEDIR)/flup.get: $(FLUP_SOURCES)
+$(STATEDIR)/gettext-dummy.get: $(GETTEXT_DUMMY_SOURCES)
+$(STATEDIR)/xorg-lib-xscrnsaver.get: $(XORG_LIB_XSCRNSAVER_SOURCES)
+$(STATEDIR)/sysstat.get: $(SYSSTAT_SOURCES)
+$(STATEDIR)/calibrator.get: $(CALIBRATOR_SOURCES)
+$(STATEDIR)/tomcat.get: $(TOMCAT_SOURCES)
+$(STATEDIR)/host-liblzo.get: $(HOST_LIBLZO_SOURCES)
+$(STATEDIR)/fbutils.get: $(FBUTILS_SOURCES)
+$(STATEDIR)/libid3tag.get: $(LIBID3TAG_SOURCES)
+$(STATEDIR)/latencytop.get: $(LATENCYTOP_SOURCES)
+$(STATEDIR)/ssmtp.get: $(SSMTP_SOURCES)
+$(STATEDIR)/bridge-utils.get: $(BRIDGE_UTILS_SOURCES)
+$(STATEDIR)/dbus-glib.get: $(DBUS_GLIB_SOURCES)
+$(STATEDIR)/flex.get: $(FLEX_SOURCES)
+$(STATEDIR)/at91bootstrap.get: $(AT91BOOTSTRAP_SOURCES)
+$(STATEDIR)/xorg-driver-video-dummy.get: $(XORG_DRIVER_VIDEO_DUMMY_SOURCES)
+$(STATEDIR)/os-release.get: $(OS_RELEASE_SOURCES)
+$(STATEDIR)/sudo.get: $(SUDO_SOURCES)
+$(STATEDIR)/gawk.get: $(GAWK_SOURCES)
+$(STATEDIR)/libssh2.get: $(LIBSSH2_SOURCES)
+$(STATEDIR)/supertux.get: $(SUPERTUX_SOURCES)
+$(STATEDIR)/powertop.get: $(POWERTOP_SOURCES)
+$(STATEDIR)/xterm.get: $(XTERM_SOURCES)
+$(STATEDIR)/host-xcb-proto.get: $(HOST_XCB_PROTO_SOURCES)
+$(STATEDIR)/irssi.get: $(IRSSI_SOURCES)
+$(STATEDIR)/xorg-font-misc-ethiopic.get: $(XORG_FONT_MISC_ETHIOPIC_SOURCES)
+$(STATEDIR)/host-ustr.get: $(HOST_USTR_SOURCES)
+$(STATEDIR)/host-libpthread-stubs.get: $(HOST_LIBPTHREAD_STUBS_SOURCES)
+$(STATEDIR)/libsepol.get: $(LIBSEPOL_SOURCES)
+$(STATEDIR)/upstart.get: $(UPSTART_SOURCES)
+$(STATEDIR)/dash.get: $(DASH_SOURCES)
+$(STATEDIR)/xorg-proto-render.get: $(XORG_PROTO_RENDER_SOURCES)
+$(STATEDIR)/geckoboot.get: $(GECKOBOOT_SOURCES)
+$(STATEDIR)/libqxt.get: $(LIBQXT_SOURCES)
+$(STATEDIR)/host-unfs3.get: $(HOST_UNFS3_SOURCES)
+$(STATEDIR)/host-genromfs.get: $(HOST_GENROMFS_SOURCES)
+$(STATEDIR)/host-xorg-lib-xfont.get: $(HOST_XORG_LIB_XFONT_SOURCES)
+$(STATEDIR)/lite.get: $(LITE_SOURCES)
+$(STATEDIR)/networkmanager.get: $(NETWORKMANAGER_SOURCES)
+$(STATEDIR)/qt4.get: $(QT4_SOURCES)
+$(STATEDIR)/xorg-app-rgb.get: $(XORG_APP_RGB_SOURCES)
+$(STATEDIR)/xorg-lib-xft.get: $(XORG_LIB_XFT_SOURCES)
+$(STATEDIR)/libelf.get: $(LIBELF_SOURCES)
+$(STATEDIR)/libtasn1.get: $(LIBTASN1_SOURCES)
+$(STATEDIR)/pyserial.get: $(PYSERIAL_SOURCES)
+$(STATEDIR)/canutils.get: $(CANUTILS_SOURCES)
+$(STATEDIR)/host-directfb.get: $(HOST_DIRECTFB_SOURCES)
+$(STATEDIR)/host-xorg-proto-xext.get: $(HOST_XORG_PROTO_XEXT_SOURCES)
+$(STATEDIR)/trace-cmd.get: $(TRACE_CMD_SOURCES)
+$(STATEDIR)/ckermit.get: $(CKERMIT_SOURCES)
+$(STATEDIR)/host-checkpolicy.get: $(HOST_CHECKPOLICY_SOURCES)
+$(STATEDIR)/audiofile.get: $(AUDIOFILE_SOURCES)
+$(STATEDIR)/cpufrequtils.get: $(CPUFREQUTILS_SOURCES)
+$(STATEDIR)/timeout.get: $(TIMEOUT_SOURCES)
+$(STATEDIR)/cross-nasm.get: $(CROSS_NASM_SOURCES)
+$(STATEDIR)/gzip.get: $(GZIP_SOURCES)
+$(STATEDIR)/libblkid.get: $(LIBBLKID_SOURCES)
+$(STATEDIR)/checkpolicy.get: $(CHECKPOLICY_SOURCES)
+$(STATEDIR)/xorg-font-screen-cyrillic.get: $(XORG_FONT_SCREEN_CYRILLIC_SOURCES)
+$(STATEDIR)/ltp-kernel.get: $(LTP_KERNEL_SOURCES)
+$(STATEDIR)/wayland.get: $(WAYLAND_SOURCES)
+$(STATEDIR)/libxslt.get: $(LIBXSLT_SOURCES)
+$(STATEDIR)/tar.get: $(TAR_SOURCES)
+$(STATEDIR)/kbd.get: $(KBD_SOURCES)
+$(STATEDIR)/xorg-lib-xkbui.get: $(XORG_LIB_XKBUI_SOURCES)
+$(STATEDIR)/gettext.get: $(GETTEXT_SOURCES)
+$(STATEDIR)/gst-plugins-fsl_vpu.get: $(GST_PLUGINS_FSL_VPU_SOURCES)
+$(STATEDIR)/xorg-font-encodings.get: $(XORG_FONT_ENCODINGS_SOURCES)
+$(STATEDIR)/xorg-app-mkfontscale.get: $(XORG_APP_MKFONTSCALE_SOURCES)
+$(STATEDIR)/gdbserver.get: $(GDBSERVER_SOURCES)
+$(STATEDIR)/xorg-lib-xxf86dga.get: $(XORG_LIB_XXF86DGA_SOURCES)
+$(STATEDIR)/boa.get: $(BOA_SOURCES)
+$(STATEDIR)/ptrtd.get: $(PTRTD_SOURCES)
+$(STATEDIR)/xorg-font-mutt-misc.get: $(XORG_FONT_MUTT_MISC_SOURCES)
+$(STATEDIR)/vo-aacenc.get: $(VO_AACENC_SOURCES)
+$(STATEDIR)/hal.get: $(HAL_SOURCES)
+$(STATEDIR)/rc-once.get: $(RC_ONCE_SOURCES)
+$(STATEDIR)/memedit.get: $(MEMEDIT_SOURCES)
+$(STATEDIR)/libx86.get: $(LIBX86_SOURCES)
+$(STATEDIR)/zlib.get: $(ZLIB_SOURCES)
+$(STATEDIR)/fbgrab.get: $(FBGRAB_SOURCES)
+$(STATEDIR)/iozone.get: $(IOZONE_SOURCES)
+$(STATEDIR)/unzip.get: $(UNZIP_SOURCES)
+$(STATEDIR)/xorg-proto-dmx.get: $(XORG_PROTO_DMX_SOURCES)
+$(STATEDIR)/bzip2.get: $(BZIP2_SOURCES)
+$(STATEDIR)/htop.get: $(HTOP_SOURCES)
+$(STATEDIR)/host-libiconv.get: $(HOST_LIBICONV_SOURCES)
+$(STATEDIR)/libusb.get: $(LIBUSB_SOURCES)
+$(STATEDIR)/xorg-font-alias.get: $(XORG_FONT_ALIAS_SOURCES)
+$(STATEDIR)/mysql.get: $(MYSQL_SOURCES)
+$(STATEDIR)/gst-plugins-good1.get: $(GST_PLUGINS_GOOD1_SOURCES)
+$(STATEDIR)/xmlstarlet.get: $(XMLSTARLET_SOURCES)
+$(STATEDIR)/host-python.get: $(HOST_PYTHON_SOURCES)
+$(STATEDIR)/cbmbasic.get: $(CBMBASIC_SOURCES)
+$(STATEDIR)/xorg-font-sony-misc.get: $(XORG_FONT_SONY_MISC_SOURCES)
+$(STATEDIR)/cairomm.get: $(CAIROMM_SOURCES)
+$(STATEDIR)/host-e2fsprogs.get: $(HOST_E2FSPROGS_SOURCES)
+$(STATEDIR)/pureftpd.get: $(PUREFTPD_SOURCES)
+$(STATEDIR)/host-xorg-app-xkbcomp.get: $(HOST_XORG_APP_XKBCOMP_SOURCES)
+$(STATEDIR)/frodo.get: $(FRODO_SOURCES)
+$(STATEDIR)/directfb-examples.get: $(DIRECTFB_EXAMPLES_SOURCES)
+$(STATEDIR)/liblockfile.get: $(LIBLOCKFILE_SOURCES)
+$(STATEDIR)/dhcp.get: $(DHCP_SOURCES)
+$(STATEDIR)/host-file.get: $(HOST_FILE_SOURCES)
+$(STATEDIR)/liboil.get: $(LIBOIL_SOURCES)
+$(STATEDIR)/initramfs-kernel-modules.get: $(INITRAMFS_KERNEL_MODULES_SOURCES)
+$(STATEDIR)/pelts-tests.get: $(PELTS_TESTS_SOURCES)
+$(STATEDIR)/atop.get: $(ATOP_SOURCES)
+$(STATEDIR)/dbus.get: $(DBUS_SOURCES)
+$(STATEDIR)/ltp-commands.get: $(LTP_COMMANDS_SOURCES)
+$(STATEDIR)/kernel-header.get: $(KERNEL_HEADER_SOURCES)
+$(STATEDIR)/xmlbench.get: $(XMLBENCH_SOURCES)
+$(STATEDIR)/mpg123.get: $(MPG123_SOURCES)
+$(STATEDIR)/libffi.get: $(LIBFFI_SOURCES)
+$(STATEDIR)/xorg-font-arphic-uming.get: $(XORG_FONT_ARPHIC_UMING_SOURCES)
+$(STATEDIR)/xorg-driver-video-vesa.get: $(XORG_DRIVER_VIDEO_VESA_SOURCES)
+$(STATEDIR)/xorg-driver-video-intel.get: $(XORG_DRIVER_VIDEO_INTEL_SOURCES)
+$(STATEDIR)/berlios-can-utils.get: $(BERLIOS_CAN_UTILS_SOURCES)
+$(STATEDIR)/host-flex.get: $(HOST_FLEX_SOURCES)
+$(STATEDIR)/base-pkgs.get: $(BASE_PKGS_SOURCES)
+$(STATEDIR)/gnupg.get: $(GNUPG_SOURCES)
+$(STATEDIR)/host-qemu.get: $(HOST_QEMU_SOURCES)
+$(STATEDIR)/init.get: $(INIT_SOURCES)
+$(STATEDIR)/host-glib.get: $(HOST_GLIB_SOURCES)
+$(STATEDIR)/xli.get: $(XLI_SOURCES)
+$(STATEDIR)/u-boot.get: $(U_BOOT_SOURCES)
+$(STATEDIR)/aumix.get: $(AUMIX_SOURCES)
+$(STATEDIR)/libpcre.get: $(LIBPCRE_SOURCES)
+$(STATEDIR)/cairo.get: $(CAIRO_SOURCES)
+$(STATEDIR)/xorg-lib-xdamage.get: $(XORG_LIB_XDAMAGE_SOURCES)
+$(STATEDIR)/libmxml.get: $(LIBMXML_SOURCES)
+$(STATEDIR)/host-apr.get: $(HOST_APR_SOURCES)
+$(STATEDIR)/libcap.get: $(LIBCAP_SOURCES)
+$(STATEDIR)/crda.get: $(CRDA_SOURCES)
+$(STATEDIR)/xorg-app-xinput.get: $(XORG_APP_XINPUT_SOURCES)
+$(STATEDIR)/sjinn.get: $(SJINN_SOURCES)
+$(STATEDIR)/mesa-demos.get: $(MESA_DEMOS_SOURCES)
+$(STATEDIR)/xorg-font-schumacher-misc.get: $(XORG_FONT_SCHUMACHER_MISC_SOURCES)
+$(STATEDIR)/ldd.get: $(LDD_SOURCES)
+$(STATEDIR)/xorg-font-adobe-100dpi.get: $(XORG_FONT_ADOBE_100DPI_SOURCES)
+$(STATEDIR)/libassuan.get: $(LIBASSUAN_SOURCES)
+$(STATEDIR)/host-libsepol.get: $(HOST_LIBSEPOL_SOURCES)
+$(STATEDIR)/pixman.get: $(PIXMAN_SOURCES)
+$(STATEDIR)/xorg-lib-dmx.get: $(XORG_LIB_DMX_SOURCES)
+$(STATEDIR)/liburcu.get: $(LIBURCU_SOURCES)
+$(STATEDIR)/xorg-proto-xf86bigfont.get: $(XORG_PROTO_XF86BIGFONT_SOURCES)
+$(STATEDIR)/host-libgd.get: $(HOST_LIBGD_SOURCES)
+$(STATEDIR)/locales.get: $(LOCALES_SOURCES)
+$(STATEDIR)/e2fsprogs.get: $(E2FSPROGS_SOURCES)
+$(STATEDIR)/host-ipkg-utils.get: $(HOST_IPKG_UTILS_SOURCES)
+$(STATEDIR)/xorg-app-xkbcomp.get: $(XORG_APP_XKBCOMP_SOURCES)
+$(STATEDIR)/fbtest.get: $(FBTEST_SOURCES)
+$(STATEDIR)/memtester.get: $(MEMTESTER_SOURCES)
+$(STATEDIR)/rrdtool.get: $(RRDTOOL_SOURCES)
+$(STATEDIR)/host-lrzsz.get: $(HOST_LRZSZ_SOURCES)
+$(STATEDIR)/icu.get: $(ICU_SOURCES)
+$(STATEDIR)/parted.get: $(PARTED_SOURCES)
+$(STATEDIR)/xorg-app-xeyes.get: $(XORG_APP_XEYES_SOURCES)
+$(STATEDIR)/gst-plugins-ugly1.get: $(GST_PLUGINS_UGLY1_SOURCES)
+$(STATEDIR)/freetype.get: $(FREETYPE_SOURCES)
+$(STATEDIR)/libkmod.get: $(LIBKMOD_SOURCES)
+$(STATEDIR)/fbv.get: $(FBV_SOURCES)
+$(STATEDIR)/media-ctl.get: $(MEDIA_CTL_SOURCES)
+$(STATEDIR)/termcap.get: $(TERMCAP_SOURCES)
+$(STATEDIR)/mc.get: $(MC_SOURCES)
+$(STATEDIR)/xcb-proto.get: $(XCB_PROTO_SOURCES)
+$(STATEDIR)/libxmlconfig.get: $(LIBXMLCONFIG_SOURCES)
+$(STATEDIR)/ed.get: $(ED_SOURCES)
+$(STATEDIR)/host-libblkid.get: $(HOST_LIBBLKID_SOURCES)
+$(STATEDIR)/libcgic.get: $(LIBCGIC_SOURCES)
+$(STATEDIR)/ncurses.get: $(NCURSES_SOURCES)
+$(STATEDIR)/xorg-font-daewoo-misc.get: $(XORG_FONT_DAEWOO_MISC_SOURCES)
+$(STATEDIR)/xorg-lib-xxf86misc.get: $(XORG_LIB_XXF86MISC_SOURCES)
+$(STATEDIR)/libmng.get: $(LIBMNG_SOURCES)
+$(STATEDIR)/host-xorg-proto-bigreqs.get: $(HOST_XORG_PROTO_BIGREQS_SOURCES)
+$(STATEDIR)/barebox_mlo.get: $(BAREBOX_MLO_SOURCES)
+$(STATEDIR)/libcaca.get: $(LIBCACA_SOURCES)
+$(STATEDIR)/klibc.get: $(KLIBC_SOURCES)
+$(STATEDIR)/at.get: $(AT_SOURCES)
+$(STATEDIR)/iw.get: $(IW_SOURCES)
+$(STATEDIR)/host-util-linux-ng.get: $(HOST_UTIL_LINUX_NG_SOURCES)
+$(STATEDIR)/chrony.get: $(CHRONY_SOURCES)
+$(STATEDIR)/libconfuse.get: $(LIBCONFUSE_SOURCES)
+$(STATEDIR)/ltp-network.get: $(LTP_NETWORK_SOURCES)
+$(STATEDIR)/host-mysql.get: $(HOST_MYSQL_SOURCES)
+$(STATEDIR)/xfsprogs.get: $(XFSPROGS_SOURCES)
+$(STATEDIR)/xorg-font-adobe-75dpi.get: $(XORG_FONT_ADOBE_75DPI_SOURCES)
+$(STATEDIR)/host-libconfuse.get: $(HOST_LIBCONFUSE_SOURCES)
+$(STATEDIR)/libpv.get: $(LIBPV_SOURCES)
+$(STATEDIR)/host-zlib.get: $(HOST_ZLIB_SOURCES)
+$(STATEDIR)/initng.get: $(INITNG_SOURCES)
+$(STATEDIR)/syslinux.get: $(SYSLINUX_SOURCES)
+$(STATEDIR)/host-tz-database.get: $(HOST_TZ_DATABASE_SOURCES)
+$(STATEDIR)/commoncpp2.get: $(COMMONCPP2_SOURCES)
+$(STATEDIR)/perl.get: $(PERL_SOURCES)
+$(STATEDIR)/dconf.get: $(DCONF_SOURCES)
+$(STATEDIR)/host-libxcb.get: $(HOST_LIBXCB_SOURCES)
+$(STATEDIR)/xorg-lib-xtst.get: $(XORG_LIB_XTST_SOURCES)
+$(STATEDIR)/wget.get: $(WGET_SOURCES)
+$(STATEDIR)/sched_switch.get: $(SCHED_SWITCH_SOURCES)
+$(STATEDIR)/xorg-proto-xf86misc.get: $(XORG_PROTO_XF86MISC_SOURCES)
+$(STATEDIR)/vim.get: $(VIM_SOURCES)
+$(STATEDIR)/xorg-font-util.get: $(XORG_FONT_UTIL_SOURCES)
+$(STATEDIR)/sdl.get: $(SDL_SOURCES)
+$(STATEDIR)/host-autotools-autoconf.get: $(HOST_AUTOTOOLS_AUTOCONF_SOURCES)
+$(STATEDIR)/xorg-font-adobe-utopia-type1.get: $(XORG_FONT_ADOBE_UTOPIA_TYPE1_SOURCES)
+$(STATEDIR)/sdl_mixer.get: $(SDL_MIXER_SOURCES)
+$(STATEDIR)/jed.get: $(JED_SOURCES)
+$(STATEDIR)/libtheora.get: $(LIBTHEORA_SOURCES)
+$(STATEDIR)/xorg-font-winitzki-cyrillic.get: $(XORG_FONT_WINITZKI_CYRILLIC_SOURCES)
+$(STATEDIR)/gdb.get: $(GDB_SOURCES)
+$(STATEDIR)/xorg-app-xrandr.get: $(XORG_APP_XRANDR_SOURCES)
+$(STATEDIR)/libmicrohttpd.get: $(LIBMICROHTTPD_SOURCES)
+$(STATEDIR)/host-ckermit.get: $(HOST_CKERMIT_SOURCES)
+$(STATEDIR)/memtest.get: $(MEMTEST_SOURCES)
+$(STATEDIR)/openssh.get: $(OPENSSH_SOURCES)
+$(STATEDIR)/rt-tests.get: $(RT_TESTS_SOURCES)
+$(STATEDIR)/cppunit.get: $(CPPUNIT_SOURCES)
+$(STATEDIR)/ltp-template.get: $(LTP_TEMPLATE_SOURCES)
+$(STATEDIR)/gtk.get: $(GTK_SOURCES)
+$(STATEDIR)/openvpn.get: $(OPENVPN_SOURCES)
+$(STATEDIR)/host-timeout.get: $(HOST_TIMEOUT_SOURCES)
+$(STATEDIR)/gpm.get: $(GPM_SOURCES)
+$(STATEDIR)/openssl.get: $(OPENSSL_SOURCES)
+$(STATEDIR)/initmethod-systemd.get: $(INITMETHOD_SYSTEMD_SOURCES)
+$(STATEDIR)/madplay.get: $(MADPLAY_SOURCES)
+$(STATEDIR)/serdisplib.get: $(SERDISPLIB_SOURCES)
+$(STATEDIR)/fcgi.get: $(FCGI_SOURCES)
+$(STATEDIR)/host-dbus.get: $(HOST_DBUS_SOURCES)
+$(STATEDIR)/mbw.get: $(MBW_SOURCES)
+$(STATEDIR)/host-fakeroot.get: $(HOST_FAKEROOT_SOURCES)
+$(STATEDIR)/ltp-posix.get: $(LTP_POSIX_SOURCES)
+$(STATEDIR)/host-gtk-doc.get: $(HOST_GTK_DOC_SOURCES)
+$(STATEDIR)/host-wayland.get: $(HOST_WAYLAND_SOURCES)
+$(STATEDIR)/fftw.get: $(FFTW_SOURCES)
+$(STATEDIR)/xorg-proto-bigreqs.get: $(XORG_PROTO_BIGREQS_SOURCES)
+$(STATEDIR)/host-libxslt.get: $(HOST_LIBXSLT_SOURCES)
+$(STATEDIR)/libsndfile.get: $(LIBSNDFILE_SOURCES)
+$(STATEDIR)/libnl3.get: $(LIBNL3_SOURCES)
+$(STATEDIR)/oprofile.get: $(OPROFILE_SOURCES)
+$(STATEDIR)/xorg-proto-xinerama.get: $(XORG_PROTO_XINERAMA_SOURCES)
+$(STATEDIR)/log4cplus.get: $(LOG4CPLUS_SOURCES)
+$(STATEDIR)/nfsutils.get: $(NFSUTILS_SOURCES)
+$(STATEDIR)/ltt-control.get: $(LTT_CONTROL_SOURCES)
+$(STATEDIR)/inetutils.get: $(INETUTILS_SOURCES)
+$(STATEDIR)/bootchart.get: $(BOOTCHART_SOURCES)
+$(STATEDIR)/systemd.get: $(SYSTEMD_SOURCES)
+$(STATEDIR)/microcom.get: $(MICROCOM_SOURCES)
+$(STATEDIR)/dnsmasq.get: $(DNSMASQ_SOURCES)
+$(STATEDIR)/xorg-proto-evieext.get: $(XORG_PROTO_EVIEEXT_SOURCES)
+$(STATEDIR)/fluxbox.get: $(FLUXBOX_SOURCES)
+$(STATEDIR)/driver-gamepad.get: $(DRIVER_GAMEPAD_SOURCES)
+$(STATEDIR)/host-makedepend.get: $(HOST_MAKEDEPEND_SOURCES)
+$(STATEDIR)/gnuplot.get: $(GNUPLOT_SOURCES)
+$(STATEDIR)/xorg-driver-input-void.get: $(XORG_DRIVER_INPUT_VOID_SOURCES)
+$(STATEDIR)/rsyslog.get: $(RSYSLOG_SOURCES)
+$(STATEDIR)/libnetfilter_conntrack.get: $(LIBNETFILTER_CONNTRACK_SOURCES)
+$(STATEDIR)/boost.get: $(BOOST_SOURCES)
+$(STATEDIR)/timezone.get: $(TIMEZONE_SOURCES)
+$(STATEDIR)/u-boot-tools.get: $(U_BOOT_TOOLS_SOURCES)
+$(STATEDIR)/host-autotools-libtool.get: $(HOST_AUTOTOOLS_LIBTOOL_SOURCES)
+$(STATEDIR)/ltp-kdump.get: $(LTP_KDUMP_SOURCES)
+$(STATEDIR)/pygobject.get: $(PYGOBJECT_SOURCES)
+$(STATEDIR)/poco.get: $(POCO_SOURCES)
+$(STATEDIR)/sitecopy.get: $(SITECOPY_SOURCES)
+$(STATEDIR)/xorg-proto-composite.get: $(XORG_PROTO_COMPOSITE_SOURCES)
+$(STATEDIR)/xorg-lib-fontenc.get: $(XORG_LIB_FONTENC_SOURCES)
+$(STATEDIR)/hdparm.get: $(HDPARM_SOURCES)
+$(STATEDIR)/xorg-font-misc-misc.get: $(XORG_FONT_MISC_MISC_SOURCES)
+$(STATEDIR)/jsvc.get: $(JSVC_SOURCES)
+$(STATEDIR)/netkit-ftp.get: $(NETKIT_FTP_SOURCES)
+$(STATEDIR)/eggdbus.get: $(EGGDBUS_SOURCES)
+$(STATEDIR)/host-freetype.get: $(HOST_FREETYPE_SOURCES)
+$(STATEDIR)/host-u-boot-tools.get: $(HOST_U_BOOT_TOOLS_SOURCES)
+$(STATEDIR)/xorg-lib-xinerama.get: $(XORG_LIB_XINERAMA_SOURCES)
+$(STATEDIR)/host-bzip2.get: $(HOST_BZIP2_SOURCES)
+$(STATEDIR)/tslib.get: $(TSLIB_SOURCES)
+$(STATEDIR)/msmtp.get: $(MSMTP_SOURCES)
+$(STATEDIR)/xorg-font-ttf-bitstream-vera.get: $(XORG_FONT_TTF_BITSTREAM_VERA_SOURCES)
+$(STATEDIR)/bluez.get: $(BLUEZ_SOURCES)
+$(STATEDIR)/xorg-driver-input-tslib.get: $(XORG_DRIVER_INPUT_TSLIB_SOURCES)
+$(STATEDIR)/gnutls.get: $(GNUTLS_SOURCES)
+$(STATEDIR)/xorg-lib-xcomposite.get: $(XORG_LIB_XCOMPOSITE_SOURCES)
+$(STATEDIR)/gst-plugins-ugly.get: $(GST_PLUGINS_UGLY_SOURCES)
+$(STATEDIR)/valgrind.get: $(VALGRIND_SOURCES)
+$(STATEDIR)/host-libpng.get: $(HOST_LIBPNG_SOURCES)
+$(STATEDIR)/ntp.get: $(NTP_SOURCES)
+$(STATEDIR)/mgetty.get: $(MGETTY_SOURCES)
+$(STATEDIR)/gmake.get: $(GMAKE_SOURCES)
+$(STATEDIR)/lua-filesystem.get: $(LUA_FILESYSTEM_SOURCES)
+$(STATEDIR)/netcat.get: $(NETCAT_SOURCES)
+$(STATEDIR)/host-figlet.get: $(HOST_FIGLET_SOURCES)
+$(STATEDIR)/pango.get: $(PANGO_SOURCES)
+$(STATEDIR)/quota-tools.get: $(QUOTA_TOOLS_SOURCES)
+$(STATEDIR)/shiboken.get: $(SHIBOKEN_SOURCES)
+$(STATEDIR)/ltp-dots.get: $(LTP_DOTS_SOURCES)
+$(STATEDIR)/nickel.get: $(NICKEL_SOURCES)
+$(STATEDIR)/xorg-app-xvinfo.get: $(XORG_APP_XVINFO_SOURCES)
+$(STATEDIR)/openntpd.get: $(OPENNTPD_SOURCES)
+$(STATEDIR)/host-xorg-lib-fontenc.get: $(HOST_XORG_LIB_FONTENC_SOURCES)
+$(STATEDIR)/machine-id.get: $(MACHINE_ID_SOURCES)
+$(STATEDIR)/xorg-lib-xtrans.get: $(XORG_LIB_XTRANS_SOURCES)
+$(STATEDIR)/xorg-driver-video-ati.get: $(XORG_DRIVER_VIDEO_ATI_SOURCES)
+$(STATEDIR)/ltp-realtime.get: $(LTP_REALTIME_SOURCES)
+$(STATEDIR)/opus.get: $(OPUS_SOURCES)
+$(STATEDIR)/xorg-lib-xrender.get: $(XORG_LIB_XRENDER_SOURCES)
+$(STATEDIR)/expat.get: $(EXPAT_SOURCES)
+$(STATEDIR)/wxwidgets.get: $(WXWIDGETS_SOURCES)
+$(STATEDIR)/host-xorg-app-bdftopcf.get: $(HOST_XORG_APP_BDFTOPCF_SOURCES)
+$(STATEDIR)/xorg-driver-video-apm.get: $(XORG_DRIVER_VIDEO_APM_SOURCES)
+$(STATEDIR)/openldap.get: $(OPENLDAP_SOURCES)
+$(STATEDIR)/thttpd.get: $(THTTPD_SOURCES)
+$(STATEDIR)/hping.get: $(HPING_SOURCES)
+$(STATEDIR)/libfsl-vpu.get: $(LIBFSL_VPU_SOURCES)
+$(STATEDIR)/xorg-font-bh-100dpi.get: $(XORG_FONT_BH_100DPI_SOURCES)
+$(STATEDIR)/mtdev.get: $(MTDEV_SOURCES)
+$(STATEDIR)/pcmciautils.get: $(PCMCIAUTILS_SOURCES)
+$(STATEDIR)/xorg-lib-xcursor.get: $(XORG_LIB_XCURSOR_SOURCES)
+$(STATEDIR)/gst-plugins-base.get: $(GST_PLUGINS_BASE_SOURCES)
+$(STATEDIR)/host-gettext.get: $(HOST_GETTEXT_SOURCES)
+$(STATEDIR)/xorg-app-iceauth.get: $(XORG_APP_ICEAUTH_SOURCES)
+$(STATEDIR)/libucdaemon.get: $(LIBUCDAEMON_SOURCES)
+$(STATEDIR)/nss-mdns.get: $(NSS_MDNS_SOURCES)
+$(STATEDIR)/attr.get: $(ATTR_SOURCES)
+$(STATEDIR)/xorg-font-intl.get: $(XORG_FONT_INTL_SOURCES)
+$(STATEDIR)/host-ncurses.get: $(HOST_NCURSES_SOURCES)
+$(STATEDIR)/bing.get: $(BING_SOURCES)
+$(STATEDIR)/wavemon.get: $(WAVEMON_SOURCES)
+$(STATEDIR)/libuuid.get: $(LIBUUID_SOURCES)
+$(STATEDIR)/grub.get: $(GRUB_SOURCES)
+$(STATEDIR)/libgpg-error.get: $(LIBGPG_ERROR_SOURCES)
+$(STATEDIR)/apr-util.get: $(APR_UTIL_SOURCES)
+$(STATEDIR)/host-autotools-automake.get: $(HOST_AUTOTOOLS_AUTOMAKE_SOURCES)
+$(STATEDIR)/host-elf-h-compat.get: $(HOST_ELF_H_COMPAT_SOURCES)
+$(STATEDIR)/orc.get: $(ORC_SOURCES)
+$(STATEDIR)/host-xorg-font-util.get: $(HOST_XORG_FONT_UTIL_SOURCES)
+$(STATEDIR)/host-libsemanage.get: $(HOST_LIBSEMANAGE_SOURCES)
+$(STATEDIR)/lua.get: $(LUA_SOURCES)
+$(STATEDIR)/host-gettext-dummy.get: $(HOST_GETTEXT_DUMMY_SOURCES)
+$(STATEDIR)/rtps.get: $(RTPS_SOURCES)
+$(STATEDIR)/libsemanage.get: $(LIBSEMANAGE_SOURCES)
+$(STATEDIR)/libjpeg.get: $(LIBJPEG_SOURCES)
+$(STATEDIR)/host-yasm.get: $(HOST_YASM_SOURCES)
+$(STATEDIR)/xorg-proto-kb.get: $(XORG_PROTO_KB_SOURCES)
+$(STATEDIR)/grep.get: $(GREP_SOURCES)
+$(STATEDIR)/libedit.get: $(LIBEDIT_SOURCES)
+$(STATEDIR)/u-boot-v2.get: $(U_BOOT_V2_SOURCES)
+$(STATEDIR)/mesalib.get: $(MESALIB_SOURCES)
+$(STATEDIR)/xorg-font-bh-ttf.get: $(XORG_FONT_BH_TTF_SOURCES)
+$(STATEDIR)/xorg-proto-gl.get: $(XORG_PROTO_GL_SOURCES)
+$(STATEDIR)/host-libcap-ng.get: $(HOST_LIBCAP_NG_SOURCES)
+$(STATEDIR)/host-mxs-utils.get: $(HOST_MXS_UTILS_SOURCES)
+$(STATEDIR)/xorg-app-mkfontdir.get: $(XORG_APP_MKFONTDIR_SOURCES)
+$(STATEDIR)/host-qt4.get: $(HOST_QT4_SOURCES)
+$(STATEDIR)/libksba.get: $(LIBKSBA_SOURCES)
+$(STATEDIR)/psmisc.get: $(PSMISC_SOURCES)
+$(STATEDIR)/prelink.get: $(PRELINK_SOURCES)
+$(STATEDIR)/xorg-proto-resource.get: $(XORG_PROTO_RESOURCE_SOURCES)
+$(STATEDIR)/xorg-driver-input-evdev.get: $(XORG_DRIVER_INPUT_EVDEV_SOURCES)
+$(STATEDIR)/udev.get: $(UDEV_SOURCES)
+$(STATEDIR)/cvs.get: $(CVS_SOURCES)
+$(STATEDIR)/host-xorg-app-mkfontscale.get: $(HOST_XORG_APP_MKFONTSCALE_SOURCES)
+$(STATEDIR)/v4l-utils.get: $(V4L_UTILS_SOURCES)
+$(STATEDIR)/xorg-lib-fs.get: $(XORG_LIB_FS_SOURCES)
+$(STATEDIR)/syslogng.get: $(SYSLOGNG_SOURCES)
+$(STATEDIR)/xkeyboard-config.get: $(XKEYBOARD_CONFIG_SOURCES)
+$(STATEDIR)/host-libpcre.get: $(HOST_LIBPCRE_SOURCES)
+$(STATEDIR)/nanocom.get: $(NANOCOM_SOURCES)
+$(STATEDIR)/bc.get: $(BC_SOURCES)
+$(STATEDIR)/libusb-compat.get: $(LIBUSB_COMPAT_SOURCES)
+$(STATEDIR)/xorg-app-setxkbmap.get: $(XORG_APP_SETXKBMAP_SOURCES)
+$(STATEDIR)/python3.get: $(PYTHON3_SOURCES)
+$(STATEDIR)/samba.get: $(SAMBA_SOURCES)
+$(STATEDIR)/libvorbis.get: $(LIBVORBIS_SOURCES)
+$(STATEDIR)/host-openssl.get: $(HOST_OPENSSL_SOURCES)
+$(STATEDIR)/lowpan-tools.get: $(LOWPAN_TOOLS_SOURCES)
+$(STATEDIR)/php5.get: $(PHP5_SOURCES)
+$(STATEDIR)/libnfnetlink.get: $(LIBNFNETLINK_SOURCES)
+$(STATEDIR)/xorg-proto-print.get: $(XORG_PROTO_PRINT_SOURCES)
+$(STATEDIR)/arora.get: $(ARORA_SOURCES)
+$(STATEDIR)/policycoreutils.get: $(POLICYCOREUTILS_SOURCES)
+$(STATEDIR)/libmd.get: $(LIBMD_SOURCES)
+$(STATEDIR)/libmatthew-java.get: $(LIBMATTHEW_JAVA_SOURCES)
+$(STATEDIR)/memstat.get: $(MEMSTAT_SOURCES)
+$(STATEDIR)/js.get: $(JS_SOURCES)
+$(STATEDIR)/canfestival.get: $(CANFESTIVAL_SOURCES)
+$(STATEDIR)/libgee.get: $(LIBGEE_SOURCES)
+$(STATEDIR)/libao.get: $(LIBAO_SOURCES)
+$(STATEDIR)/host-xorg-app-mkfontdir.get: $(HOST_XORG_APP_MKFONTDIR_SOURCES)
+$(STATEDIR)/eventlog.get: $(EVENTLOG_SOURCES)
+$(STATEDIR)/host-pkg-config.get: $(HOST_PKG_CONFIG_SOURCES)
+$(STATEDIR)/host-systemd.get: $(HOST_SYSTEMD_SOURCES)
+$(STATEDIR)/libftdi1.get: $(LIBFTDI1_SOURCES)
+$(STATEDIR)/libgmp.get: $(LIBGMP_SOURCES)
+$(STATEDIR)/pangomm.get: $(PANGOMM_SOURCES)
+$(STATEDIR)/host-cramfs.get: $(HOST_CRAMFS_SOURCES)
+$(STATEDIR)/gstreamer.get: $(GSTREAMER_SOURCES)
+$(STATEDIR)/portmap.get: $(PORTMAP_SOURCES)
+$(STATEDIR)/host-libusb.get: $(HOST_LIBUSB_SOURCES)
+$(STATEDIR)/libxkbcommon.get: $(LIBXKBCOMMON_SOURCES)
+$(STATEDIR)/libdmtx.get: $(LIBDMTX_SOURCES)
+$(STATEDIR)/sed.get: $(SED_SOURCES)
+$(STATEDIR)/host-libkmod.get: $(HOST_LIBKMOD_SOURCES)
+$(STATEDIR)/less.get: $(LESS_SOURCES)
+$(STATEDIR)/ffmpeg.get: $(FFMPEG_SOURCES)
+$(STATEDIR)/libcap-ng.get: $(LIBCAP_NG_SOURCES)
+$(STATEDIR)/libpvgen.get: $(LIBPVGEN_SOURCES)
+$(STATEDIR)/uttt.get: $(UTTT_SOURCES)
+$(STATEDIR)/gst-plugins-base1.get: $(GST_PLUGINS_BASE1_SOURCES)
+$(STATEDIR)/libftdi.get: $(LIBFTDI_SOURCES)
+$(STATEDIR)/efax.get: $(EFAX_SOURCES)
+$(STATEDIR)/ppp.get: $(PPP_SOURCES)
+$(STATEDIR)/cross-libtool.get: $(CROSS_LIBTOOL_SOURCES)
+$(STATEDIR)/gtk-engines.get: $(GTK_ENGINES_SOURCES)
+$(STATEDIR)/dtc.get: $(DTC_SOURCES)
+$(STATEDIR)/kernel.get: $(KERNEL_SOURCES)
+$(STATEDIR)/xorg-lib-xxf86vm.get: $(XORG_LIB_XXF86VM_SOURCES)
+$(STATEDIR)/json-dbus-bridge.get: $(JSON_DBUS_BRIDGE_SOURCES)
+$(STATEDIR)/libcroco.get: $(LIBCROCO_SOURCES)
+$(STATEDIR)/sw-ek-lm3s3748.get: $(SW_EK_LM3S3748_SOURCES)
+$(STATEDIR)/i2c-tools.get: $(I2C_TOOLS_SOURCES)
+$(STATEDIR)/host-attr.get: $(HOST_ATTR_SOURCES)
+$(STATEDIR)/librsvg.get: $(LIBRSVG_SOURCES)
+$(STATEDIR)/svgalib.get: $(SVGALIB_SOURCES)
+$(STATEDIR)/xorg-font-ibm-type1.get: $(XORG_FONT_IBM_TYPE1_SOURCES)
+$(STATEDIR)/xorg-data-xbitmaps.get: $(XORG_DATA_XBITMAPS_SOURCES)
+$(STATEDIR)/tiobench.get: $(TIOBENCH_SOURCES)
+$(STATEDIR)/game.get: $(GAME_SOURCES)
+$(STATEDIR)/xorg-font-bitstream-type1.get: $(XORG_FONT_BITSTREAM_TYPE1_SOURCES)
+$(STATEDIR)/wireshark.get: $(WIRESHARK_SOURCES)
+$(STATEDIR)/host-libffi.get: $(HOST_LIBFFI_SOURCES)
+$(STATEDIR)/splashutils.get: $(SPLASHUTILS_SOURCES)
+$(STATEDIR)/host-cdrkit.get: $(HOST_CDRKIT_SOURCES)
+$(STATEDIR)/acl.get: $(ACL_SOURCES)
+$(STATEDIR)/i915resolution.get: $(I915RESOLUTION_SOURCES)
+$(STATEDIR)/host-system-perl.get: $(HOST_SYSTEM_PERL_SOURCES)
+$(STATEDIR)/ltrace.get: $(LTRACE_SOURCES)
+$(STATEDIR)/host-libcap.get: $(HOST_LIBCAP_SOURCES)
+$(STATEDIR)/libsocketcan.get: $(LIBSOCKETCAN_SOURCES)
+$(STATEDIR)/host-xorg-proto-fonts.get: $(HOST_XORG_PROTO_FONTS_SOURCES)
+$(STATEDIR)/pyside.get: $(PYSIDE_SOURCES)
+$(STATEDIR)/wireless.get: $(WIRELESS_SOURCES)
+$(STATEDIR)/totd.get: $(TOTD_SOURCES)
+$(STATEDIR)/tree.get: $(TREE_SOURCES)
+$(STATEDIR)/fake-overlayfs.get: $(FAKE_OVERLAYFS_SOURCES)
+$(STATEDIR)/initmethod-bbinit.get: $(INITMETHOD_BBINIT_SOURCES)
+$(STATEDIR)/libnih.get: $(LIBNIH_SOURCES)
+$(STATEDIR)/xorg-lib-xpm.get: $(XORG_LIB_XPM_SOURCES)
+$(STATEDIR)/lpc21isp.get: $(LPC21ISP_SOURCES)
+$(STATEDIR)/usb-modeswitch.get: $(USB_MODESWITCH_SOURCES)
+$(STATEDIR)/lighttpd.get: $(LIGHTTPD_SOURCES)
+$(STATEDIR)/policykit.get: $(POLICYKIT_SOURCES)
+$(STATEDIR)/slang.get: $(SLANG_SOURCES)
+$(STATEDIR)/libltdl.get: $(LIBLTDL_SOURCES)
+$(STATEDIR)/host-libdbus-cxx.get: $(HOST_LIBDBUS_CXX_SOURCES)
+$(STATEDIR)/gst-plugins-good.get: $(GST_PLUGINS_GOOD_SOURCES)
+$(STATEDIR)/libc.get: $(LIBC_SOURCES)
+$(STATEDIR)/cifs-utils.get: $(CIFS_UTILS_SOURCES)
+$(STATEDIR)/xorg-font-bh-lucidatypewriter-100dpi.get: $(XORG_FONT_BH_LUCIDATYPEWRITER_100DPI_SOURCES)
+$(STATEDIR)/libmodbus.get: $(LIBMODBUS_SOURCES)
+$(STATEDIR)/sun-java6-jre.get: $(SUN_JAVA6_JRE_SOURCES)
+$(STATEDIR)/libdbus-cxx.get: $(LIBDBUS_CXX_SOURCES)
+$(STATEDIR)/libnet.get: $(LIBNET_SOURCES)
+$(STATEDIR)/wpa_supplicant.get: $(WPA_SUPPLICANT_SOURCES)
+$(STATEDIR)/libxml2.get: $(LIBXML2_SOURCES)
+$(STATEDIR)/at91bootstrap2.get: $(AT91BOOTSTRAP2_SOURCES)
+$(STATEDIR)/host-libsigcpp.get: $(HOST_LIBSIGCPP_SOURCES)
+$(STATEDIR)/tcpwrapper.get: $(TCPWRAPPER_SOURCES)
+$(STATEDIR)/host-icu.get: $(HOST_ICU_SOURCES)
+$(STATEDIR)/glade.get: $(GLADE_SOURCES)
+$(STATEDIR)/xorg-lib-ice.get: $(XORG_LIB_ICE_SOURCES)
+$(STATEDIR)/xorg-cursor.get: $(XORG_CURSOR_SOURCES)
+$(STATEDIR)/libiodbc.get: $(LIBIODBC_SOURCES)
+$(STATEDIR)/sdparm.get: $(SDPARM_SOURCES)
+$(STATEDIR)/proftpd.get: $(PROFTPD_SOURCES)
+$(STATEDIR)/rawrec.get: $(RAWREC_SOURCES)
+$(STATEDIR)/zip.get: $(ZIP_SOURCES)
+$(STATEDIR)/smtpclient.get: $(SMTPCLIENT_SOURCES)
+$(STATEDIR)/ima-evm-utils.get: $(IMA_EVM_UTILS_SOURCES)
+$(STATEDIR)/xorg-lib-xres.get: $(XORG_LIB_XRES_SOURCES)
+$(STATEDIR)/tcl.get: $(TCL_SOURCES)
+$(STATEDIR)/host-shiboken.get: $(HOST_SHIBOKEN_SOURCES)
+$(STATEDIR)/xorg-font-misc-meltho.get: $(XORG_FONT_MISC_MELTHO_SOURCES)
+$(STATEDIR)/lsuio.get: $(LSUIO_SOURCES)
+$(STATEDIR)/host-expat.get: $(HOST_EXPAT_SOURCES)
+$(STATEDIR)/net-snmp.get: $(NET_SNMP_SOURCES)
+$(STATEDIR)/iperf.get: $(IPERF_SOURCES)
+$(STATEDIR)/xorg-driver-video-v4l.get: $(XORG_DRIVER_VIDEO_V4L_SOURCES)
+$(STATEDIR)/readline.get: $(READLINE_SOURCES)
+$(STATEDIR)/nmap.get: $(NMAP_SOURCES)
+$(STATEDIR)/smartmontools.get: $(SMARTMONTOOLS_SOURCES)
+$(STATEDIR)/dropbear.get: $(DROPBEAR_SOURCES)
+$(STATEDIR)/xorg-proto-xf86dri.get: $(XORG_PROTO_XF86DRI_SOURCES)
+$(STATEDIR)/xorg-proto-fonts.get: $(XORG_PROTO_FONTS_SOURCES)
+$(STATEDIR)/tomoyo-tools.get: $(TOMOYO_TOOLS_SOURCES)
+$(STATEDIR)/xorg-app-xauth.get: $(XORG_APP_XAUTH_SOURCES)
+$(STATEDIR)/xorg-proto-record.get: $(XORG_PROTO_RECORD_SOURCES)
+$(STATEDIR)/fbset.get: $(FBSET_SOURCES)
+$(STATEDIR)/xcursor-transparent-theme.get: $(XCURSOR_TRANSPARENT_THEME_SOURCES)
+$(STATEDIR)/setserial.get: $(SETSERIAL_SOURCES)
+$(STATEDIR)/poppler.get: $(POPPLER_SOURCES)
+$(STATEDIR)/libcurl.get: $(LIBCURL_SOURCES)
+$(STATEDIR)/dbus-python.get: $(DBUS_PYTHON_SOURCES)
+$(STATEDIR)/host-gperf.get: $(HOST_GPERF_SOURCES)
+$(STATEDIR)/gstreamer1.get: $(GSTREAMER1_SOURCES)
+$(STATEDIR)/usplash.get: $(USPLASH_SOURCES)
+$(STATEDIR)/libezv24.get: $(LIBEZV24_SOURCES)
+$(STATEDIR)/host-eggdbus.get: $(HOST_EGGDBUS_SOURCES)
+$(STATEDIR)/procps.get: $(PROCPS_SOURCES)
+$(STATEDIR)/usbutils.get: $(USBUTILS_SOURCES)
+$(STATEDIR)/host-mesalib.get: $(HOST_MESALIB_SOURCES)
+$(STATEDIR)/xorg-proto-fixes.get: $(XORG_PROTO_FIXES_SOURCES)
+$(STATEDIR)/gst-plugins-bad1.get: $(GST_PLUGINS_BAD1_SOURCES)
+$(STATEDIR)/lsof.get: $(LSOF_SOURCES)
+$(STATEDIR)/host-libcgroup.get: $(HOST_LIBCGROUP_SOURCES)
+$(STATEDIR)/inotify-tools.get: $(INOTIFY_TOOLS_SOURCES)
+$(STATEDIR)/memtest86p.get: $(MEMTEST86P_SOURCES)
+$(STATEDIR)/setmixer.get: $(SETMIXER_SOURCES)
+$(STATEDIR)/python-imaging.get: $(PYTHON_IMAGING_SOURCES)
+$(STATEDIR)/libogg.get: $(LIBOGG_SOURCES)
+$(STATEDIR)/libnetpbm.get: $(LIBNETPBM_SOURCES)
+$(STATEDIR)/alsa-utils.get: $(ALSA_UTILS_SOURCES)
+$(STATEDIR)/failmalloc.get: $(FAILMALLOC_SOURCES)
+$(STATEDIR)/wine.get: $(WINE_SOURCES)
+$(STATEDIR)/liboop.get: $(LIBOOP_SOURCES)
+$(STATEDIR)/liblzo.get: $(LIBLZO_SOURCES)
+$(STATEDIR)/host-apr-util.get: $(HOST_APR_UTIL_SOURCES)
+$(STATEDIR)/dhex.get: $(DHEX_SOURCES)
+$(STATEDIR)/connman.get: $(CONNMAN_SOURCES)
+$(STATEDIR)/gtkmm.get: $(GTKMM_SOURCES)
+$(STATEDIR)/xorg-font-arabic-misc.get: $(XORG_FONT_ARABIC_MISC_SOURCES)
+$(STATEDIR)/schedtool.get: $(SCHEDTOOL_SOURCES)
+$(STATEDIR)/etherwake.get: $(ETHERWAKE_SOURCES)
+$(STATEDIR)/xorg-proto-xext.get: $(XORG_PROTO_XEXT_SOURCES)
+$(STATEDIR)/libcgi.get: $(LIBCGI_SOURCES)
+$(STATEDIR)/tmux.get: $(TMUX_SOURCES)
+$(STATEDIR)/xorg-font-dec-misc.get: $(XORG_FONT_DEC_MISC_SOURCES)
+$(STATEDIR)/libpopt.get: $(LIBPOPT_SOURCES)
+$(STATEDIR)/host-pelts.get: $(HOST_PELTS_SOURCES)
+$(STATEDIR)/speex.get: $(SPEEX_SOURCES)
+$(STATEDIR)/lame.get: $(LAME_SOURCES)
+$(STATEDIR)/busybox.get: $(BUSYBOX_SOURCES)
+$(STATEDIR)/protobuf.get: $(PROTOBUF_SOURCES)
+$(STATEDIR)/libsysfs.get: $(LIBSYSFS_SOURCES)
+$(STATEDIR)/xorg-lib-xprintutil.get: $(XORG_LIB_XPRINTUTIL_SOURCES)
+$(STATEDIR)/libgsloop.get: $(LIBGSLOOP_SOURCES)
+$(STATEDIR)/xorg-app-xsetroot.get: $(XORG_APP_XSETROOT_SOURCES)
+$(STATEDIR)/host-swig.get: $(HOST_SWIG_SOURCES)
+$(STATEDIR)/sparsehash.get: $(SPARSEHASH_SOURCES)
+$(STATEDIR)/xorg-lib-xevie.get: $(XORG_LIB_XEVIE_SOURCES)
+$(STATEDIR)/pdksh.get: $(PDKSH_SOURCES)
+$(STATEDIR)/xorg-proto-xcmisc.get: $(XORG_PROTO_XCMISC_SOURCES)
+$(STATEDIR)/host-xorg-lib-xtrans.get: $(HOST_XORG_LIB_XTRANS_SOURCES)
+$(STATEDIR)/lm_sensors.get: $(LM_SENSORS_SOURCES)
+$(STATEDIR)/inadyn.get: $(INADYN_SOURCES)
+$(STATEDIR)/xorg-lib-xprintapputil.get: $(XORG_LIB_XPRINTAPPUTIL_SOURCES)
+$(STATEDIR)/libnetfilter_queue.get: $(LIBNETFILTER_QUEUE_SOURCES)
+$(STATEDIR)/xorg-lib-xfixes.get: $(XORG_LIB_XFIXES_SOURCES)
+$(STATEDIR)/killproc.get: $(KILLPROC_SOURCES)
+$(STATEDIR)/libselinux.get: $(LIBSELINUX_SOURCES)
+$(STATEDIR)/rtmpdump.get: $(RTMPDUMP_SOURCES)
+$(STATEDIR)/daemonize.get: $(DAEMONIZE_SOURCES)
+$(STATEDIR)/rootfs.get: $(ROOTFS_SOURCES)
+$(STATEDIR)/sp-oops-extract.get: $(SP_OOPS_EXTRACT_SOURCES)
+$(STATEDIR)/xorg-app-xset.get: $(XORG_APP_XSET_SOURCES)
+$(STATEDIR)/libcgroup.get: $(LIBCGROUP_SOURCES)
+$(STATEDIR)/xorg-lib-sm.get: $(XORG_LIB_SM_SOURCES)
+$(STATEDIR)/host-libselinux.get: $(HOST_LIBSELINUX_SOURCES)
+$(STATEDIR)/ltp-hpi.get: $(LTP_HPI_SOURCES)
+$(STATEDIR)/host-energyawaretools.get: $(HOST_ENERGYAWARETOOLS_SOURCES)
+$(STATEDIR)/owfs.get: $(OWFS_SOURCES)
+$(STATEDIR)/host-localedef.get: $(HOST_LOCALEDEF_SOURCES)
+$(STATEDIR)/ncftp.get: $(NCFTP_SOURCES)
+$(STATEDIR)/xorg-app-xprop.get: $(XORG_APP_XPROP_SOURCES)
+$(STATEDIR)/initramfs-tools.get: $(INITRAMFS_TOOLS_SOURCES)
+$(STATEDIR)/apache2.get: $(APACHE2_SOURCES)
+$(STATEDIR)/logrotate.get: $(LOGROTATE_SOURCES)
+$(STATEDIR)/host-libuuid.get: $(HOST_LIBUUID_SOURCES)
+$(STATEDIR)/hackbench.get: $(HACKBENCH_SOURCES)
+$(STATEDIR)/minicom.get: $(MINICOM_SOURCES)
+$(STATEDIR)/pekwm.get: $(PEKWM_SOURCES)
+$(STATEDIR)/libpipeline.get: $(LIBPIPELINE_SOURCES)
+$(STATEDIR)/polkit.get: $(POLKIT_SOURCES)
+$(STATEDIR)/xorg-app-xdm.get: $(XORG_APP_XDM_SOURCES)
+$(STATEDIR)/dbench.get: $(DBENCH_SOURCES)
+$(STATEDIR)/xorg-font-adobe-utopia-75dpi.get: $(XORG_FONT_ADOBE_UTOPIA_75DPI_SOURCES)
+$(STATEDIR)/xorg-font-misc-cyrillic.get: $(XORG_FONT_MISC_CYRILLIC_SOURCES)
+$(STATEDIR)/luaexpat.get: $(LUAEXPAT_SOURCES)
+$(STATEDIR)/sdl-gfx.get: $(SDL_GFX_SOURCES)
+$(STATEDIR)/host-genimage.get: $(HOST_GENIMAGE_SOURCES)
+$(STATEDIR)/pnputils.get: $(PNPUTILS_SOURCES)
+$(STATEDIR)/acpid.get: $(ACPID_SOURCES)
+$(STATEDIR)/libnl.get: $(LIBNL_SOURCES)
+$(STATEDIR)/glibc.get: $(GLIBC_SOURCES)
+$(STATEDIR)/librn.get: $(LIBRN_SOURCES)
+$(STATEDIR)/glademm.get: $(GLADEMM_SOURCES)
+$(STATEDIR)/xorg-driver-input-keyboard.get: $(XORG_DRIVER_INPUT_KEYBOARD_SOURCES)
+$(STATEDIR)/libmemcached.get: $(LIBMEMCACHED_SOURCES)
+$(STATEDIR)/xorg-driver-input-mouse.get: $(XORG_DRIVER_INPUT_MOUSE_SOURCES)
+$(STATEDIR)/twolame.get: $(TWOLAME_SOURCES)
+$(STATEDIR)/apache2_mod_python.get: $(APACHE2_MOD_PYTHON_SOURCES)
+$(STATEDIR)/libmikmod.get: $(LIBMIKMOD_SOURCES)
+$(STATEDIR)/binutils.get: $(BINUTILS_SOURCES)
+$(STATEDIR)/ltp-misc.get: $(LTP_MISC_SOURCES)
+$(STATEDIR)/libsigcpp.get: $(LIBSIGCPP_SOURCES)
+$(STATEDIR)/xorg-proto-damage.get: $(XORG_PROTO_DAMAGE_SOURCES)
+$(STATEDIR)/fuse.get: $(FUSE_SOURCES)
+$(STATEDIR)/pop3spam.get: $(POP3SPAM_SOURCES)
+$(STATEDIR)/xorg-proto-xf86vidmode.get: $(XORG_PROTO_XF86VIDMODE_SOURCES)
+$(STATEDIR)/mtd-oopslog.get: $(MTD_OOPSLOG_SOURCES)
+$(STATEDIR)/utelnetd.get: $(UTELNETD_SOURCES)
+$(STATEDIR)/udisks.get: $(UDISKS_SOURCES)
+$(STATEDIR)/bonniexx.get: $(BONNIEXX_SOURCES)
+$(STATEDIR)/python.get: $(PYTHON_SOURCES)
+$(STATEDIR)/host-libgcrypt.get: $(HOST_LIBGCRYPT_SOURCES)
+$(STATEDIR)/gpsd.get: $(GPSD_SOURCES)
+$(STATEDIR)/strace.get: $(STRACE_SOURCES)
+$(STATEDIR)/rxtx.get: $(RXTX_SOURCES)
+$(STATEDIR)/sqlite.get: $(SQLITE_SOURCES)
+$(STATEDIR)/libevent.get: $(LIBEVENT_SOURCES)
+$(STATEDIR)/host-python3.get: $(HOST_PYTHON3_SOURCES)
+$(STATEDIR)/host-libxml2.get: $(HOST_LIBXML2_SOURCES)
+$(STATEDIR)/joe.get: $(JOE_SOURCES)
+$(STATEDIR)/fltk.get: $(FLTK_SOURCES)
+$(STATEDIR)/watchdog.get: $(WATCHDOG_SOURCES)
+$(STATEDIR)/libpciaccess.get: $(LIBPCIACCESS_SOURCES)
+$(STATEDIR)/libosip2.get: $(LIBOSIP2_SOURCES)
+$(STATEDIR)/xorg-font-bitstream-100dpi.get: $(XORG_FONT_BITSTREAM_100DPI_SOURCES)
+$(STATEDIR)/sdl-ttf.get: $(SDL_TTF_SOURCES)
+$(STATEDIR)/blackbox.get: $(BLACKBOX_SOURCES)
+$(STATEDIR)/mtr.get: $(MTR_SOURCES)
+$(STATEDIR)/xorg-lib-xext.get: $(XORG_LIB_XEXT_SOURCES)
+$(STATEDIR)/pciutils.get: $(PCIUTILS_SOURCES)
+$(STATEDIR)/freeglut.get: $(FREEGLUT_SOURCES)
+$(STATEDIR)/host-mkelfimage.get: $(HOST_MKELFIMAGE_SOURCES)
+$(STATEDIR)/host-genpart.get: $(HOST_GENPART_SOURCES)
+$(STATEDIR)/xorg-font-arphic-ukai.get: $(XORG_FONT_ARPHIC_UKAI_SOURCES)
+$(STATEDIR)/dfu-util.get: $(DFU_UTIL_SOURCES)
+$(STATEDIR)/consolekit.get: $(CONSOLEKIT_SOURCES)
+$(STATEDIR)/haserl.get: $(HASERL_SOURCES)
+$(STATEDIR)/lmbench.get: $(LMBENCH_SOURCES)
+$(STATEDIR)/atk.get: $(ATK_SOURCES)
+$(STATEDIR)/xorg-font-cursor-misc.get: $(XORG_FONT_CURSOR_MISC_SOURCES)
+$(STATEDIR)/memcached.get: $(MEMCACHED_SOURCES)
+$(STATEDIR)/urshd.get: $(URSHD_SOURCES)
+$(STATEDIR)/host-policycoreutils.get: $(HOST_POLICYCOREUTILS_SOURCES)
+$(STATEDIR)/xorg-font-adobe-utopia-100dpi.get: $(XORG_FONT_ADOBE_UTOPIA_100DPI_SOURCES)
+$(STATEDIR)/p7zip.get: $(P7ZIP_SOURCES)
+$(STATEDIR)/kexec-tools.get: $(KEXEC_TOOLS_SOURCES)
+$(STATEDIR)/apr.get: $(APR_SOURCES)
+$(STATEDIR)/xorg-lib-x11.get: $(XORG_LIB_X11_SOURCES)
+$(STATEDIR)/ps3-utils.get: $(PS3_UTILS_SOURCES)
+$(STATEDIR)/host-mtd-utils.get: $(HOST_MTD_UTILS_SOURCES)
+$(STATEDIR)/xorg-font-cronyx-cyrillic.get: $(XORG_FONT_CRONYX_CYRILLIC_SOURCES)
+$(STATEDIR)/alsa-lib.get: $(ALSA_LIB_SOURCES)
+$(STATEDIR)/mmpong.get: $(MMPONG_SOURCES)
+$(STATEDIR)/dibbler.get: $(DIBBLER_SOURCES)
+$(STATEDIR)/comgt.get: $(COMGT_SOURCES)
+$(STATEDIR)/xorg-app-xinit.get: $(XORG_APP_XINIT_SOURCES)
+$(STATEDIR)/mii-diag.get: $(MII_DIAG_SOURCES)
+$(STATEDIR)/xmlrpc-c.get: $(XMLRPC_C_SOURCES)
+$(STATEDIR)/evtest.get: $(EVTEST_SOURCES)
+$(STATEDIR)/host-xorg-lib-x11.get: $(HOST_XORG_LIB_X11_SOURCES)
+$(STATEDIR)/glibmm.get: $(GLIBMM_SOURCES)
+$(STATEDIR)/ipkg.get: $(IPKG_SOURCES)
+$(STATEDIR)/barebox.get: $(BAREBOX_SOURCES)
+$(STATEDIR)/host-opkg-utils.get: $(HOST_OPKG_UTILS_SOURCES)
+$(STATEDIR)/host-usplash.get: $(HOST_USPLASH_SOURCES)
+$(STATEDIR)/libgcrypt.get: $(LIBGCRYPT_SOURCES)
+$(STATEDIR)/xorg-lib-windowswm.get: $(XORG_LIB_WINDOWSWM_SOURCES)
+$(STATEDIR)/php-apc.get: $(PHP_APC_SOURCES)
+$(STATEDIR)/squashfs-tools.get: $(SQUASHFS_TOOLS_SOURCES)
+$(STATEDIR)/xorg-lib-xmu.get: $(XORG_LIB_XMU_SOURCES)
+$(STATEDIR)/xorg-lib-xau.get: $(XORG_LIB_XAU_SOURCES)
+$(STATEDIR)/xorg-lib-xaw.get: $(XORG_LIB_XAW_SOURCES)
+$(STATEDIR)/xorg-lib-oldx.get: $(XORG_LIB_OLDX_SOURCES)
+$(STATEDIR)/dosfstools.get: $(DOSFSTOOLS_SOURCES)
+$(STATEDIR)/util-linux-ng.get: $(UTIL_LINUX_NG_SOURCES)
+$(STATEDIR)/host-chrpath.get: $(HOST_CHRPATH_SOURCES)
+$(STATEDIR)/jamvm.get: $(JAMVM_SOURCES)
+$(STATEDIR)/host-dosfstools.get: $(HOST_DOSFSTOOLS_SOURCES)
+$(STATEDIR)/host-xorg-proto-kb.get: $(HOST_XORG_PROTO_KB_SOURCES)
+$(STATEDIR)/zsync.get: $(ZSYNC_SOURCES)
+$(STATEDIR)/avahi.get: $(AVAHI_SOURCES)
+$(STATEDIR)/xawtv.get: $(XAWTV_SOURCES)
+$(STATEDIR)/lcms.get: $(LCMS_SOURCES)
+$(STATEDIR)/host-xorg-lib-xau.get: $(HOST_XORG_LIB_XAU_SOURCES)
+$(STATEDIR)/libarchive.get: $(LIBARCHIVE_SOURCES)
+$(STATEDIR)/libv4l2-python.get: $(LIBV4L2_PYTHON_SOURCES)
+$(STATEDIR)/xorg-proto-input.get: $(XORG_PROTO_INPUT_SOURCES)
+$(STATEDIR)/directfb.get: $(DIRECTFB_SOURCES)
+$(STATEDIR)/xorg-app-xrdb.get: $(XORG_APP_XRDB_SOURCES)
+$(STATEDIR)/host-lzop.get: $(HOST_LZOP_SOURCES)
+$(STATEDIR)/rsync.get: $(RSYNC_SOURCES)
+$(STATEDIR)/qwt.get: $(QWT_SOURCES)
+$(STATEDIR)/dbus-java.get: $(DBUS_JAVA_SOURCES)
+$(STATEDIR)/host-intltool.get: $(HOST_INTLTOOL_SOURCES)
+$(STATEDIR)/xorg-lib-xkbfile.get: $(XORG_LIB_XKBFILE_SOURCES)
+$(STATEDIR)/xorg-proto-xf86dga.get: $(XORG_PROTO_XF86DGA_SOURCES)
+$(STATEDIR)/xorg-app-xhost.get: $(XORG_APP_XHOST_SOURCES)
+$(STATEDIR)/mtd-utils.get: $(MTD_UTILS_SOURCES)
+$(STATEDIR)/ntpclient.get: $(NTPCLIENT_SOURCES)
+$(STATEDIR)/lvm2.get: $(LVM2_SOURCES)
+$(STATEDIR)/myodbc.get: $(MYODBC_SOURCES)
+$(STATEDIR)/which.get: $(WHICH_SOURCES)
+$(STATEDIR)/host-genext2fs.get: $(HOST_GENEXT2FS_SOURCES)
+$(STATEDIR)/opkg.get: $(OPKG_SOURCES)
+$(STATEDIR)/vorbis-tools.get: $(VORBIS_TOOLS_SOURCES)
+$(STATEDIR)/cross-dummy-strip.get: $(CROSS_DUMMY_STRIP_SOURCES)
+$(STATEDIR)/nano.get: $(NANO_SOURCES)
+$(STATEDIR)/coreutils.get: $(COREUTILS_SOURCES)
+$(STATEDIR)/libxcb.get: $(LIBXCB_SOURCES)
+$(STATEDIR)/vice.get: $(VICE_SOURCES)
+$(STATEDIR)/sdl_image.get: $(SDL_IMAGE_SOURCES)
+$(STATEDIR)/host-qooxdoo.get: $(HOST_QOOXDOO_SOURCES)
+$(STATEDIR)/gcclibs.get: $(GCCLIBS_SOURCES)
+$(STATEDIR)/xorg-font-sun-misc.get: $(XORG_FONT_SUN_MISC_SOURCES)
+$(STATEDIR)/xorg-proto-windowswm.get: $(XORG_PROTO_WINDOWSWM_SOURCES)
+$(STATEDIR)/flashbench.get: $(FLASHBENCH_SOURCES)
+$(STATEDIR)/ltp-pounder21.get: $(LTP_POUNDER21_SOURCES)
+$(STATEDIR)/host-xorg-proto-input.get: $(HOST_XORG_PROTO_INPUT_SOURCES)
+$(STATEDIR)/dialog.get: $(DIALOG_SOURCES)
+$(STATEDIR)/xorg-proto-scrnsaver.get: $(XORG_PROTO_SCRNSAVER_SOURCES)
+$(STATEDIR)/libmodbus3.get: $(LIBMODBUS3_SOURCES)
+$(STATEDIR)/jvisu.get: $(JVISU_SOURCES)
+$(STATEDIR)/host-xorg-server.get: $(HOST_XORG_SERVER_SOURCES)
+$(STATEDIR)/host-lndir.get: $(HOST_LNDIR_SOURCES)
+$(STATEDIR)/host-protobuf.get: $(HOST_PROTOBUF_SOURCES)
+$(STATEDIR)/xorg-lib-xvmc.get: $(XORG_LIB_XVMC_SOURCES)
+$(STATEDIR)/xorg-lib-xfont.get: $(XORG_LIB_XFONT_SOURCES)
+$(STATEDIR)/host-dtc.get: $(HOST_DTC_SOURCES)
+$(STATEDIR)/host-apache2.get: $(HOST_APACHE2_SOURCES)
+$(STATEDIR)/findutils.get: $(FINDUTILS_SOURCES)
+$(STATEDIR)/host-xorg-lib-xkbfile.get: $(HOST_XORG_LIB_XKBFILE_SOURCES)
+$(STATEDIR)/xorg-server.get: $(XORG_SERVER_SOURCES)
+$(STATEDIR)/xerces.get: $(XERCES_SOURCES)
+$(STATEDIR)/lshw.get: $(LSHW_SOURCES)
+$(STATEDIR)/fontconfig.get: $(FONTCONFIG_SOURCES)
+$(STATEDIR)/gst-plugins-bad.get: $(GST_PLUGINS_BAD_SOURCES)
+$(STATEDIR)/iproute2.get: $(IPROUTE2_SOURCES)
+$(STATEDIR)/xorg-driver-video-fbdev.get: $(XORG_DRIVER_VIDEO_FBDEV_SOURCES)
+$(STATEDIR)/xcb-util.get: $(XCB_UTIL_SOURCES)
+$(STATEDIR)/host-xorg-util-macros.get: $(HOST_XORG_UTIL_MACROS_SOURCES)
+$(STATEDIR)/host-xl-tools.get: $(HOST_XL_TOOLS_SOURCES)
+$(STATEDIR)/host-apiextractor.get: $(HOST_APIEXTRACTOR_SOURCES)
+$(STATEDIR)/libmemcache.get: $(LIBMEMCACHE_SOURCES)
+$(STATEDIR)/rootfs.extract: $(STATEDIR)/rootfs.get
+$(STATEDIR)/rootfs.extract.post: $(STATEDIR)/rootfs.extract
+$(STATEDIR)/rootfs.prepare: $(STATEDIR)/rootfs.extract.post
+$(STATEDIR)/rootfs.tags: $(STATEDIR)/rootfs.prepare
+$(STATEDIR)/rootfs.compile: $(STATEDIR)/rootfs.prepare
+$(STATEDIR)/rootfs.install: $(STATEDIR)/rootfs.compile
+$(STATEDIR)/rootfs.install.pack: $(STATEDIR)/rootfs.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(ROOTFS_DEVPKG))),)
+$(STATEDIR)/rootfs.install.post: $(STATEDIR)/rootfs.install.pack
+else
+$(STATEDIR)/rootfs.install.post: $(STATEDIR)/rootfs.install.unpack
+endif
+$(STATEDIR)/rootfs.targetinstall: $(STATEDIR)/rootfs.install.post
+$(STATEDIR)/rootfs.targetinstall.post: $(STATEDIR)/rootfs.targetinstall
+ifneq ($(ROOTFS),)
+ifneq ($(call autogen_dep,$(ROOTFS)),)
+$(STATEDIR)/rootfs.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(ROOTFS_URL)),)
+$(STATEDIR)/rootfs.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/rootfs.extract.post: $(STATEDIR)/host-figlet.install.post
+$(STATEDIR)/rootfs.install.unpack: $(STATEDIR)/host-figlet.install.post
+$(STATEDIR)/rootfs.extract.post: $(STATEDIR)/base.install
+$(STATEDIR)/rootfs.install.unpack: $(STATEDIR)/base.install
+$(STATEDIR)/kernel.extract: $(STATEDIR)/kernel.get
+$(STATEDIR)/kernel.extract.post: $(STATEDIR)/kernel.extract
+$(STATEDIR)/kernel.prepare: $(STATEDIR)/kernel.extract.post
+$(STATEDIR)/kernel.tags: $(STATEDIR)/kernel.prepare
+$(STATEDIR)/kernel.compile: $(STATEDIR)/kernel.prepare
+$(STATEDIR)/kernel.install: $(STATEDIR)/kernel.compile
+$(STATEDIR)/kernel.install.pack: $(STATEDIR)/kernel.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(KERNEL_DEVPKG))),)
+$(STATEDIR)/kernel.install.post: $(STATEDIR)/kernel.install.pack
+else
+$(STATEDIR)/kernel.install.post: $(STATEDIR)/kernel.install.unpack
+endif
+$(STATEDIR)/kernel.targetinstall: $(STATEDIR)/kernel.install.post
+$(STATEDIR)/kernel.targetinstall.post: $(STATEDIR)/kernel.targetinstall
+ifneq ($(KERNEL),)
+ifneq ($(call autogen_dep,$(KERNEL)),)
+$(STATEDIR)/kernel.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(KERNEL_URL)),)
+$(STATEDIR)/kernel.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/kernel.extract.post: $(STATEDIR)/host-libkmod.install.post
+$(STATEDIR)/kernel.install.unpack: $(STATEDIR)/host-libkmod.install.post
+$(STATEDIR)/kernel.extract.post: $(STATEDIR)/base.install
+$(STATEDIR)/kernel.install.unpack: $(STATEDIR)/base.install
+$(STATEDIR)/geckoboot.extract: $(STATEDIR)/geckoboot.get
+$(STATEDIR)/geckoboot.extract.post: $(STATEDIR)/geckoboot.extract
+$(STATEDIR)/geckoboot.prepare: $(STATEDIR)/geckoboot.extract.post
+$(STATEDIR)/geckoboot.tags: $(STATEDIR)/geckoboot.prepare
+$(STATEDIR)/geckoboot.compile: $(STATEDIR)/geckoboot.prepare
+$(STATEDIR)/geckoboot.install: $(STATEDIR)/geckoboot.compile
+$(STATEDIR)/geckoboot.install.pack: $(STATEDIR)/geckoboot.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(GECKOBOOT_DEVPKG))),)
+$(STATEDIR)/geckoboot.install.post: $(STATEDIR)/geckoboot.install.pack
+else
+$(STATEDIR)/geckoboot.install.post: $(STATEDIR)/geckoboot.install.unpack
+endif
+$(STATEDIR)/geckoboot.targetinstall: $(STATEDIR)/geckoboot.install.post
+$(STATEDIR)/geckoboot.targetinstall.post: $(STATEDIR)/geckoboot.targetinstall
+ifneq ($(GECKOBOOT),)
+ifneq ($(call autogen_dep,$(GECKOBOOT)),)
+$(STATEDIR)/geckoboot.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(GECKOBOOT_URL)),)
+$(STATEDIR)/geckoboot.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/geckoboot.extract.post: $(STATEDIR)/base.install
+$(STATEDIR)/geckoboot.install.unpack: $(STATEDIR)/base.install
+$(STATEDIR)/os-release.extract: $(STATEDIR)/os-release.get
+$(STATEDIR)/os-release.extract.post: $(STATEDIR)/os-release.extract
+$(STATEDIR)/os-release.prepare: $(STATEDIR)/os-release.extract.post
+$(STATEDIR)/os-release.tags: $(STATEDIR)/os-release.prepare
+$(STATEDIR)/os-release.compile: $(STATEDIR)/os-release.prepare
+$(STATEDIR)/os-release.install: $(STATEDIR)/os-release.compile
+$(STATEDIR)/os-release.install.pack: $(STATEDIR)/os-release.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(OS_RELEASE_DEVPKG))),)
+$(STATEDIR)/os-release.install.post: $(STATEDIR)/os-release.install.pack
+else
+$(STATEDIR)/os-release.install.post: $(STATEDIR)/os-release.install.unpack
+endif
+$(STATEDIR)/os-release.targetinstall: $(STATEDIR)/os-release.install.post
+$(STATEDIR)/os-release.targetinstall.post: $(STATEDIR)/os-release.targetinstall
+ifneq ($(OS_RELEASE),)
+ifneq ($(call autogen_dep,$(OS_RELEASE)),)
+$(STATEDIR)/os-release.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(OS_RELEASE_URL)),)
+$(STATEDIR)/os-release.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/os-release.extract.post: $(STATEDIR)/base.install
+$(STATEDIR)/os-release.install.unpack: $(STATEDIR)/base.install
+$(STATEDIR)/host-lndir.extract: $(STATEDIR)/host-lndir.get
+$(STATEDIR)/host-lndir.extract.post: $(STATEDIR)/host-lndir.extract
+$(STATEDIR)/host-lndir.prepare: $(STATEDIR)/host-lndir.extract.post
+$(STATEDIR)/host-lndir.tags: $(STATEDIR)/host-lndir.prepare
+$(STATEDIR)/host-lndir.compile: $(STATEDIR)/host-lndir.prepare
+$(STATEDIR)/host-lndir.install: $(STATEDIR)/host-lndir.compile
+$(STATEDIR)/host-lndir.install.pack: $(STATEDIR)/host-lndir.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_LNDIR_DEVPKG))),)
+$(STATEDIR)/host-lndir.install.post: $(STATEDIR)/host-lndir.install.pack
+else
+$(STATEDIR)/host-lndir.install.post: $(STATEDIR)/host-lndir.install.unpack
+endif
+ifneq ($(HOST_LNDIR),)
+ifneq ($(call autogen_dep,$(HOST_LNDIR)),)
+$(STATEDIR)/host-lndir.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_LNDIR_URL)),)
+$(STATEDIR)/host-lndir.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-lndir.extract.post: $(STATEDIR)/host-xorg-proto-x.install.post
+$(STATEDIR)/host-lndir.install.unpack: $(STATEDIR)/host-xorg-proto-x.install.post
+$(STATEDIR)/host-lndir.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-lndir.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-autotools-autoconf.extract: $(STATEDIR)/host-autotools-autoconf.get
+$(STATEDIR)/host-autotools-autoconf.extract.post: $(STATEDIR)/host-autotools-autoconf.extract
+$(STATEDIR)/host-autotools-autoconf.prepare: $(STATEDIR)/host-autotools-autoconf.extract.post
+$(STATEDIR)/host-autotools-autoconf.tags: $(STATEDIR)/host-autotools-autoconf.prepare
+$(STATEDIR)/host-autotools-autoconf.compile: $(STATEDIR)/host-autotools-autoconf.prepare
+$(STATEDIR)/host-autotools-autoconf.install: $(STATEDIR)/host-autotools-autoconf.compile
+$(STATEDIR)/host-autotools-autoconf.install.pack: $(STATEDIR)/host-autotools-autoconf.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_AUTOTOOLS_AUTOCONF_DEVPKG))),)
+$(STATEDIR)/host-autotools-autoconf.install.post: $(STATEDIR)/host-autotools-autoconf.install.pack
+else
+$(STATEDIR)/host-autotools-autoconf.install.post: $(STATEDIR)/host-autotools-autoconf.install.unpack
+endif
+ifneq ($(HOST_AUTOTOOLS_AUTOCONF),)
+ifneq ($(call autogen_dep,$(HOST_AUTOTOOLS_AUTOCONF)),)
+$(STATEDIR)/host-autotools-autoconf.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_AUTOTOOLS_AUTOCONF_URL)),)
+$(STATEDIR)/host-autotools-autoconf.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-autotools-autoconf.extract.post: $(STATEDIR)/host-system-perl.install.post
+$(STATEDIR)/host-autotools-autoconf.install.unpack: $(STATEDIR)/host-system-perl.install.post
+$(STATEDIR)/host-autotools-autoconf.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-autotools-autoconf.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/game.extract: $(STATEDIR)/game.get
+$(STATEDIR)/game.extract.post: $(STATEDIR)/game.extract
+$(STATEDIR)/game.prepare: $(STATEDIR)/game.extract.post
+$(STATEDIR)/game.tags: $(STATEDIR)/game.prepare
+$(STATEDIR)/game.compile: $(STATEDIR)/game.prepare
+$(STATEDIR)/game.install: $(STATEDIR)/game.compile
+$(STATEDIR)/game.install.pack: $(STATEDIR)/game.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(GAME_DEVPKG))),)
+$(STATEDIR)/game.install.post: $(STATEDIR)/game.install.pack
+else
+$(STATEDIR)/game.install.post: $(STATEDIR)/game.install.unpack
+endif
+$(STATEDIR)/game.targetinstall: $(STATEDIR)/game.install.post
+$(STATEDIR)/game.targetinstall.post: $(STATEDIR)/game.targetinstall
+ifneq ($(GAME),)
+ifneq ($(call autogen_dep,$(GAME)),)
+$(STATEDIR)/game.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(GAME_URL)),)
+$(STATEDIR)/game.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/game.extract.post: $(STATEDIR)/base.install
+$(STATEDIR)/game.install.unpack: $(STATEDIR)/base.install
+$(STATEDIR)/host-ipkg-utils.extract: $(STATEDIR)/host-ipkg-utils.get
+$(STATEDIR)/host-ipkg-utils.extract.post: $(STATEDIR)/host-ipkg-utils.extract
+$(STATEDIR)/host-ipkg-utils.prepare: $(STATEDIR)/host-ipkg-utils.extract.post
+$(STATEDIR)/host-ipkg-utils.tags: $(STATEDIR)/host-ipkg-utils.prepare
+$(STATEDIR)/host-ipkg-utils.compile: $(STATEDIR)/host-ipkg-utils.prepare
+$(STATEDIR)/host-ipkg-utils.install: $(STATEDIR)/host-ipkg-utils.compile
+$(STATEDIR)/host-ipkg-utils.install.pack: $(STATEDIR)/host-ipkg-utils.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_IPKG_UTILS_DEVPKG))),)
+$(STATEDIR)/host-ipkg-utils.install.post: $(STATEDIR)/host-ipkg-utils.install.pack
+else
+$(STATEDIR)/host-ipkg-utils.install.post: $(STATEDIR)/host-ipkg-utils.install.unpack
+endif
+ifneq ($(HOST_IPKG_UTILS),)
+ifneq ($(call autogen_dep,$(HOST_IPKG_UTILS)),)
+$(STATEDIR)/host-ipkg-utils.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_IPKG_UTILS_URL)),)
+$(STATEDIR)/host-ipkg-utils.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-ipkg-utils.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-ipkg-utils.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/init.extract: $(STATEDIR)/init.get
+$(STATEDIR)/init.extract.post: $(STATEDIR)/init.extract
+$(STATEDIR)/init.prepare: $(STATEDIR)/init.extract.post
+$(STATEDIR)/init.tags: $(STATEDIR)/init.prepare
+$(STATEDIR)/init.compile: $(STATEDIR)/init.prepare
+$(STATEDIR)/init.install: $(STATEDIR)/init.compile
+$(STATEDIR)/init.install.pack: $(STATEDIR)/init.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(INIT_DEVPKG))),)
+$(STATEDIR)/init.install.post: $(STATEDIR)/init.install.pack
+else
+$(STATEDIR)/init.install.post: $(STATEDIR)/init.install.unpack
+endif
+$(STATEDIR)/init.targetinstall: $(STATEDIR)/init.install.post
+$(STATEDIR)/init.targetinstall.post: $(STATEDIR)/init.targetinstall
+ifneq ($(INIT),)
+ifneq ($(call autogen_dep,$(INIT)),)
+$(STATEDIR)/init.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(INIT_URL)),)
+$(STATEDIR)/init.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/init.extract.post: $(STATEDIR)/base.install
+$(STATEDIR)/init.install.unpack: $(STATEDIR)/base.install
+$(STATEDIR)/host-unfs3.extract: $(STATEDIR)/host-unfs3.get
+$(STATEDIR)/host-unfs3.extract.post: $(STATEDIR)/host-unfs3.extract
+$(STATEDIR)/host-unfs3.prepare: $(STATEDIR)/host-unfs3.extract.post
+$(STATEDIR)/host-unfs3.tags: $(STATEDIR)/host-unfs3.prepare
+$(STATEDIR)/host-unfs3.compile: $(STATEDIR)/host-unfs3.prepare
+$(STATEDIR)/host-unfs3.install: $(STATEDIR)/host-unfs3.compile
+$(STATEDIR)/host-unfs3.install.pack: $(STATEDIR)/host-unfs3.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_UNFS3_DEVPKG))),)
+$(STATEDIR)/host-unfs3.install.post: $(STATEDIR)/host-unfs3.install.pack
+else
+$(STATEDIR)/host-unfs3.install.post: $(STATEDIR)/host-unfs3.install.unpack
+endif
+ifneq ($(HOST_UNFS3),)
+ifneq ($(call autogen_dep,$(HOST_UNFS3)),)
+$(STATEDIR)/host-unfs3.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_UNFS3_URL)),)
+$(STATEDIR)/host-unfs3.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-unfs3.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-unfs3.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-pkg-config.extract: $(STATEDIR)/host-pkg-config.get
+$(STATEDIR)/host-pkg-config.extract.post: $(STATEDIR)/host-pkg-config.extract
+$(STATEDIR)/host-pkg-config.prepare: $(STATEDIR)/host-pkg-config.extract.post
+$(STATEDIR)/host-pkg-config.tags: $(STATEDIR)/host-pkg-config.prepare
+$(STATEDIR)/host-pkg-config.compile: $(STATEDIR)/host-pkg-config.prepare
+$(STATEDIR)/host-pkg-config.install: $(STATEDIR)/host-pkg-config.compile
+$(STATEDIR)/host-pkg-config.install.pack: $(STATEDIR)/host-pkg-config.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_PKG_CONFIG_DEVPKG))),)
+$(STATEDIR)/host-pkg-config.install.post: $(STATEDIR)/host-pkg-config.install.pack
+else
+$(STATEDIR)/host-pkg-config.install.post: $(STATEDIR)/host-pkg-config.install.unpack
+endif
+ifneq ($(HOST_PKG_CONFIG),)
+ifneq ($(call autogen_dep,$(HOST_PKG_CONFIG)),)
+$(STATEDIR)/host-pkg-config.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_PKG_CONFIG_URL)),)
+$(STATEDIR)/host-pkg-config.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/cross-dummy-strip.extract: $(STATEDIR)/cross-dummy-strip.get
+$(STATEDIR)/cross-dummy-strip.extract.post: $(STATEDIR)/cross-dummy-strip.extract
+$(STATEDIR)/cross-dummy-strip.prepare: $(STATEDIR)/cross-dummy-strip.extract.post
+$(STATEDIR)/cross-dummy-strip.tags: $(STATEDIR)/cross-dummy-strip.prepare
+$(STATEDIR)/cross-dummy-strip.compile: $(STATEDIR)/cross-dummy-strip.prepare
+$(STATEDIR)/cross-dummy-strip.install: $(STATEDIR)/cross-dummy-strip.compile
+$(STATEDIR)/cross-dummy-strip.install.pack: $(STATEDIR)/cross-dummy-strip.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(CROSS_DUMMY_STRIP_DEVPKG))),)
+$(STATEDIR)/cross-dummy-strip.install.post: $(STATEDIR)/cross-dummy-strip.install.pack
+else
+$(STATEDIR)/cross-dummy-strip.install.post: $(STATEDIR)/cross-dummy-strip.install.unpack
+endif
+ifneq ($(CROSS_DUMMY_STRIP),)
+ifneq ($(call autogen_dep,$(CROSS_DUMMY_STRIP)),)
+$(STATEDIR)/cross-dummy-strip.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(CROSS_DUMMY_STRIP_URL)),)
+$(STATEDIR)/cross-dummy-strip.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/cross-dummy-strip.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/cross-dummy-strip.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-energyawaretools.extract: $(STATEDIR)/host-energyawaretools.get
+$(STATEDIR)/host-energyawaretools.extract.post: $(STATEDIR)/host-energyawaretools.extract
+$(STATEDIR)/host-energyawaretools.prepare: $(STATEDIR)/host-energyawaretools.extract.post
+$(STATEDIR)/host-energyawaretools.tags: $(STATEDIR)/host-energyawaretools.prepare
+$(STATEDIR)/host-energyawaretools.compile: $(STATEDIR)/host-energyawaretools.prepare
+$(STATEDIR)/host-energyawaretools.install: $(STATEDIR)/host-energyawaretools.compile
+$(STATEDIR)/host-energyawaretools.install.pack: $(STATEDIR)/host-energyawaretools.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_ENERGYAWARETOOLS_DEVPKG))),)
+$(STATEDIR)/host-energyawaretools.install.post: $(STATEDIR)/host-energyawaretools.install.pack
+else
+$(STATEDIR)/host-energyawaretools.install.post: $(STATEDIR)/host-energyawaretools.install.unpack
+endif
+ifneq ($(HOST_ENERGYAWARETOOLS),)
+ifneq ($(call autogen_dep,$(HOST_ENERGYAWARETOOLS)),)
+$(STATEDIR)/host-energyawaretools.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_ENERGYAWARETOOLS_URL)),)
+$(STATEDIR)/host-energyawaretools.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-energyawaretools.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-energyawaretools.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-genromfs.extract: $(STATEDIR)/host-genromfs.get
+$(STATEDIR)/host-genromfs.extract.post: $(STATEDIR)/host-genromfs.extract
+$(STATEDIR)/host-genromfs.prepare: $(STATEDIR)/host-genromfs.extract.post
+$(STATEDIR)/host-genromfs.tags: $(STATEDIR)/host-genromfs.prepare
+$(STATEDIR)/host-genromfs.compile: $(STATEDIR)/host-genromfs.prepare
+$(STATEDIR)/host-genromfs.install: $(STATEDIR)/host-genromfs.compile
+$(STATEDIR)/host-genromfs.install.pack: $(STATEDIR)/host-genromfs.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_GENROMFS_DEVPKG))),)
+$(STATEDIR)/host-genromfs.install.post: $(STATEDIR)/host-genromfs.install.pack
+else
+$(STATEDIR)/host-genromfs.install.post: $(STATEDIR)/host-genromfs.install.unpack
+endif
+ifneq ($(HOST_GENROMFS),)
+ifneq ($(call autogen_dep,$(HOST_GENROMFS)),)
+$(STATEDIR)/host-genromfs.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_GENROMFS_URL)),)
+$(STATEDIR)/host-genromfs.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-genromfs.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-genromfs.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/base.extract: $(STATEDIR)/base.get
+$(STATEDIR)/base.extract.post: $(STATEDIR)/base.extract
+$(STATEDIR)/base.prepare: $(STATEDIR)/base.extract.post
+$(STATEDIR)/base.tags: $(STATEDIR)/base.prepare
+$(STATEDIR)/base.compile: $(STATEDIR)/base.prepare
+$(STATEDIR)/base.install: $(STATEDIR)/base.compile
+$(STATEDIR)/base.install.pack: $(STATEDIR)/base.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(BASE_DEVPKG))),)
+$(STATEDIR)/base.install.post: $(STATEDIR)/base.install.pack
+else
+$(STATEDIR)/base.install.post: $(STATEDIR)/base.install.unpack
+endif
+$(STATEDIR)/base.targetinstall: $(STATEDIR)/base.install.post
+$(STATEDIR)/base.targetinstall.post: $(STATEDIR)/base.targetinstall
+ifneq ($(BASE),)
+ifneq ($(call autogen_dep,$(BASE)),)
+$(STATEDIR)/base.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(BASE_URL)),)
+$(STATEDIR)/base.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/base.extract.post: $(STATEDIR)/virtual-cross-tools.install
+$(STATEDIR)/base.install.unpack: $(STATEDIR)/virtual-cross-tools.install
+$(STATEDIR)/host-xorg-proto-x.extract: $(STATEDIR)/host-xorg-proto-x.get
+$(STATEDIR)/host-xorg-proto-x.extract.post: $(STATEDIR)/host-xorg-proto-x.extract
+$(STATEDIR)/host-xorg-proto-x.prepare: $(STATEDIR)/host-xorg-proto-x.extract.post
+$(STATEDIR)/host-xorg-proto-x.tags: $(STATEDIR)/host-xorg-proto-x.prepare
+$(STATEDIR)/host-xorg-proto-x.compile: $(STATEDIR)/host-xorg-proto-x.prepare
+$(STATEDIR)/host-xorg-proto-x.install: $(STATEDIR)/host-xorg-proto-x.compile
+$(STATEDIR)/host-xorg-proto-x.install.pack: $(STATEDIR)/host-xorg-proto-x.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_XORG_PROTO_X_DEVPKG))),)
+$(STATEDIR)/host-xorg-proto-x.install.post: $(STATEDIR)/host-xorg-proto-x.install.pack
+else
+$(STATEDIR)/host-xorg-proto-x.install.post: $(STATEDIR)/host-xorg-proto-x.install.unpack
+endif
+ifneq ($(HOST_XORG_PROTO_X),)
+ifneq ($(call autogen_dep,$(HOST_XORG_PROTO_X)),)
+$(STATEDIR)/host-xorg-proto-x.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_XORG_PROTO_X_URL)),)
+$(STATEDIR)/host-xorg-proto-x.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-xorg-proto-x.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-xorg-proto-x.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-ipkg.extract: $(STATEDIR)/host-ipkg.get
+$(STATEDIR)/host-ipkg.extract.post: $(STATEDIR)/host-ipkg.extract
+$(STATEDIR)/host-ipkg.prepare: $(STATEDIR)/host-ipkg.extract.post
+$(STATEDIR)/host-ipkg.tags: $(STATEDIR)/host-ipkg.prepare
+$(STATEDIR)/host-ipkg.compile: $(STATEDIR)/host-ipkg.prepare
+$(STATEDIR)/host-ipkg.install: $(STATEDIR)/host-ipkg.compile
+$(STATEDIR)/host-ipkg.install.pack: $(STATEDIR)/host-ipkg.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_IPKG_DEVPKG))),)
+$(STATEDIR)/host-ipkg.install.post: $(STATEDIR)/host-ipkg.install.pack
+else
+$(STATEDIR)/host-ipkg.install.post: $(STATEDIR)/host-ipkg.install.unpack
+endif
+ifneq ($(HOST_IPKG),)
+ifneq ($(call autogen_dep,$(HOST_IPKG)),)
+$(STATEDIR)/host-ipkg.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_IPKG_URL)),)
+$(STATEDIR)/host-ipkg.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-ipkg.extract.post: $(STATEDIR)/host-ipkg-utils.install.post
+$(STATEDIR)/host-ipkg.install.unpack: $(STATEDIR)/host-ipkg-utils.install.post
+$(STATEDIR)/host-ipkg.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-ipkg.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-elf-h-compat.extract: $(STATEDIR)/host-elf-h-compat.get
+$(STATEDIR)/host-elf-h-compat.extract.post: $(STATEDIR)/host-elf-h-compat.extract
+$(STATEDIR)/host-elf-h-compat.prepare: $(STATEDIR)/host-elf-h-compat.extract.post
+$(STATEDIR)/host-elf-h-compat.tags: $(STATEDIR)/host-elf-h-compat.prepare
+$(STATEDIR)/host-elf-h-compat.compile: $(STATEDIR)/host-elf-h-compat.prepare
+$(STATEDIR)/host-elf-h-compat.install: $(STATEDIR)/host-elf-h-compat.compile
+$(STATEDIR)/host-elf-h-compat.install.pack: $(STATEDIR)/host-elf-h-compat.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_ELF_H_COMPAT_DEVPKG))),)
+$(STATEDIR)/host-elf-h-compat.install.post: $(STATEDIR)/host-elf-h-compat.install.pack
+else
+$(STATEDIR)/host-elf-h-compat.install.post: $(STATEDIR)/host-elf-h-compat.install.unpack
+endif
+ifneq ($(HOST_ELF_H_COMPAT),)
+ifneq ($(call autogen_dep,$(HOST_ELF_H_COMPAT)),)
+$(STATEDIR)/host-elf-h-compat.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_ELF_H_COMPAT_URL)),)
+$(STATEDIR)/host-elf-h-compat.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-elf-h-compat.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-elf-h-compat.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-autotools-automake.extract: $(STATEDIR)/host-autotools-automake.get
+$(STATEDIR)/host-autotools-automake.extract.post: $(STATEDIR)/host-autotools-automake.extract
+$(STATEDIR)/host-autotools-automake.prepare: $(STATEDIR)/host-autotools-automake.extract.post
+$(STATEDIR)/host-autotools-automake.tags: $(STATEDIR)/host-autotools-automake.prepare
+$(STATEDIR)/host-autotools-automake.compile: $(STATEDIR)/host-autotools-automake.prepare
+$(STATEDIR)/host-autotools-automake.install: $(STATEDIR)/host-autotools-automake.compile
+$(STATEDIR)/host-autotools-automake.install.pack: $(STATEDIR)/host-autotools-automake.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_AUTOTOOLS_AUTOMAKE_DEVPKG))),)
+$(STATEDIR)/host-autotools-automake.install.post: $(STATEDIR)/host-autotools-automake.install.pack
+else
+$(STATEDIR)/host-autotools-automake.install.post: $(STATEDIR)/host-autotools-automake.install.unpack
+endif
+ifneq ($(HOST_AUTOTOOLS_AUTOMAKE),)
+ifneq ($(call autogen_dep,$(HOST_AUTOTOOLS_AUTOMAKE)),)
+$(STATEDIR)/host-autotools-automake.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_AUTOTOOLS_AUTOMAKE_URL)),)
+$(STATEDIR)/host-autotools-automake.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-autotools-automake.extract.post: $(STATEDIR)/host-system-perl.install.post
+$(STATEDIR)/host-autotools-automake.install.unpack: $(STATEDIR)/host-system-perl.install.post
+$(STATEDIR)/host-autotools-automake.extract.post: $(STATEDIR)/host-autotools-autoconf.install.post
+$(STATEDIR)/host-autotools-automake.install.unpack: $(STATEDIR)/host-autotools-autoconf.install.post
+$(STATEDIR)/host-autotools-automake.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-autotools-automake.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-libkmod.extract: $(STATEDIR)/host-libkmod.get
+$(STATEDIR)/host-libkmod.extract.post: $(STATEDIR)/host-libkmod.extract
+$(STATEDIR)/host-libkmod.prepare: $(STATEDIR)/host-libkmod.extract.post
+$(STATEDIR)/host-libkmod.tags: $(STATEDIR)/host-libkmod.prepare
+$(STATEDIR)/host-libkmod.compile: $(STATEDIR)/host-libkmod.prepare
+$(STATEDIR)/host-libkmod.install: $(STATEDIR)/host-libkmod.compile
+$(STATEDIR)/host-libkmod.install.pack: $(STATEDIR)/host-libkmod.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_LIBKMOD_DEVPKG))),)
+$(STATEDIR)/host-libkmod.install.post: $(STATEDIR)/host-libkmod.install.pack
+else
+$(STATEDIR)/host-libkmod.install.post: $(STATEDIR)/host-libkmod.install.unpack
+endif
+ifneq ($(HOST_LIBKMOD),)
+ifneq ($(call autogen_dep,$(HOST_LIBKMOD)),)
+$(STATEDIR)/host-libkmod.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_LIBKMOD_URL)),)
+$(STATEDIR)/host-libkmod.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-libkmod.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-libkmod.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/fbtest.extract: $(STATEDIR)/fbtest.get
+$(STATEDIR)/fbtest.extract.post: $(STATEDIR)/fbtest.extract
+$(STATEDIR)/fbtest.prepare: $(STATEDIR)/fbtest.extract.post
+$(STATEDIR)/fbtest.tags: $(STATEDIR)/fbtest.prepare
+$(STATEDIR)/fbtest.compile: $(STATEDIR)/fbtest.prepare
+$(STATEDIR)/fbtest.install: $(STATEDIR)/fbtest.compile
+$(STATEDIR)/fbtest.install.pack: $(STATEDIR)/fbtest.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(FBTEST_DEVPKG))),)
+$(STATEDIR)/fbtest.install.post: $(STATEDIR)/fbtest.install.pack
+else
+$(STATEDIR)/fbtest.install.post: $(STATEDIR)/fbtest.install.unpack
+endif
+$(STATEDIR)/fbtest.targetinstall: $(STATEDIR)/fbtest.install.post
+$(STATEDIR)/fbtest.targetinstall.post: $(STATEDIR)/fbtest.targetinstall
+ifneq ($(FBTEST),)
+ifneq ($(call autogen_dep,$(FBTEST)),)
+$(STATEDIR)/fbtest.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(FBTEST_URL)),)
+$(STATEDIR)/fbtest.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/fbtest.extract.post: $(STATEDIR)/base.install
+$(STATEDIR)/fbtest.install.unpack: $(STATEDIR)/base.install
+$(STATEDIR)/driver-gamepad.extract: $(STATEDIR)/driver-gamepad.get
+$(STATEDIR)/driver-gamepad.extract.post: $(STATEDIR)/driver-gamepad.extract
+$(STATEDIR)/driver-gamepad.prepare: $(STATEDIR)/driver-gamepad.extract.post
+$(STATEDIR)/driver-gamepad.tags: $(STATEDIR)/driver-gamepad.prepare
+$(STATEDIR)/driver-gamepad.compile: $(STATEDIR)/driver-gamepad.prepare
+$(STATEDIR)/driver-gamepad.install: $(STATEDIR)/driver-gamepad.compile
+$(STATEDIR)/driver-gamepad.install.pack: $(STATEDIR)/driver-gamepad.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(DRIVER_GAMEPAD_DEVPKG))),)
+$(STATEDIR)/driver-gamepad.install.post: $(STATEDIR)/driver-gamepad.install.pack
+else
+$(STATEDIR)/driver-gamepad.install.post: $(STATEDIR)/driver-gamepad.install.unpack
+endif
+$(STATEDIR)/driver-gamepad.targetinstall: $(STATEDIR)/driver-gamepad.install.post
+$(STATEDIR)/driver-gamepad.targetinstall.post: $(STATEDIR)/driver-gamepad.targetinstall
+ifneq ($(DRIVER_GAMEPAD),)
+ifneq ($(call autogen_dep,$(DRIVER_GAMEPAD)),)
+$(STATEDIR)/driver-gamepad.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(DRIVER_GAMEPAD_URL)),)
+$(STATEDIR)/driver-gamepad.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/driver-gamepad.extract.post: $(STATEDIR)/kernel.install.post
+$(STATEDIR)/driver-gamepad.install.unpack: $(STATEDIR)/kernel.install.post
+$(STATEDIR)/driver-gamepad.targetinstall: $(STATEDIR)/kernel.targetinstall
+$(STATEDIR)/driver-gamepad.extract.post: $(STATEDIR)/base.install
+$(STATEDIR)/driver-gamepad.install.unpack: $(STATEDIR)/base.install
+$(STATEDIR)/dtc.extract: $(STATEDIR)/dtc.get
+$(STATEDIR)/dtc.extract.post: $(STATEDIR)/dtc.extract
+$(STATEDIR)/dtc.prepare: $(STATEDIR)/dtc.extract.post
+$(STATEDIR)/dtc.tags: $(STATEDIR)/dtc.prepare
+$(STATEDIR)/dtc.compile: $(STATEDIR)/dtc.prepare
+$(STATEDIR)/dtc.install: $(STATEDIR)/dtc.compile
+$(STATEDIR)/dtc.install.pack: $(STATEDIR)/dtc.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(DTC_DEVPKG))),)
+$(STATEDIR)/dtc.install.post: $(STATEDIR)/dtc.install.pack
+else
+$(STATEDIR)/dtc.install.post: $(STATEDIR)/dtc.install.unpack
+endif
+$(STATEDIR)/dtc.targetinstall: $(STATEDIR)/dtc.install.post
+$(STATEDIR)/dtc.targetinstall.post: $(STATEDIR)/dtc.targetinstall
+ifneq ($(DTC),)
+ifneq ($(call autogen_dep,$(DTC)),)
+$(STATEDIR)/dtc.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(DTC_URL)),)
+$(STATEDIR)/dtc.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/dtc.extract.post: $(STATEDIR)/kernel.install.post
+$(STATEDIR)/dtc.install.unpack: $(STATEDIR)/kernel.install.post
+$(STATEDIR)/dtc.targetinstall: $(STATEDIR)/kernel.targetinstall
+$(STATEDIR)/dtc.extract.post: $(STATEDIR)/base.install
+$(STATEDIR)/dtc.install.unpack: $(STATEDIR)/base.install
+$(STATEDIR)/busybox.extract: $(STATEDIR)/busybox.get
+$(STATEDIR)/busybox.extract.post: $(STATEDIR)/busybox.extract
+$(STATEDIR)/busybox.prepare: $(STATEDIR)/busybox.extract.post
+$(STATEDIR)/busybox.tags: $(STATEDIR)/busybox.prepare
+$(STATEDIR)/busybox.compile: $(STATEDIR)/busybox.prepare
+$(STATEDIR)/busybox.install: $(STATEDIR)/busybox.compile
+$(STATEDIR)/busybox.install.pack: $(STATEDIR)/busybox.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(BUSYBOX_DEVPKG))),)
+$(STATEDIR)/busybox.install.post: $(STATEDIR)/busybox.install.pack
+else
+$(STATEDIR)/busybox.install.post: $(STATEDIR)/busybox.install.unpack
+endif
+$(STATEDIR)/busybox.targetinstall: $(STATEDIR)/busybox.install.post
+$(STATEDIR)/busybox.targetinstall.post: $(STATEDIR)/busybox.targetinstall
+ifneq ($(BUSYBOX),)
+ifneq ($(call autogen_dep,$(BUSYBOX)),)
+$(STATEDIR)/busybox.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(BUSYBOX_URL)),)
+$(STATEDIR)/busybox.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/busybox.extract.post: $(STATEDIR)/base.install
+$(STATEDIR)/busybox.install.unpack: $(STATEDIR)/base.install
+$(STATEDIR)/host-fakeroot.extract: $(STATEDIR)/host-fakeroot.get
+$(STATEDIR)/host-fakeroot.extract.post: $(STATEDIR)/host-fakeroot.extract
+$(STATEDIR)/host-fakeroot.prepare: $(STATEDIR)/host-fakeroot.extract.post
+$(STATEDIR)/host-fakeroot.tags: $(STATEDIR)/host-fakeroot.prepare
+$(STATEDIR)/host-fakeroot.compile: $(STATEDIR)/host-fakeroot.prepare
+$(STATEDIR)/host-fakeroot.install: $(STATEDIR)/host-fakeroot.compile
+$(STATEDIR)/host-fakeroot.install.pack: $(STATEDIR)/host-fakeroot.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_FAKEROOT_DEVPKG))),)
+$(STATEDIR)/host-fakeroot.install.post: $(STATEDIR)/host-fakeroot.install.pack
+else
+$(STATEDIR)/host-fakeroot.install.post: $(STATEDIR)/host-fakeroot.install.unpack
+endif
+ifneq ($(HOST_FAKEROOT),)
+ifneq ($(call autogen_dep,$(HOST_FAKEROOT)),)
+$(STATEDIR)/host-fakeroot.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_FAKEROOT_URL)),)
+$(STATEDIR)/host-fakeroot.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-fakeroot.extract.post: $(STATEDIR)/host-acl.install.post
+$(STATEDIR)/host-fakeroot.install.unpack: $(STATEDIR)/host-acl.install.post
+$(STATEDIR)/host-fakeroot.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-fakeroot.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/cross-pkg-config-wrapper.extract: $(STATEDIR)/cross-pkg-config-wrapper.get
+$(STATEDIR)/cross-pkg-config-wrapper.extract.post: $(STATEDIR)/cross-pkg-config-wrapper.extract
+$(STATEDIR)/cross-pkg-config-wrapper.prepare: $(STATEDIR)/cross-pkg-config-wrapper.extract.post
+$(STATEDIR)/cross-pkg-config-wrapper.tags: $(STATEDIR)/cross-pkg-config-wrapper.prepare
+$(STATEDIR)/cross-pkg-config-wrapper.compile: $(STATEDIR)/cross-pkg-config-wrapper.prepare
+$(STATEDIR)/cross-pkg-config-wrapper.install: $(STATEDIR)/cross-pkg-config-wrapper.compile
+$(STATEDIR)/cross-pkg-config-wrapper.install.pack: $(STATEDIR)/cross-pkg-config-wrapper.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(CROSS_PKG_CONFIG_WRAPPER_DEVPKG))),)
+$(STATEDIR)/cross-pkg-config-wrapper.install.post: $(STATEDIR)/cross-pkg-config-wrapper.install.pack
+else
+$(STATEDIR)/cross-pkg-config-wrapper.install.post: $(STATEDIR)/cross-pkg-config-wrapper.install.unpack
+endif
+ifneq ($(CROSS_PKG_CONFIG_WRAPPER),)
+ifneq ($(call autogen_dep,$(CROSS_PKG_CONFIG_WRAPPER)),)
+$(STATEDIR)/cross-pkg-config-wrapper.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(CROSS_PKG_CONFIG_WRAPPER_URL)),)
+$(STATEDIR)/cross-pkg-config-wrapper.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/cross-pkg-config-wrapper.extract.post: $(STATEDIR)/host-pkg-config.install.post
+$(STATEDIR)/cross-pkg-config-wrapper.install.unpack: $(STATEDIR)/host-pkg-config.install.post
+$(STATEDIR)/cross-pkg-config-wrapper.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/cross-pkg-config-wrapper.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-figlet.extract: $(STATEDIR)/host-figlet.get
+$(STATEDIR)/host-figlet.extract.post: $(STATEDIR)/host-figlet.extract
+$(STATEDIR)/host-figlet.prepare: $(STATEDIR)/host-figlet.extract.post
+$(STATEDIR)/host-figlet.tags: $(STATEDIR)/host-figlet.prepare
+$(STATEDIR)/host-figlet.compile: $(STATEDIR)/host-figlet.prepare
+$(STATEDIR)/host-figlet.install: $(STATEDIR)/host-figlet.compile
+$(STATEDIR)/host-figlet.install.pack: $(STATEDIR)/host-figlet.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_FIGLET_DEVPKG))),)
+$(STATEDIR)/host-figlet.install.post: $(STATEDIR)/host-figlet.install.pack
+else
+$(STATEDIR)/host-figlet.install.post: $(STATEDIR)/host-figlet.install.unpack
+endif
+ifneq ($(HOST_FIGLET),)
+ifneq ($(call autogen_dep,$(HOST_FIGLET)),)
+$(STATEDIR)/host-figlet.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_FIGLET_URL)),)
+$(STATEDIR)/host-figlet.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-figlet.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-figlet.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-attr.extract: $(STATEDIR)/host-attr.get
+$(STATEDIR)/host-attr.extract.post: $(STATEDIR)/host-attr.extract
+$(STATEDIR)/host-attr.prepare: $(STATEDIR)/host-attr.extract.post
+$(STATEDIR)/host-attr.tags: $(STATEDIR)/host-attr.prepare
+$(STATEDIR)/host-attr.compile: $(STATEDIR)/host-attr.prepare
+$(STATEDIR)/host-attr.install: $(STATEDIR)/host-attr.compile
+$(STATEDIR)/host-attr.install.pack: $(STATEDIR)/host-attr.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_ATTR_DEVPKG))),)
+$(STATEDIR)/host-attr.install.post: $(STATEDIR)/host-attr.install.pack
+else
+$(STATEDIR)/host-attr.install.post: $(STATEDIR)/host-attr.install.unpack
+endif
+ifneq ($(HOST_ATTR),)
+ifneq ($(call autogen_dep,$(HOST_ATTR)),)
+$(STATEDIR)/host-attr.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_ATTR_URL)),)
+$(STATEDIR)/host-attr.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-attr.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-attr.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-system-perl.extract: $(STATEDIR)/host-system-perl.get
+$(STATEDIR)/host-system-perl.extract.post: $(STATEDIR)/host-system-perl.extract
+$(STATEDIR)/host-system-perl.prepare: $(STATEDIR)/host-system-perl.extract.post
+$(STATEDIR)/host-system-perl.tags: $(STATEDIR)/host-system-perl.prepare
+$(STATEDIR)/host-system-perl.compile: $(STATEDIR)/host-system-perl.prepare
+$(STATEDIR)/host-system-perl.install: $(STATEDIR)/host-system-perl.compile
+$(STATEDIR)/host-system-perl.install.pack: $(STATEDIR)/host-system-perl.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_SYSTEM_PERL_DEVPKG))),)
+$(STATEDIR)/host-system-perl.install.post: $(STATEDIR)/host-system-perl.install.pack
+else
+$(STATEDIR)/host-system-perl.install.post: $(STATEDIR)/host-system-perl.install.unpack
+endif
+ifneq ($(HOST_SYSTEM_PERL),)
+ifneq ($(call autogen_dep,$(HOST_SYSTEM_PERL)),)
+$(STATEDIR)/host-system-perl.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_SYSTEM_PERL_URL)),)
+$(STATEDIR)/host-system-perl.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-system-perl.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-system-perl.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-autotools-libtool.extract: $(STATEDIR)/host-autotools-libtool.get
+$(STATEDIR)/host-autotools-libtool.extract.post: $(STATEDIR)/host-autotools-libtool.extract
+$(STATEDIR)/host-autotools-libtool.prepare: $(STATEDIR)/host-autotools-libtool.extract.post
+$(STATEDIR)/host-autotools-libtool.tags: $(STATEDIR)/host-autotools-libtool.prepare
+$(STATEDIR)/host-autotools-libtool.compile: $(STATEDIR)/host-autotools-libtool.prepare
+$(STATEDIR)/host-autotools-libtool.install: $(STATEDIR)/host-autotools-libtool.compile
+$(STATEDIR)/host-autotools-libtool.install.pack: $(STATEDIR)/host-autotools-libtool.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_AUTOTOOLS_LIBTOOL_DEVPKG))),)
+$(STATEDIR)/host-autotools-libtool.install.post: $(STATEDIR)/host-autotools-libtool.install.pack
+else
+$(STATEDIR)/host-autotools-libtool.install.post: $(STATEDIR)/host-autotools-libtool.install.unpack
+endif
+ifneq ($(HOST_AUTOTOOLS_LIBTOOL),)
+ifneq ($(call autogen_dep,$(HOST_AUTOTOOLS_LIBTOOL)),)
+$(STATEDIR)/host-autotools-libtool.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_AUTOTOOLS_LIBTOOL_URL)),)
+$(STATEDIR)/host-autotools-libtool.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-autotools-libtool.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-autotools-libtool.install.unpack: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-acl.extract: $(STATEDIR)/host-acl.get
+$(STATEDIR)/host-acl.extract.post: $(STATEDIR)/host-acl.extract
+$(STATEDIR)/host-acl.prepare: $(STATEDIR)/host-acl.extract.post
+$(STATEDIR)/host-acl.tags: $(STATEDIR)/host-acl.prepare
+$(STATEDIR)/host-acl.compile: $(STATEDIR)/host-acl.prepare
+$(STATEDIR)/host-acl.install: $(STATEDIR)/host-acl.compile
+$(STATEDIR)/host-acl.install.pack: $(STATEDIR)/host-acl.install
+ifeq ($(strip $(wildcard $(PTXDIST_DEVPKG_PLATFORMDIR)/$(HOST_ACL_DEVPKG))),)
+$(STATEDIR)/host-acl.install.post: $(STATEDIR)/host-acl.install.pack
+else
+$(STATEDIR)/host-acl.install.post: $(STATEDIR)/host-acl.install.unpack
+endif
+ifneq ($(HOST_ACL),)
+ifneq ($(call autogen_dep,$(HOST_ACL)),)
+$(STATEDIR)/host-acl.extract.post: $(STATEDIR)/autogen-tools
+endif
+ifneq ($(findstring lndir://,$(HOST_ACL_URL)),)
+$(STATEDIR)/host-acl.extract: $(STATEDIR)/host-lndir.install.post
+endif
+endif
+$(STATEDIR)/host-acl.extract.post: $(STATEDIR)/host-attr.install.post
+$(STATEDIR)/host-acl.install.unpack: $(STATEDIR)/host-attr.install.post
+$(STATEDIR)/host-acl.extract.post: $(STATEDIR)/virtual-host-tools.install
+$(STATEDIR)/host-acl.install.unpack: $(STATEDIR)/virtual-host-tools.install

@@ -1,0 +1,9 @@
+Package:	init
+Priority:	optional
+Version:	1.0.0
+Section:  	base
+Architecture:	arm
+Maintainer:	"Marc Kleine-Budde <mkl@pengutronix.de>"
+Depends:	
+Source: 	http://www.ptxdist.org/
+Description:	missing

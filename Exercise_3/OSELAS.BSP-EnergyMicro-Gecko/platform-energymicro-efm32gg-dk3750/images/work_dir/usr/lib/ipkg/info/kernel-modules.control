@@ -1,0 +1,9 @@
+Package:	kernel-modules
+Priority:	optional
+Version:	3.12~rc4
+Section:  	base
+Architecture:	arm
+Maintainer:	"Robert Schwebel <r.schwebel@pengutronix.de>"
+Depends:	
+Source: 	http://www.ptxdist.org/
+Description:	missing

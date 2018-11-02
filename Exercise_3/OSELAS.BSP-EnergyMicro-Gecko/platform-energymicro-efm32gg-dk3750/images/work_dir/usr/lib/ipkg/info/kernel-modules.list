@@ -1,0 +1,12 @@
+/lib/modules/3.12.0-rc4/modules.dep
+/lib/modules/3.12.0-rc4/modules.alias.bin
+/lib/modules/3.12.0-rc4/modules.symbols.bin
+/lib/modules/3.12.0-rc4/modules.symbols
+/lib/modules/3.12.0-rc4/modules.builtin
+/lib/modules/3.12.0-rc4/modules.order
+/lib/modules/3.12.0-rc4/modules.dep.bin
+/lib/modules/3.12.0-rc4/extra/driver-gamepad.ko
+/lib/modules/3.12.0-rc4/modules.alias
+/lib/modules/3.12.0-rc4/modules.builtin.bin
+/lib/modules/3.12.0-rc4/modules.devname
+/lib/modules/3.12.0-rc4/modules.softdep
