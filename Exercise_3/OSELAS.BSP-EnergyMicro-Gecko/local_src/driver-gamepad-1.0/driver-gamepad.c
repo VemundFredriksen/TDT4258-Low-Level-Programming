@@ -4,13 +4,36 @@
 
 #include <linux/fs.h>
 #include <linux/ioport.h>
+#include <linux/interrupt.h>
+#include <linux/cdev.h>
 #include <asm/io.h>
 #include "efm32gg.h"
 
 
 #define DRIVER_NAME "TDT4258_Gamepad_Driver"
+#define GPIO_IRQ_EVEN 17
+#define GPIO_IRQ_ODD 18
+
+//========== Local Function Declarations ==========//
+static irqreturn_t gpio_interrupt_handler(int irq, void* dev_id, struct pt_regs* regs);
+static int __init setup(void);
+static void __exit teardown(void);
+static ssize_t driver_read(struct file *filp, char __user *buff, size_t count, loff_t *offp);
+static ssize_t driver_write(struct file *filp, const char __user *buff, size_t count, loff_t *offp);
+static int driver_open (struct inode *inode, struct file *filp);
+static int driver_release (struct inode *inode, struct file *filep);
 
 int device_number;
+struct cdev driver_cdev;
+
+
+static struct file_operations driver_fops = {
+    .owner = THIS_MODULE,
+    .read = driver_read,
+    .write = driver_write,
+    .open = driver_open,
+    .release = driver_release
+};
 
 /*
  * template_init - function to insert this module into kernel space
@@ -23,7 +46,7 @@ int device_number;
 
 static int __init setup(void)
 {
-	printk("Hello World, here is your module speaking\n");
+	printk("Setting up TDT4258 Gamepad Driver...\n");
 	
 	//int result;
 	//result = alloc_chrdev_region(&device_number, 0, 1, DRIVER_NAME);
@@ -54,6 +77,19 @@ static int __init setup(void)
 	iowrite32(0x33333333, GPIO_PC_MODEL);
 	iowrite32(0xFF, GPIO_PC_DOUT);
 	
+	//Add driver to OS interrupt list
+	request_irq(GPIO_IRQ_EVEN, (irq_handler_t) gpio_interrupt_handler, 0, DRIVER_NAME, &driver_cdev);
+    request_irq(GPIO_IRQ_ODD, (irq_handler_t) gpio_interrupt_handler, 0, DRIVER_NAME, &driver_cdev);
+	
+	//Initializing cdev and add to kernel driver list
+	cdev_init(&driver_cdev, &driver_fops);
+	cdev_add(&driver_cdev, device_number, 1);
+	
+	//Enable interrupts
+	iowrite32(0x22222222, GPIO_EXTIPSELL);
+	iowrite32(0xFF, GPIO_EXTIFALL);
+	iowrite32(0xFF, GPIO_IEN);
+	
 	return 0;
 }
 
@@ -66,8 +102,38 @@ static int __init setup(void)
 
 static void __exit teardown(void)
 {
-	 printk("Short life for a small module...\n");
+	 printk("Tearing down TDT4258 Gamepad Driver...\n");
 }
+
+irqreturn_t gpio_interrupt_handler(int irq, void* dev_id, struct pt_regs* regs)
+{
+    iowrite32(ioread32(GPIO_IF), GPIO_IFC);
+    int temp = ~ioread32(GPIO_PC_DIN);
+    printk("gampead:%d\n", temp);
+    return IRQ_HANDLED;
+}
+
+static ssize_t driver_read(struct file *filp, char __user *buff, size_t count, loff_t *offp)
+{
+	//TODO read gpio pc din, write to buff
+	return 1;
+}
+
+static ssize_t driver_write(struct file *filp, const char __user *buff, size_t count, loff_t *offp)
+{
+	return 1;
+}
+static int driver_open (struct inode *inode, struct file *filp)
+{
+	return 0;
+}
+
+static int driver_release (struct inode *inode, struct file *filep)
+{
+	return 0;
+}
+
+
 
 module_init(setup);
 module_exit(teardown);

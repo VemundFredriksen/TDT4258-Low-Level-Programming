@@ -13288,3 +13288,2242 @@ Deleting src dir:
 
 
 
+{{{ 2018-11-04T15:18:25+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+
+}}} 2018-11-04T15:18:28+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:18:32+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+--------------------------
+target: driver-gamepad.get
+--------------------------
+
+finished target driver-gamepad.get
+
+------------------------------
+target: driver-gamepad.extract
+------------------------------
+
+local directory using lndir
+patchin: no patches found
+finished target driver-gamepad.extract
+
+-----------------------------------
+target: driver-gamepad.extract.post
+-----------------------------------
+
+patchin: fixup:
+patchin: fixup: done
+
+finished target driver-gamepad.extract.post
+
+------------------------------
+target: driver-gamepad.prepare
+------------------------------
+
+finished target driver-gamepad.prepare
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:41:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:45:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:49:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:54:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:8:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:55:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:8:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:62:45: error: 'gpio_interrupt_handler' undeclared (first use in this function)
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:62:45: note: each undeclared identifier is reported only once for each function it appears in
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:62:86: error: 'gamepad_cdev' undeclared (first use in this function)
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'gpio_interrupt_handler':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:82:5: error: 'GPIO_IF' undeclared (first use in this function)
+make[2]: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o] Error 1
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+make[1]: *** [_module_/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0] Error 2
+make: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile] Error 2
+
+}}} 2018-11-04T15:18:36+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 2)
+
+
+
+{{{ 2018-11-04T15:19:52+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+Deleting stage files:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.get
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.prepare
+
+Deleting src dir:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0
+
+
+}}} 2018-11-04T15:19:55+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:19:59+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+--------------------------
+target: driver-gamepad.get
+--------------------------
+
+finished target driver-gamepad.get
+
+------------------------------
+target: driver-gamepad.extract
+------------------------------
+
+local directory using lndir
+patchin: no patches found
+finished target driver-gamepad.extract
+
+-----------------------------------
+target: driver-gamepad.extract.post
+-----------------------------------
+
+patchin: fixup:
+patchin: fixup: done
+
+finished target driver-gamepad.extract.post
+
+------------------------------
+target: driver-gamepad.prepare
+------------------------------
+
+finished target driver-gamepad.prepare
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:41:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:45:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:49:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:54:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:8:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:55:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:8:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:62:45: error: 'gpio_interrupt_handler' undeclared (first use in this function)
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:62:45: note: each undeclared identifier is reported only once for each function it appears in
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:62:86: error: 'gamepad_cdev' undeclared (first use in this function)
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+make[2]: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o] Error 1
+make[1]: *** [_module_/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0] Error 2
+make: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile] Error 2
+
+}}} 2018-11-04T15:20:03+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 2)
+
+
+
+{{{ 2018-11-04T15:20:18+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+Deleting stage files:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.get
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.prepare
+
+Deleting src dir:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0
+
+
+}}} 2018-11-04T15:20:21+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:20:22+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+--------------------------
+target: driver-gamepad.get
+--------------------------
+
+finished target driver-gamepad.get
+
+------------------------------
+target: driver-gamepad.extract
+------------------------------
+
+local directory using lndir
+patchin: no patches found
+finished target driver-gamepad.extract
+
+-----------------------------------
+target: driver-gamepad.extract.post
+-----------------------------------
+
+patchin: fixup:
+patchin: fixup: done
+
+finished target driver-gamepad.extract.post
+
+------------------------------
+target: driver-gamepad.prepare
+------------------------------
+
+finished target driver-gamepad.prepare
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:41:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:45:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:49:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:54:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:8:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:55:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:8:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:62:45: error: 'gpio_interrupt_handler' undeclared (first use in this function)
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:62:45: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o] Error 1
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+make[1]: *** [_module_/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0] Error 2
+make: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile] Error 2
+
+}}} 2018-11-04T15:20:26+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 2)
+
+
+
+{{{ 2018-11-04T15:21:47+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+Deleting stage files:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.get
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.prepare
+
+Deleting src dir:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0
+
+
+}}} 2018-11-04T15:21:50+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:21:51+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+--------------------------
+target: driver-gamepad.get
+--------------------------
+
+finished target driver-gamepad.get
+
+------------------------------
+target: driver-gamepad.extract
+------------------------------
+
+local directory using lndir
+patchin: no patches found
+finished target driver-gamepad.extract
+
+-----------------------------------
+target: driver-gamepad.extract.post
+-----------------------------------
+
+patchin: fixup:
+patchin: fixup: done
+
+finished target driver-gamepad.extract.post
+
+------------------------------
+target: driver-gamepad.prepare
+------------------------------
+
+finished target driver-gamepad.prepare
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:45:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:49:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:53:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:58:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:8:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:59:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:8:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: At top level:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:21:13: error: storage size of 'driver_cdev' isn't known
+make[2]: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o] Error 1
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+make[1]: *** [_module_/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0] Error 2
+make: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile] Error 2
+
+}}} 2018-11-04T15:21:55+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 2)
+
+
+
+{{{ 2018-11-04T15:22:38+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+Deleting stage files:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.get
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.prepare
+
+Deleting src dir:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0
+
+
+}}} 2018-11-04T15:22:41+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:22:42+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+--------------------------
+target: driver-gamepad.get
+--------------------------
+
+finished target driver-gamepad.get
+
+------------------------------
+target: driver-gamepad.extract
+------------------------------
+
+local directory using lndir
+patchin: no patches found
+finished target driver-gamepad.extract
+
+-----------------------------------
+target: driver-gamepad.extract.post
+-----------------------------------
+
+patchin: fixup:
+patchin: fixup: done
+
+finished target driver-gamepad.extract.post
+
+------------------------------
+target: driver-gamepad.prepare
+------------------------------
+
+finished target driver-gamepad.prepare
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:46:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:50:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:54:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:59:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:60:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.mod.o
+  LD [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.ko
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+finished target driver-gamepad.compile
+
+}}} 2018-11-04T15:22:46+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:26:31+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+Deleting stage files:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.get
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.prepare
+
+Deleting src dir:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0
+
+
+}}} 2018-11-04T15:26:34+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:26:36+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+--------------------------
+target: driver-gamepad.get
+--------------------------
+
+finished target driver-gamepad.get
+
+------------------------------
+target: driver-gamepad.extract
+------------------------------
+
+local directory using lndir
+patchin: no patches found
+finished target driver-gamepad.extract
+
+-----------------------------------
+target: driver-gamepad.extract.post
+-----------------------------------
+
+patchin: fixup:
+patchin: fixup: done
+
+finished target driver-gamepad.extract.post
+
+------------------------------
+target: driver-gamepad.prepare
+------------------------------
+
+finished target driver-gamepad.prepare
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:27:13: error: 'driver_read' undeclared here (not in a function)
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:28:14: error: 'driver_write' undeclared here (not in a function)
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:29:13: error: 'driver_open' undeclared here (not in a function)
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:30:16: error: 'driver_release' undeclared here (not in a function)
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:55:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:59:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:63:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:68:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:69:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: At top level:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:25:31: warning: 'driver_fops' defined but not used [-Wunused-variable]
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:100:16: warning: 'driver_read' defined but not used [-Wunused-function]
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:106:16: warning: 'driver_write' defined but not used [-Wunused-function]
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:110:12: warning: 'driver_open' defined but not used [-Wunused-function]
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:115:12: warning: 'driver_release' defined but not used [-Wunused-function]
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+make[2]: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o] Error 1
+make[1]: *** [_module_/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0] Error 2
+make: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile] Error 2
+
+}}} 2018-11-04T15:26:39+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 2)
+
+
+
+{{{ 2018-11-04T15:27:04+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+Deleting stage files:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.get
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.prepare
+
+Deleting src dir:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0
+
+
+}}} 2018-11-04T15:27:07+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:27:09+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+--------------------------
+target: driver-gamepad.get
+--------------------------
+
+finished target driver-gamepad.get
+
+------------------------------
+target: driver-gamepad.extract
+------------------------------
+
+local directory using lndir
+patchin: no patches found
+finished target driver-gamepad.extract
+
+-----------------------------------
+target: driver-gamepad.extract.post
+-----------------------------------
+
+patchin: fixup:
+patchin: fixup: done
+
+finished target driver-gamepad.extract.post
+
+------------------------------
+target: driver-gamepad.prepare
+------------------------------
+
+finished target driver-gamepad.prepare
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:60:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:64:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:68:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:73:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:74:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: At top level:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:30:31: warning: 'driver_fops' defined but not used [-Wunused-variable]
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.mod.o
+  LD [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.ko
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+finished target driver-gamepad.compile
+
+}}} 2018-11-04T15:27:13+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:28:43+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+Deleting stage files:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.get
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.prepare
+
+Deleting src dir:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0
+
+
+}}} 2018-11-04T15:28:46+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:28:48+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+--------------------------
+target: driver-gamepad.get
+--------------------------
+
+finished target driver-gamepad.get
+
+------------------------------
+target: driver-gamepad.extract
+------------------------------
+
+local directory using lndir
+patchin: no patches found
+finished target driver-gamepad.extract
+
+-----------------------------------
+target: driver-gamepad.extract.post
+-----------------------------------
+
+patchin: fixup:
+patchin: fixup: done
+
+finished target driver-gamepad.extract.post
+
+------------------------------
+target: driver-gamepad.prepare
+------------------------------
+
+finished target driver-gamepad.prepare
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:60:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:64:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:68:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:73:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:74:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.mod.o
+  LD [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.ko
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+finished target driver-gamepad.compile
+
+}}} 2018-11-04T15:28:51+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:31:19+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+Deleting stage files:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.get
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.prepare
+
+Deleting src dir:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0
+
+
+}}} 2018-11-04T15:31:22+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:31:25+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+--------------------------
+target: driver-gamepad.get
+--------------------------
+
+finished target driver-gamepad.get
+
+------------------------------
+target: driver-gamepad.extract
+------------------------------
+
+local directory using lndir
+patchin: no patches found
+finished target driver-gamepad.extract
+
+-----------------------------------
+target: driver-gamepad.extract.post
+-----------------------------------
+
+patchin: fixup:
+patchin: fixup: done
+
+finished target driver-gamepad.extract.post
+
+------------------------------
+target: driver-gamepad.prepare
+------------------------------
+
+finished target driver-gamepad.prepare
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:60:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:64:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:68:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:73:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:74:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:85:25: error: 'driver_number' undeclared (first use in this function)
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:85:25: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+make[2]: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o] Error 1
+make[1]: *** [_module_/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0] Error 2
+make: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile] Error 2
+
+}}} 2018-11-04T15:31:29+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 2)
+
+
+
+{{{ 2018-11-04T15:31:53+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+Deleting stage files:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.get
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.prepare
+
+Deleting src dir:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0
+
+
+}}} 2018-11-04T15:31:56+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:31:56+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+--------------------------
+target: driver-gamepad.get
+--------------------------
+
+finished target driver-gamepad.get
+
+------------------------------
+target: driver-gamepad.extract
+------------------------------
+
+local directory using lndir
+patchin: no patches found
+finished target driver-gamepad.extract
+
+-----------------------------------
+target: driver-gamepad.extract.post
+-----------------------------------
+
+patchin: fixup:
+patchin: fixup: done
+
+finished target driver-gamepad.extract.post
+
+------------------------------
+target: driver-gamepad.prepare
+------------------------------
+
+finished target driver-gamepad.prepare
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:60:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:64:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:68:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:73:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:74:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.mod.o
+  LD [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.ko
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+finished target driver-gamepad.compile
+
+}}} 2018-11-04T15:32:00+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:33:18+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+Deleting stage files:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.get
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.prepare
+
+Deleting src dir:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0
+
+
+}}} 2018-11-04T15:33:21+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:33:22+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+--------------------------
+target: driver-gamepad.get
+--------------------------
+
+finished target driver-gamepad.get
+
+------------------------------
+target: driver-gamepad.extract
+------------------------------
+
+local directory using lndir
+patchin: no patches found
+finished target driver-gamepad.extract
+
+-----------------------------------
+target: driver-gamepad.extract.post
+-----------------------------------
+
+patchin: fixup:
+patchin: fixup: done
+
+finished target driver-gamepad.extract.post
+
+------------------------------
+target: driver-gamepad.prepare
+------------------------------
+
+finished target driver-gamepad.prepare
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:60:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:64:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:68:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:73:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:74:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'gpio_interrupt_handler':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:104:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:105:5: warning: passing argument 1 of 'printk' makes pointer from integer without a cast [enabled by default]
+In file included from include/linux/kernel.h:13:0,
+                 from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:1:
+include/linux/printk.h:124:5: note: expected 'const char *' but argument is of type 'int'
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.mod.o
+  LD [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.ko
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+finished target driver-gamepad.compile
+
+}}} 2018-11-04T15:33:26+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:35:19+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall driver-gamepad
+
+------------------------------
+target: driver-gamepad.install
+------------------------------
+
+finished target driver-gamepad.install
+
+-----------------------------------
+target: driver-gamepad.install.pack
+-----------------------------------
+
+ptxdist: warning: PKG didn't install anything to '/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/driver-gamepad-1.0'
+finished target driver-gamepad.install.pack
+
+-----------------------------------
+target: driver-gamepad.install.post
+-----------------------------------
+
+finished target driver-gamepad.install.post
+
+------------------------------------
+target: driver-gamepad.targetinstall
+------------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules_install
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  INSTALL /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.ko
+  DEPMOD  3.12.0-rc4
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+finished target driver-gamepad.targetinstall
+
+-----------------------------------------
+target: driver-gamepad.targetinstall.post
+-----------------------------------------
+
+finished target driver-gamepad.targetinstall.post
+
+}}} 2018-11-04T15:35:22+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:35:28+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall kernel
+
+---------------------------------
+target: kernel.targetinstall.post
+---------------------------------
+
+install_init:	preparing for image creation of 'kernel-modules'...
+install_init:	@ARCH@ -> arm
+install_init:	@PACKAGE@ -> kernel-modules
+install_init:	@VERSION@ -> 3.12~rc4
+install_init:	@DEPENDS@ -> 
+install_init:	preinst not available
+install_init:	postinst not available
+install_init:	prerm not available
+install_init:	postrm not available
+install_fixup:	@PRIORITY@ -> optional ... done.
+install_fixup:	@SECTION@ -> base ... done.
+install_fixup:	@AUTHOR@ -> "Robert Schwebel <r.schwebel\@pengutronix.de>" ... done.
+install_fixup:	@DESCRIPTION@ -> missing ... done.
+xpkg_finish:	collecting license (GPLv2) ... done.
+xpkg_finish:	creating ipkg package ... 
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.dep.bin
+  dst=/lib/modules/3.12.0-rc4/modules.dep.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.alias.bin
+  dst=/lib/modules/3.12.0-rc4/modules.alias.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.alias
+  dst=/lib/modules/3.12.0-rc4/modules.alias
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.builtin.bin
+  dst=/lib/modules/3.12.0-rc4/modules.builtin.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.devname
+  dst=/lib/modules/3.12.0-rc4/modules.devname
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.order
+  dst=/lib/modules/3.12.0-rc4/modules.order
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.symbols
+  dst=/lib/modules/3.12.0-rc4/modules.symbols
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.builtin
+  dst=/lib/modules/3.12.0-rc4/modules.builtin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.dep
+  dst=/lib/modules/3.12.0-rc4/modules.dep
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.symbols.bin
+  dst=/lib/modules/3.12.0-rc4/modules.symbols.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/extra/driver-gamepad.ko
+  dst=/lib/modules/3.12.0-rc4/extra/driver-gamepad.ko
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.softdep
+  dst=/lib/modules/3.12.0-rc4/modules.softdep
+  owner=0 
+  group=0 
+  permissions=0644
+
+Packaged contents of /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/kernel-modules.tmp/ipkg into /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/kernel-modules_3.12~rc4_arm.ipk
+done.
+finished target kernel.targetinstall.post
+
+}}} 2018-11-04T15:35:31+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall kernel; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:35:43+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist image root.romfs
+Installing os-release (1.0) to root...
+Installing init (1.0.0) to root...
+Installing fbtest (20041102+1) to root...
+Installing kernel-modules (3.12~rc4) to root...
+Installing game (1.0) to root...
+Installing busybox (1.21.0) to root...
+Installing rootfs (1.0.0) to root...
+Configuring busybox
+Configuring fbtest
+Configuring game
+Configuring init
+Configuring kernel-modules
+Configuring os-release
+Configuring rootfs
+Successfully terminated.
+finished target image_working_dir
+Creating root.romfs from image_working_dir...done.
+
+}}} 2018-11-04T15:35:45+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist image root.romfs; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:35:51+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist test flash-rootfs
+
+}}} 2018-11-04T15:36:02+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist test flash-rootfs; (exit value: 255)
+
+
+
+{{{ 2018-11-04T15:38:04+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+Deleting stage files:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.get
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.install
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.install.pack
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.install.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.prepare
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.targetinstall
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.targetinstall.post
+
+Deleting src dir:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0
+
+
+}}} 2018-11-04T15:38:07+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:38:11+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+--------------------------
+target: driver-gamepad.get
+--------------------------
+
+finished target driver-gamepad.get
+
+------------------------------
+target: driver-gamepad.extract
+------------------------------
+
+local directory using lndir
+patchin: no patches found
+finished target driver-gamepad.extract
+
+-----------------------------------
+target: driver-gamepad.extract.post
+-----------------------------------
+
+patchin: fixup:
+patchin: fixup: done
+
+finished target driver-gamepad.extract.post
+
+------------------------------
+target: driver-gamepad.prepare
+------------------------------
+
+finished target driver-gamepad.prepare
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:60:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:64:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:68:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:73:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:74:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'gpio_interrupt_handler':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:104:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:105:5: warning: passing argument 1 of 'printk' makes pointer from integer without a cast [enabled by default]
+In file included from include/linux/kernel.h:13:0,
+                 from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:1:
+include/linux/printk.h:124:5: note: expected 'const char *' but argument is of type 'int'
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.mod.o
+  LD [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.ko
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+finished target driver-gamepad.compile
+
+}}} 2018-11-04T15:38:15+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:38:18+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall driver-gamepad
+
+------------------------------
+target: driver-gamepad.install
+------------------------------
+
+finished target driver-gamepad.install
+
+-----------------------------------
+target: driver-gamepad.install.pack
+-----------------------------------
+
+ptxdist: warning: PKG didn't install anything to '/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/driver-gamepad-1.0'
+finished target driver-gamepad.install.pack
+
+-----------------------------------
+target: driver-gamepad.install.post
+-----------------------------------
+
+finished target driver-gamepad.install.post
+
+------------------------------------
+target: driver-gamepad.targetinstall
+------------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules_install
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  INSTALL /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.ko
+  DEPMOD  3.12.0-rc4
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+finished target driver-gamepad.targetinstall
+
+-----------------------------------------
+target: driver-gamepad.targetinstall.post
+-----------------------------------------
+
+finished target driver-gamepad.targetinstall.post
+
+}}} 2018-11-04T15:38:21+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:38:24+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall kernel
+
+---------------------------------
+target: kernel.targetinstall.post
+---------------------------------
+
+install_init:	preparing for image creation of 'kernel-modules'...
+install_init:	@ARCH@ -> arm
+install_init:	@PACKAGE@ -> kernel-modules
+install_init:	@VERSION@ -> 3.12~rc4
+install_init:	@DEPENDS@ -> 
+install_init:	preinst not available
+install_init:	postinst not available
+install_init:	prerm not available
+install_init:	postrm not available
+install_fixup:	@PRIORITY@ -> optional ... done.
+install_fixup:	@SECTION@ -> base ... done.
+install_fixup:	@AUTHOR@ -> "Robert Schwebel <r.schwebel\@pengutronix.de>" ... done.
+install_fixup:	@DESCRIPTION@ -> missing ... done.
+xpkg_finish:	collecting license (GPLv2) ... done.
+xpkg_finish:	creating ipkg package ... 
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.dep.bin
+  dst=/lib/modules/3.12.0-rc4/modules.dep.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.alias.bin
+  dst=/lib/modules/3.12.0-rc4/modules.alias.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.alias
+  dst=/lib/modules/3.12.0-rc4/modules.alias
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.builtin.bin
+  dst=/lib/modules/3.12.0-rc4/modules.builtin.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.devname
+  dst=/lib/modules/3.12.0-rc4/modules.devname
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.order
+  dst=/lib/modules/3.12.0-rc4/modules.order
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.symbols
+  dst=/lib/modules/3.12.0-rc4/modules.symbols
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.builtin
+  dst=/lib/modules/3.12.0-rc4/modules.builtin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.dep
+  dst=/lib/modules/3.12.0-rc4/modules.dep
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.symbols.bin
+  dst=/lib/modules/3.12.0-rc4/modules.symbols.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/extra/driver-gamepad.ko
+  dst=/lib/modules/3.12.0-rc4/extra/driver-gamepad.ko
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.softdep
+  dst=/lib/modules/3.12.0-rc4/modules.softdep
+  owner=0 
+  group=0 
+  permissions=0644
+
+Packaged contents of /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/kernel-modules.tmp/ipkg into /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/kernel-modules_3.12~rc4_arm.ipk
+done.
+finished target kernel.targetinstall.post
+
+}}} 2018-11-04T15:38:27+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall kernel; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:38:34+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist image root.romfs
+Installing os-release (1.0) to root...
+Installing init (1.0.0) to root...
+Installing fbtest (20041102+1) to root...
+Installing kernel-modules (3.12~rc4) to root...
+Installing game (1.0) to root...
+Installing busybox (1.21.0) to root...
+Installing rootfs (1.0.0) to root...
+Configuring busybox
+Configuring fbtest
+Configuring game
+Configuring init
+Configuring kernel-modules
+Configuring os-release
+Configuring rootfs
+Successfully terminated.
+finished target image_working_dir
+Creating root.romfs from image_working_dir...done.
+
+}}} 2018-11-04T15:38:36+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist image root.romfs; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:38:43+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist test flash-rootfs
+
+}}} 2018-11-04T15:38:43+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist test flash-rootfs; (exit value: 255)
+
+
+
+{{{ 2018-11-04T15:38:54+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist test flash-rootfs
+
+}}} 2018-11-04T15:39:05+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist test flash-rootfs; (exit value: 255)
+
+
+
+{{{ 2018-11-04T15:42:14+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+Deleting stage files:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.get
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.install
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.install.pack
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.install.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.prepare
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.targetinstall
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.targetinstall.post
+
+Deleting src dir:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0
+
+
+}}} 2018-11-04T15:42:18+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:42:42+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+--------------------------
+target: driver-gamepad.get
+--------------------------
+
+finished target driver-gamepad.get
+
+------------------------------
+target: driver-gamepad.extract
+------------------------------
+
+local directory using lndir
+patchin: no patches found
+finished target driver-gamepad.extract
+
+-----------------------------------
+target: driver-gamepad.extract.post
+-----------------------------------
+
+patchin: fixup:
+patchin: fixup: done
+
+finished target driver-gamepad.extract.post
+
+------------------------------
+target: driver-gamepad.prepare
+------------------------------
+
+finished target driver-gamepad.prepare
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:60:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:64:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:68:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:73:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:74:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:90:2: error: implicit declaration of function 'iowrite' [-Werror=implicit-function-declaration]
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:90:16: error: 'GPIO_EXTIPFALL' undeclared (first use in this function)
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:90:16: note: each undeclared identifier is reported only once for each function it appears in
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'gpio_interrupt_handler':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:111:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:112:5: warning: passing argument 1 of 'printk' makes pointer from integer without a cast [enabled by default]
+In file included from include/linux/kernel.h:13:0,
+                 from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:1:
+include/linux/printk.h:124:5: note: expected 'const char *' but argument is of type 'int'
+cc1: some warnings being treated as errors
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+make[2]: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o] Error 1
+make[1]: *** [_module_/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0] Error 2
+make: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile] Error 2
+
+}}} 2018-11-04T15:42:46+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 2)
+
+
+
+{{{ 2018-11-04T15:42:50+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall driver-gamepad
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:60:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:64:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:68:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:73:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:74:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:90:2: error: implicit declaration of function 'iowrite' [-Werror=implicit-function-declaration]
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:90:16: error: 'GPIO_EXTIPFALL' undeclared (first use in this function)
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:90:16: note: each undeclared identifier is reported only once for each function it appears in
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'gpio_interrupt_handler':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:111:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:112:5: warning: passing argument 1 of 'printk' makes pointer from integer without a cast [enabled by default]
+In file included from include/linux/kernel.h:13:0,
+                 from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:1:
+include/linux/printk.h:124:5: note: expected 'const char *' but argument is of type 'int'
+cc1: some warnings being treated as errors
+make[2]: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o] Error 1
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+make[1]: *** [_module_/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0] Error 2
+make: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile] Error 2
+
+}}} 2018-11-04T15:42:53+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall driver-gamepad; (exit value: 2)
+
+
+
+{{{ 2018-11-04T15:43:53+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:60:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:64:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:68:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:73:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:74:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:90:2: error: implicit declaration of function 'iowrite' [-Werror=implicit-function-declaration]
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:90:16: error: 'GPIO_EXTIPFALL' undeclared (first use in this function)
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:90:16: note: each undeclared identifier is reported only once for each function it appears in
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'gpio_interrupt_handler':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:111:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+cc1: some warnings being treated as errors
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+make[2]: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o] Error 1
+make[1]: *** [_module_/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0] Error 2
+make: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile] Error 2
+
+}}} 2018-11-04T15:43:56+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 2)
+
+
+
+{{{ 2018-11-04T15:44:21+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:60:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:64:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:68:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:73:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:74:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:90:2: error: implicit declaration of function 'iowrite' [-Werror=implicit-function-declaration]
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'gpio_interrupt_handler':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:111:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+cc1: some warnings being treated as errors
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+make[2]: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o] Error 1
+make[1]: *** [_module_/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0] Error 2
+make: *** [/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile] Error 2
+
+}}} 2018-11-04T15:44:24+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 2)
+
+
+
+{{{ 2018-11-04T15:44:38+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:60:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:64:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:68:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:73:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:74:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'gpio_interrupt_handler':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:111:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.mod.o
+  LD [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.ko
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+finished target driver-gamepad.compile
+
+}}} 2018-11-04T15:44:42+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:44:46+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall driver-gamepad
+
+------------------------------
+target: driver-gamepad.install
+------------------------------
+
+finished target driver-gamepad.install
+
+-----------------------------------
+target: driver-gamepad.install.pack
+-----------------------------------
+
+ptxdist: warning: PKG didn't install anything to '/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/driver-gamepad-1.0'
+finished target driver-gamepad.install.pack
+
+-----------------------------------
+target: driver-gamepad.install.post
+-----------------------------------
+
+finished target driver-gamepad.install.post
+
+------------------------------------
+target: driver-gamepad.targetinstall
+------------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules_install
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  INSTALL /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.ko
+  DEPMOD  3.12.0-rc4
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+finished target driver-gamepad.targetinstall
+
+-----------------------------------------
+target: driver-gamepad.targetinstall.post
+-----------------------------------------
+
+finished target driver-gamepad.targetinstall.post
+
+}}} 2018-11-04T15:44:50+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:44:53+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall kernel
+
+---------------------------------
+target: kernel.targetinstall.post
+---------------------------------
+
+install_init:	preparing for image creation of 'kernel-modules'...
+install_init:	@ARCH@ -> arm
+install_init:	@PACKAGE@ -> kernel-modules
+install_init:	@VERSION@ -> 3.12~rc4
+install_init:	@DEPENDS@ -> 
+install_init:	preinst not available
+install_init:	postinst not available
+install_init:	prerm not available
+install_init:	postrm not available
+install_fixup:	@PRIORITY@ -> optional ... done.
+install_fixup:	@SECTION@ -> base ... done.
+install_fixup:	@AUTHOR@ -> "Robert Schwebel <r.schwebel\@pengutronix.de>" ... done.
+install_fixup:	@DESCRIPTION@ -> missing ... done.
+xpkg_finish:	collecting license (GPLv2) ... done.
+xpkg_finish:	creating ipkg package ... 
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.dep.bin
+  dst=/lib/modules/3.12.0-rc4/modules.dep.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.alias.bin
+  dst=/lib/modules/3.12.0-rc4/modules.alias.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.alias
+  dst=/lib/modules/3.12.0-rc4/modules.alias
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.builtin.bin
+  dst=/lib/modules/3.12.0-rc4/modules.builtin.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.devname
+  dst=/lib/modules/3.12.0-rc4/modules.devname
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.order
+  dst=/lib/modules/3.12.0-rc4/modules.order
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.symbols
+  dst=/lib/modules/3.12.0-rc4/modules.symbols
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.builtin
+  dst=/lib/modules/3.12.0-rc4/modules.builtin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.dep
+  dst=/lib/modules/3.12.0-rc4/modules.dep
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.symbols.bin
+  dst=/lib/modules/3.12.0-rc4/modules.symbols.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/extra/driver-gamepad.ko
+  dst=/lib/modules/3.12.0-rc4/extra/driver-gamepad.ko
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.softdep
+  dst=/lib/modules/3.12.0-rc4/modules.softdep
+  owner=0 
+  group=0 
+  permissions=0644
+
+Packaged contents of /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/kernel-modules.tmp/ipkg into /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/kernel-modules_3.12~rc4_arm.ipk
+done.
+finished target kernel.targetinstall.post
+
+}}} 2018-11-04T15:44:56+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall kernel; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:45:01+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist image root.romfs
+Installing os-release (1.0) to root...
+Installing init (1.0.0) to root...
+Installing fbtest (20041102+1) to root...
+Installing kernel-modules (3.12~rc4) to root...
+Installing game (1.0) to root...
+Installing busybox (1.21.0) to root...
+Installing rootfs (1.0.0) to root...
+Configuring busybox
+Configuring fbtest
+Configuring game
+Configuring init
+Configuring kernel-modules
+Configuring os-release
+Configuring rootfs
+Successfully terminated.
+finished target image_working_dir
+Creating root.romfs from image_working_dir...done.
+
+}}} 2018-11-04T15:45:04+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist image root.romfs; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:45:08+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist test flash-rootfs
+
+}}} 2018-11-04T15:45:11+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist test flash-rootfs; (exit value: 254)
+
+
+
+{{{ 2018-11-04T15:45:21+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist test flash-rootfs
+
+}}} 2018-11-04T15:45:32+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist test flash-rootfs; (exit value: 255)
+
+
+
+{{{ 2018-11-04T15:46:42+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+Deleting stage files:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.get
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.install
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.install.pack
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.install.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.prepare
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.targetinstall
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.targetinstall.post
+
+Deleting src dir:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0
+
+
+}}} 2018-11-04T15:46:45+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:46:47+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad
+
+--------------------------
+target: driver-gamepad.get
+--------------------------
+
+finished target driver-gamepad.get
+
+------------------------------
+target: driver-gamepad.extract
+------------------------------
+
+local directory using lndir
+patchin: no patches found
+finished target driver-gamepad.extract
+
+-----------------------------------
+target: driver-gamepad.extract.post
+-----------------------------------
+
+patchin: fixup:
+patchin: fixup: done
+
+finished target driver-gamepad.extract.post
+
+------------------------------
+target: driver-gamepad.prepare
+------------------------------
+
+finished target driver-gamepad.prepare
+
+------------------------------
+target: driver-gamepad.compile
+------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  CC [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.o
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'setup':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:60:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:64:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:68:2: warning: passing argument 2 of '__request_region' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:6:0:
+include/linux/ioport.h:182:26: note: expected 'resource_size_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:73:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:74:2: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast [enabled by default]
+In file included from /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:9:0:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4/arch/arm/include/asm/io.h:137:22: note: expected 'phys_addr_t' but argument is of type 'volatile uint32_t *'
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c: In function 'gpio_interrupt_handler':
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.c:111:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.mod.o
+  LD [M]  /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.ko
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+finished target driver-gamepad.compile
+
+}}} 2018-11-04T15:46:51+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist compile driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:46:54+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall driver-gamepad
+
+------------------------------
+target: driver-gamepad.install
+------------------------------
+
+finished target driver-gamepad.install
+
+-----------------------------------
+target: driver-gamepad.install.pack
+-----------------------------------
+
+ptxdist: warning: PKG didn't install anything to '/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/driver-gamepad-1.0'
+finished target driver-gamepad.install.pack
+
+-----------------------------------
+target: driver-gamepad.install.post
+-----------------------------------
+
+finished target driver-gamepad.install.post
+
+------------------------------------
+target: driver-gamepad.targetinstall
+------------------------------------
+
+PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/bin:/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-cross/sbin:$PATH KCONFIG_NOTIMESTAMP=1 pkg_wrapper_blacklist="TARGET_HARDEN_STACK TARGET_HARDEN_FORTIFY TARGET_HARDEN_RELRO TARGET_HARDEN_BINDNOW TARGET_HARDEN_PIE" make -j2 V=0 ARCH=arm CROSS_COMPILE=arm-cortexm3-uclinuxeabi- INSTALL_MOD_PATH=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4 PTX_KERNEL_DIR=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4  DEPMOD=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/sysroot-host/sbin/depmod \
+		-C /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4 \
+		M=/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0 \
+		modules_install
+make[1]: Entering directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+  INSTALL /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0/driver-gamepad.ko
+  DEPMOD  3.12.0-rc4
+make[1]: Leaving directory `/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/linux-3.12-rc4'
+finished target driver-gamepad.targetinstall
+
+-----------------------------------------
+target: driver-gamepad.targetinstall.post
+-----------------------------------------
+
+finished target driver-gamepad.targetinstall.post
+
+}}} 2018-11-04T15:46:57+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall driver-gamepad; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:47:00+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall kernel
+
+---------------------------------
+target: kernel.targetinstall.post
+---------------------------------
+
+install_init:	preparing for image creation of 'kernel-modules'...
+install_init:	@ARCH@ -> arm
+install_init:	@PACKAGE@ -> kernel-modules
+install_init:	@VERSION@ -> 3.12~rc4
+install_init:	@DEPENDS@ -> 
+install_init:	preinst not available
+install_init:	postinst not available
+install_init:	prerm not available
+install_init:	postrm not available
+install_fixup:	@PRIORITY@ -> optional ... done.
+install_fixup:	@SECTION@ -> base ... done.
+install_fixup:	@AUTHOR@ -> "Robert Schwebel <r.schwebel\@pengutronix.de>" ... done.
+install_fixup:	@DESCRIPTION@ -> missing ... done.
+xpkg_finish:	collecting license (GPLv2) ... done.
+xpkg_finish:	creating ipkg package ... 
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.dep.bin
+  dst=/lib/modules/3.12.0-rc4/modules.dep.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.alias.bin
+  dst=/lib/modules/3.12.0-rc4/modules.alias.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.alias
+  dst=/lib/modules/3.12.0-rc4/modules.alias
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.builtin.bin
+  dst=/lib/modules/3.12.0-rc4/modules.builtin.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.devname
+  dst=/lib/modules/3.12.0-rc4/modules.devname
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.order
+  dst=/lib/modules/3.12.0-rc4/modules.order
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.symbols
+  dst=/lib/modules/3.12.0-rc4/modules.symbols
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.builtin
+  dst=/lib/modules/3.12.0-rc4/modules.builtin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.dep
+  dst=/lib/modules/3.12.0-rc4/modules.dep
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.symbols.bin
+  dst=/lib/modules/3.12.0-rc4/modules.symbols.bin
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/extra/driver-gamepad.ko
+  dst=/lib/modules/3.12.0-rc4/extra/driver-gamepad.ko
+  owner=0 
+  group=0 
+  permissions=0644
+
+install file:
+  src=OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/linux-3.12-rc4/lib/modules/3.12.0-rc4/modules.softdep
+  dst=/lib/modules/3.12.0-rc4/modules.softdep
+  owner=0 
+  group=0 
+  permissions=0644
+
+Packaged contents of /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/kernel-modules.tmp/ipkg into /home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/packages/kernel-modules_3.12~rc4_arm.ipk
+done.
+finished target kernel.targetinstall.post
+
+}}} 2018-11-04T15:47:04+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist targetinstall kernel; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:47:08+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist image root.romfs
+Installing os-release (1.0) to root...
+Installing init (1.0.0) to root...
+Installing fbtest (20041102+1) to root...
+Installing kernel-modules (3.12~rc4) to root...
+Installing game (1.0) to root...
+Installing busybox (1.21.0) to root...
+Installing rootfs (1.0.0) to root...
+Configuring busybox
+Configuring fbtest
+Configuring game
+Configuring init
+Configuring kernel-modules
+Configuring os-release
+Configuring rootfs
+Successfully terminated.
+finished target image_working_dir
+Creating root.romfs from image_working_dir...done.
+
+}}} 2018-11-04T15:47:11+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist image root.romfs; (exit value: 0)
+
+
+
+{{{ 2018-11-04T15:47:15+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist test flash-rootfs
+
+}}} 2018-11-04T15:47:26+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist test flash-rootfs; (exit value: 255)
+
+
+
+{{{ 2018-11-04T15:49:14+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad
+
+----------------------------
+target: driver-gamepad.clean
+----------------------------
+
+Deleting stage files:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.compile
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.extract.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.get
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.install
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.install.pack
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.install.post
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.prepare
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.targetinstall
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/state/driver-gamepad.targetinstall.post
+
+Deleting src dir:
+/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/driver-gamepad-1.0
+
+
+}}} 2018-11-04T15:49:17+0100 /opt/ex3/ptxdist-2013/lib/ptxdist-2013.07.1/bin/ptxdist clean driver-gamepad; (exit value: 0)
+
+
+

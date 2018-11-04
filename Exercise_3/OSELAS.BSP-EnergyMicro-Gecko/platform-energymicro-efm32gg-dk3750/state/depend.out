@@ -567,3 +567,116 @@ driver-gamepad.extract.post : base.install
 driver-gamepad.prepare : driver-gamepad.extract.post
 driver-gamepad.compile : driver-gamepad.prepare
 driver-gamepad.clean : FORCE
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.install : driver-gamepad.compile
+driver-gamepad.install.pack : driver-gamepad.install
+driver-gamepad.install.post : driver-gamepad.install.pack
+driver-gamepad.targetinstall : driver-gamepad.install.post
+driver-gamepad.targetinstall.post : driver-gamepad.targetinstall
+kernel.targetinstall.post : linuximage
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.install : driver-gamepad.compile
+driver-gamepad.install.pack : driver-gamepad.install
+driver-gamepad.install.post : driver-gamepad.install.pack
+driver-gamepad.targetinstall : driver-gamepad.install.post
+driver-gamepad.targetinstall.post : driver-gamepad.targetinstall
+kernel.targetinstall.post : linuximage
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.install : driver-gamepad.compile
+driver-gamepad.install.pack : driver-gamepad.install
+driver-gamepad.install.post : driver-gamepad.install.pack
+driver-gamepad.targetinstall : driver-gamepad.install.post
+driver-gamepad.targetinstall.post : driver-gamepad.targetinstall
+kernel.targetinstall.post : linuximage
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.install : driver-gamepad.compile
+driver-gamepad.install.pack : driver-gamepad.install
+driver-gamepad.install.post : driver-gamepad.install.pack
+driver-gamepad.targetinstall : driver-gamepad.install.post
+driver-gamepad.targetinstall.post : driver-gamepad.targetinstall
+kernel.targetinstall.post : linuximage
+driver-gamepad.clean : FORCE
