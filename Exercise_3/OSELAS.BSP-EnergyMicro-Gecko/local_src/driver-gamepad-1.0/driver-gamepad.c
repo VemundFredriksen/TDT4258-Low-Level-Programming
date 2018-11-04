@@ -6,6 +6,7 @@
 #include <linux/ioport.h>
 #include <linux/interrupt.h>
 #include <linux/cdev.h>
+#include <linux/device.h>
 #include <asm/io.h>
 #include "efm32gg.h"
 
@@ -23,9 +24,10 @@ static ssize_t driver_write(struct file *filp, const char __user *buff, size_t c
 static int driver_open (struct inode *inode, struct file *filp);
 static int driver_release (struct inode *inode, struct file *filep);
 
-int device_number;
-struct cdev driver_cdev;
 
+struct cdev driver_cdev;
+struct class* class;
+dev_t device_number;
 
 static struct file_operations driver_fops = {
     .owner = THIS_MODULE,
@@ -90,6 +92,10 @@ static int __init setup(void)
 	iowrite32(0xFF, GPIO_EXTIFALL);
 	iowrite32(0xFF, GPIO_IEN);
 	
+	class = class_create(THIS_MODULE, DRIVER_NAME);
+    device_create(class, NULL, device_number, NULL, DRIVER_NAME);
+	
+	printk("Setting up TDT4258 Gamepad Driver Complete!\n");
 	return 0;
 }
 
@@ -115,7 +121,8 @@ irqreturn_t gpio_interrupt_handler(int irq, void* dev_id, struct pt_regs* regs)
 
 static ssize_t driver_read(struct file *filp, char __user *buff, size_t count, loff_t *offp)
 {
-	//TODO read gpio pc din, write to buff
+	int value = ~ioread32(GPIO_PC_DIN);
+    //copy_to_user(buff, &value, 4);
 	return 1;
 }
 
