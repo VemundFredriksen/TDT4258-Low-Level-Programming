@@ -7,6 +7,9 @@
 #include <linux/interrupt.h>
 #include <linux/cdev.h>
 #include <linux/device.h>
+#include <asm/uaccess.h>
+#include <asm/signal.h>
+#include <asm/siginfo.h>
 #include <asm/io.h>
 #include "efm32gg.h"
 
@@ -23,10 +26,11 @@ static ssize_t driver_read(struct file *filp, char __user *buff, size_t count, l
 static ssize_t driver_write(struct file *filp, const char __user *buff, size_t count, loff_t *offp);
 static int driver_open (struct inode *inode, struct file *filp);
 static int driver_release (struct inode *inode, struct file *filep);
-
+static int driver_fasync_helper(int fd, struct file *filp, int mode);
 
 struct cdev driver_cdev;
 struct class* class;
+struct fasync_struct* queue;
 dev_t device_number;
 
 static struct file_operations driver_fops = {
@@ -34,7 +38,8 @@ static struct file_operations driver_fops = {
     .read = driver_read,
     .write = driver_write,
     .open = driver_open,
-    .release = driver_release
+    .release = driver_release,
+    .fasync = driver_fasync_helper
 };
 
 /*
@@ -63,17 +68,18 @@ static int __init setup(void)
 		return -1;
 	}
 	
-	if(request_mem_region(GPIO_PC_DIN, 4, DRIVER_NAME) == NULL){
+	if(request_mem_region(GPIO_PC_DIN, 1, DRIVER_NAME) == NULL){
 		return -1;
 	}
 	
-	if(request_mem_region(GPIO_PC_DOUT, 4, DRIVER_NAME) == NULL){
+	if(request_mem_region(GPIO_PC_DOUT, 1, DRIVER_NAME) == NULL){
 		return -1;
 	}
 	
 	// Memory Mapping
 	ioremap(GPIO_PC_MODEL, 4);
-	ioremap(GPIO_PC_DIN, 4);
+	ioremap(GPIO_PC_DIN, 1);
+	ioremap(GPIO_PC_DOUT, 1);
 	
 	//GPIO Button Setup
 	iowrite32(0x33333333, GPIO_PC_MODEL);
@@ -85,6 +91,7 @@ static int __init setup(void)
 	
 	//Initializing cdev and add to kernel driver list
 	cdev_init(&driver_cdev, &driver_fops);
+	driver_cdev.owner = THIS_MODULE;
 	cdev_add(&driver_cdev, device_number, 1);
 	
 	//Enable interrupts
@@ -108,26 +115,33 @@ static int __init setup(void)
 
 static void __exit teardown(void)
 {
+	//TODO scull_p_async 
 	 printk("Tearing down TDT4258 Gamepad Driver...\n");
 }
 
 irqreturn_t gpio_interrupt_handler(int irq, void* dev_id, struct pt_regs* regs)
 {
     iowrite32(ioread32(GPIO_IF), GPIO_IFC);
-    int temp = ~ioread32(GPIO_PC_DIN);
+    int temp = ioread32(GPIO_PC_DIN);
     printk("gampead:%d\n", temp);
+    
+    if (queue) {
+        kill_fasync(&queue, SIGIO, POLL_IN);
+    }
+    
     return IRQ_HANDLED;
 }
 
 static ssize_t driver_read(struct file *filp, char __user *buff, size_t count, loff_t *offp)
 {
-	int value = ~ioread32(GPIO_PC_DIN);
-    //copy_to_user(buff, &value, 4);
+	int value = ioread32(GPIO_PC_DIN);
+    copy_to_user(buff, &value, 4);
 	return 1;
 }
 
 static ssize_t driver_write(struct file *filp, const char __user *buff, size_t count, loff_t *offp)
 {
+
 	return 1;
 }
 static int driver_open (struct inode *inode, struct file *filp)
@@ -140,6 +154,10 @@ static int driver_release (struct inode *inode, struct file *filep)
 	return 0;
 }
 
+static int driver_fasync_helper(int fd, struct file *filp, int mode)
+{
+	return fasync_helper(fd, filp, mode, &queue);
+}
 
 
 module_init(setup);

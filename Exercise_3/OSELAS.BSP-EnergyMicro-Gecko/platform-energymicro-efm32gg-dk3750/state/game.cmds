@@ -1,0 +1,3 @@
+ptxd_install_run preinst
+ptxd_install_file '/home/tdt4258/Repo/TDT4258-Low-Level-Programming/Exercise_3/OSELAS.BSP-EnergyMicro-Gecko/platform-energymicro-efm32gg-dk3750/build-target/game/game' '/usr/bin/game' '0' '0' '0755' ''
+ptxd_install_run postinst
