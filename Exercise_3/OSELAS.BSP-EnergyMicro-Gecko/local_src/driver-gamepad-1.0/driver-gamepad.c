@@ -1,7 +1,6 @@
 #include <linux/kernel.h>
 #include <linux/module.h>
 #include <linux/init.h>
-
 #include <linux/fs.h>
 #include <linux/ioport.h>
 #include <linux/interrupt.h>
@@ -13,15 +12,14 @@
 #include <asm/io.h>
 #include "efm32gg.h"
 
-
 #define DRIVER_NAME "TDT4258_Gamepad_Driver"
 #define GPIO_IRQ_EVEN 17
 #define GPIO_IRQ_ODD 18
 
 //========== Local Function Declarations ==========//
-static irqreturn_t gpio_interrupt_handler(int irq, void* dev_id, struct pt_regs* regs);
 static int __init setup(void);
 static void __exit teardown(void);
+static irqreturn_t gpio_interrupt_handler(int irq, void* dev_id, struct pt_regs* regs);
 static ssize_t driver_read(struct file *filp, char __user *buff, size_t count, loff_t *offp);
 static ssize_t driver_write(struct file *filp, const char __user *buff, size_t count, loff_t *offp);
 static int driver_open (struct inode *inode, struct file *filp);
@@ -42,21 +40,10 @@ static struct file_operations driver_fops = {
     .fasync = driver_fasync_helper
 };
 
-/*
- * template_init - function to insert this module into kernel space
- *
- * This is the first of two exported functions to handle inserting this
- * code into a running kernel
- *
- * Returns 0 if successfull, otherwise -1
- */
-
 static int __init setup(void)
 {
 	printk("Setting up TDT4258 Gamepad Driver...\n");
 	
-	//int result;
-	//result = alloc_chrdev_region(&device_number, 0, 1, DRIVER_NAME);
 	// Allocating device numbers
 	if(alloc_chrdev_region(&device_number, 0, 1, DRIVER_NAME) < 0){
 		printk(KERN_ALERT "Error allocating driver numbers...\n");
@@ -65,18 +52,21 @@ static int __init setup(void)
 	
 	// IO Port Allocation
 	if(request_mem_region(GPIO_PC_MODEL, 4, DRIVER_NAME) == NULL){
+		printk(KERN_ALERT "Could not allocate necessary memory regions. Setup failed!\n");
 		return -1;
 	}
 	
 	if(request_mem_region(GPIO_PC_DIN, 1, DRIVER_NAME) == NULL){
+		printk(KERN_ALERT "Could not allocate necessary memory regions. Setup failed!\n");
 		return -1;
 	}
 	
 	if(request_mem_region(GPIO_PC_DOUT, 1, DRIVER_NAME) == NULL){
+		printk(KERN_ALERT "Could not allocate necessary memory regions. Setup failed!\n");
 		return -1;
 	}
 	
-	// Memory Mapping
+	// Virtual Memory Mapping
 	ioremap(GPIO_PC_MODEL, 4);
 	ioremap(GPIO_PC_DIN, 1);
 	ioremap(GPIO_PC_DOUT, 1);
@@ -121,11 +111,8 @@ static void __exit teardown(void)
 
 irqreturn_t gpio_interrupt_handler(int irq, void* dev_id, struct pt_regs* regs)
 {
-    iowrite32(ioread32(GPIO_IF), GPIO_IFC);
-    int temp = ioread32(GPIO_PC_DIN);
-    printk("gampead:%d\n", temp);
-    
-    if (queue) {
+	iowrite32(ioread32(GPIO_IF), GPIO_IFC);
+   	if (queue) {
         kill_fasync(&queue, SIGIO, POLL_IN);
     }
     
@@ -141,7 +128,6 @@ static ssize_t driver_read(struct file *filp, char __user *buff, size_t count, l
 
 static ssize_t driver_write(struct file *filp, const char __user *buff, size_t count, loff_t *offp)
 {
-
 	return 1;
 }
 static int driver_open (struct inode *inode, struct file *filp)
@@ -158,7 +144,6 @@ static int driver_fasync_helper(int fd, struct file *filp, int mode)
 {
 	return fasync_helper(fd, filp, mode, &queue);
 }
-
 
 module_init(setup);
 module_exit(teardown);

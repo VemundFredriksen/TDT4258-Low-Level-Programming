@@ -6,38 +6,28 @@
 #include <signal.h>
 #include <fcntl.h>
 
+#include "graphics.h"
+#include "snake.h"
+
 void input_handler(int sig);
 int setup_gamepad();
 
+snake sMan;
+
 FILE* device;
+
+unsigned short gameBoard[15*20];
 
 int main(int argc, char *argv[])
 {
-	printf("Hello World, I'm game!\n");
+	printf("Welcome to Travelling Snakesman!\n");
 	int result = setup_gamepad();
-	printf("%d\n", result);
-	int fbfd = open("/dev/fb0", 2);
+	graphicsInit();
+	restartGame();
 	
-	
-	unsigned short* screen;
-	screen = (unsigned short*) mmap(NULL, 2*320*240, PROT_WRITE | PROT_READ, MAP_SHARED, fbfd, 0);
-	int i;
-	
-	for(i = 0; i < 2*38400; i++){
-		screen[i] = 0x001F;
-	}
-	
-	struct fb_copyarea rect;
-	
-	rect.dx = 0;
-	rect.dy = 0;
-	rect.width = 320;
-	rect.height = 240;
 	while(1){
 	
 	}
-	
-	ioctl(fbfd, 0x4680, &rect);
 	exit(EXIT_SUCCESS);
 }
 
@@ -67,6 +57,42 @@ int setup_gamepad()
 void input_handler(int sig)
 {
 	int input = fgetc(device);
-	printf("inp: %d\n", input);
+	int snakeResult = SNAKE_MOVE_OK;
+	if(input == 191){
+		snakeResult = makeMove(&sMan, 0);
+	}
+	else if(input == 127){
+		snakeResult = makeMove(&sMan, 1);
+	}
+	else if(input == 239){
+		snakeResult = makeMove(&sMan, 2);
+	}
+	else if(input == 223){
+		snakeResult = makeMove(&sMan, 3);
+	}
+	if(snakeResult == SNAKE_GAME_OVER){
+		restartGame();
+	}
+	updateGraphics();
+}
+
+void restartGame(){
+	clearScreen();
+	setupSnake();
 	
+}
+
+void updateGraphics()
+{
+	writeToScreen(SNAKE_HEAD, sMan.body[0], sMan.body[1]);
+	writeToScreen(SNAKE_BODY, sMan.body[2], sMan.body[3]);
+	writeToScreen(SNAKE_BG, sMan.shadow[0], sMan.shadow[1]);
+}
+
+void setupSnake(){
+	sMan = snakeInit();
+	
+	writeToScreen(SNAKE_HEAD, sMan.body[0],sMan.body[1]);
+	writeToScreen(SNAKE_BODY, sMan.body[2],sMan.body[3]);
+	writeToScreen(SNAKE_BODY, sMan.body[4],sMan.body[5]);
 }
