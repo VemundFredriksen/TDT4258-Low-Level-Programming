@@ -3935,3 +3935,29 @@ game.targetinstall.post : game.targetinstall
 world.targetinstall : base.targetinstall.post os-release.targetinstall.post geckoboot.targetinstall.post init.targetinstall.post fbtest.targetinstall.post driver-gamepad.targetinstall.post dtc.targetinstall.post kernel.targetinstall.post game.targetinstall.post host-system-perl.targetinstall.post busybox.targetinstall.post rootfs.targetinstall.post host-acl.install.post host-ipkg.install.post host-genromfs.install.post host-ipkg-utils.install.post host-fakeroot.install.post host-figlet.install.post host-pkg-config.install.post host-libkmod.install.post host-attr.install.post host-energyawaretools.install.post cross-pkg-config-wrapper.install.post cross-dummy-strip.install.post
 driver-gamepad.clean : FORCE
 game.clean : 
+game.clean : 
+driver-gamepad.clean : FORCE
+driver-gamepad.get : 
+driver-gamepad.extract : host-lndir.install.post
+driver-gamepad.extract.post : base.install
+driver-gamepad.prepare : driver-gamepad.extract.post
+driver-gamepad.compile : driver-gamepad.prepare
+driver-gamepad.install : driver-gamepad.compile
+driver-gamepad.install.pack : driver-gamepad.install
+driver-gamepad.install.post : driver-gamepad.install.pack
+driver-gamepad.targetinstall : driver-gamepad.install.post
+driver-gamepad.targetinstall.post : driver-gamepad.targetinstall
+kernel.targetinstall.post : linuximage
+game.get : 
+game.extract : game.get
+game.extract.post : base.install
+game.prepare : game.extract.post
+game.compile : game.prepare
+game.install : game.compile
+game.install.pack : game.install
+game.install.post : game.install.pack
+game.targetinstall : game.install.post
+game.targetinstall.post : game.targetinstall
+world.targetinstall : base.targetinstall.post os-release.targetinstall.post geckoboot.targetinstall.post init.targetinstall.post fbtest.targetinstall.post driver-gamepad.targetinstall.post dtc.targetinstall.post kernel.targetinstall.post game.targetinstall.post host-system-perl.targetinstall.post busybox.targetinstall.post rootfs.targetinstall.post host-acl.install.post host-ipkg.install.post host-genromfs.install.post host-ipkg-utils.install.post host-fakeroot.install.post host-figlet.install.post host-pkg-config.install.post host-libkmod.install.post host-attr.install.post host-energyawaretools.install.post cross-pkg-config-wrapper.install.post cross-dummy-strip.install.post
+driver-gamepad.clean : FORCE
+game.clean : 

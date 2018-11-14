@@ -114,22 +114,28 @@ void game_tick(int signum)
 	if(snakeResult == SNAKE_GAME_OVER){
 		restartGame();
 	}
-	updateGameBoard();
-	updateGraphics();
+	updateGameBoard(eat);
+	updateGraphics(eat);
 }
 
-void updateGameBoard()
+void updateGameBoard(char eaten)
 {
 	gameBoard[sMan.shadow[1] * 20 + sMan.shadow[0]] = 0;
-	gameBoard[food[1] * 20 + food[0]] = 3;
+	if(eaten){
+		gameBoard[food[1] * 20 + food[0]] = 3;
+	}
+	
 	gameBoard[sMan.body[1] * 20 + sMan.body[0]] = 2;
 	gameBoard[sMan.body[3] *20 + sMan.body[2]] = 1;
 }
 
-void updateGraphics()
+void updateGraphics(char eaten)
 {
 	writeToScreen(SNAKE_BG, sMan.shadow[0], sMan.shadow[1]);
-	writeToScreen(SNAKE_FOOD, food[0], food[1]);
+	if(eaten){
+		writeToScreen(SNAKE_FOOD, food[0], food[1]);
+	}
+
 	writeToScreen(SNAKE_HEAD, sMan.body[0], sMan.body[1]);
 	writeToScreen(SNAKE_BODY, sMan.body[2], sMan.body[3]);
 }
