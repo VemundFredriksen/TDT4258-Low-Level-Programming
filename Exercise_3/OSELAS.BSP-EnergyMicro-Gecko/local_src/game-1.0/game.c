@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <signal.h>
 #include <fcntl.h>
+#include <time.h>
 
 #include "graphics.h"
 #include "snake.h"
@@ -26,6 +27,7 @@ int main(int argc, char *argv[])
 	printf("Welcome to Travelling Snakesman!\n");
 	int result = setup_gamepad();
 	graphicsInit();
+	srand(time(NULL));
 	restartGame();
 	
 	while(1){
@@ -86,21 +88,23 @@ void input_handler(int sig)
 }
 
 void restartGame(){
-	clearScreen();
-	setupSnake();
-	
 	food[0] = 12;
 	food[1] = 10;
+	clearScreen();
+	setupSnake();
+	updateGraphics();
+	
+	
 	
 	
 }
 
 void updateGraphics()
 {
-	writeToScreen(SNAKE_HEAD, sMan.body[0], sMan.body[1]);
-	writeToScreen(SNAKE_BODY, sMan.body[2], sMan.body[3]);
 	writeToScreen(SNAKE_BG, sMan.shadow[0], sMan.shadow[1]);
 	writeToScreen(SNAKE_FOOD, food[0], food[1]);
+	writeToScreen(SNAKE_HEAD, sMan.body[0], sMan.body[1]);
+	writeToScreen(SNAKE_BODY, sMan.body[2], sMan.body[3]);
 }
 
 void updateFood()
@@ -110,8 +114,4 @@ void updateFood()
 
 void setupSnake(){
 	sMan = snakeInit();
-	
-	writeToScreen(SNAKE_HEAD, sMan.body[0],sMan.body[1]);
-	writeToScreen(SNAKE_BODY, sMan.body[2],sMan.body[3]);
-	writeToScreen(SNAKE_BODY, sMan.body[4],sMan.body[5]);
 }
