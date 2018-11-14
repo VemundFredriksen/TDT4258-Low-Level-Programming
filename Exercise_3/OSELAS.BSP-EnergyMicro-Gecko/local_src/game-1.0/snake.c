@@ -10,14 +10,9 @@ snake snakeInit(){
 		.body[1] = 8,
 		.body[2] = 1,
 		.body[3] = 8,
-		.body[4] = 0,
-		.body[5] = 8,
-		.body[6] = 0,
-		.body[7] = 7,
-		.body[8] = 0,
-		.body[9] = 6,
 		
-		.length = 5,
+		
+		.length = 2,
 		
 		.shadow[0] = 0,
 		.shadow[1] = 0

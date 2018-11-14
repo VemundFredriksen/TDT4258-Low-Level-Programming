@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <linux/fb.h>
+#include <sys/time.h>
 #include <sys/mman.h>
 #include <unistd.h>
 #include <signal.h>
@@ -10,10 +11,18 @@
 #include "graphics.h"
 #include "snake.h"
 
+#define TICK_RATE 8
+
 void input_handler(int sig);
+void game_tick();
 int setup_gamepad();
+void setup_timer();
+
+struct sigaction sa;
+struct itimerval timer;
 
 snake sMan;
+unsigned char reqDirection = 0;
 
 FILE* device;
 
@@ -27,11 +36,12 @@ int main(int argc, char *argv[])
 	printf("Welcome to Travelling Snakesman!\n");
 	int result = setup_gamepad();
 	graphicsInit();
+	setup_timer();
 	srand(time(NULL));
 	restartGame();
 	
 	while(1){
-	
+		
 	}
 	exit(EXIT_SUCCESS);
 }
@@ -62,41 +72,58 @@ int setup_gamepad()
 void input_handler(int sig)
 {
 	int input = fgetc(device);
-	int snakeResult = SNAKE_MOVE_OK;
-	char eat = 0;
-	if(sMan.body[0] == food[0] && sMan.body[1] == food[1]){
-		eat = 1;
-		food[0] = food[0] -1;
-		food[1]--;
-	}
+	
 	if(input == 191){
-		snakeResult = makeMove(&sMan, 0, eat);
+		reqDirection = 0;
 	}
 	else if(input == 127){
-		snakeResult = makeMove(&sMan, 1, eat);
+		reqDirection = 1;
 	}
 	else if(input == 239){
-		snakeResult = makeMove(&sMan, 2, eat);
+		reqDirection = 2;
 	}
 	else if(input == 223){
-		snakeResult = makeMove(&sMan, 3, eat);
+		reqDirection = 3;
 	}
-	if(snakeResult == SNAKE_GAME_OVER){
-		restartGame();
-	}
-	updateGraphics();
 }
 
 void restartGame(){
 	food[0] = 12;
 	food[1] = 10;
+	reqDirection = 0;
+	clearGameBoard();
 	clearScreen();
 	setupSnake();
+	updateGameBoard();
 	updateGraphics();
 	
 	
 	
 	
+}
+
+void game_tick(int signum)
+{
+	int snakeResult = SNAKE_MOVE_OK;
+	char eat = 0;
+	if(sMan.body[0] == food[0] && sMan.body[1] == food[1]){
+		eat = 1;
+		updateFood();
+	}
+	snakeResult = makeMove(&sMan, reqDirection, eat);
+	if(snakeResult == SNAKE_GAME_OVER){
+		restartGame();
+	}
+	updateGameBoard();
+	updateGraphics();
+}
+
+void updateGameBoard()
+{
+	gameBoard[sMan.shadow[1] * 20 + sMan.shadow[0]] = 0;
+	gameBoard[food[1] * 20 + food[0]] = 3;
+	gameBoard[sMan.body[1] * 20 + sMan.body[0]] = 2;
+	gameBoard[sMan.body[3] *20 + sMan.body[2]] = 1;
 }
 
 void updateGraphics()
@@ -109,9 +136,46 @@ void updateGraphics()
 
 void updateFood()
 {
-
+	unsigned short nextPos = 1 + rand() % (299 - sMan.length);
+	unsigned short i = 0;
+	
+	while(nextPos > 0){
+		if(!gameBoard[i]){
+			nextPos--;
+		}
+		i++;
+	}
+	
+	food[0] = (i-1) % 20;
+	food[1] = (unsigned short) (i-1) / 20;
+	
 }
 
 void setupSnake(){
 	sMan = snakeInit();
+}
+
+void clearGameBoard()
+{
+	unsigned int i;
+	for(i = 0; i< 300; i++){
+		gameBoard[i] = 0;
+	}
+}
+
+void setup_timer()
+{
+	 /* Install timer_handler as the signal handler for SIGVTALRM. */
+	 memset (&sa, 0, sizeof (sa));
+	 sa.sa_handler = &game_tick;
+	 sigaction (SIGVTALRM, &sa, NULL);
+
+	 timer.it_value.tv_sec = 0;
+	 timer.it_value.tv_usec = 500000;
+
+	 timer.it_interval.tv_sec = 0;
+	 timer.it_interval.tv_usec = 1000000 / TICK_RATE;
+	 /* Start a virtual timer. It counts down whenever this process is
+	   executing. */
+	 setitimer (ITIMER_VIRTUAL, &timer, NULL);
 }
