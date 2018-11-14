@@ -16,7 +16,10 @@ snake sMan;
 
 FILE* device;
 
+//TODO always feedSnake before requesting move
+
 unsigned short gameBoard[15*20];
+unsigned short food[2];
 
 int main(int argc, char *argv[])
 {
@@ -58,17 +61,23 @@ void input_handler(int sig)
 {
 	int input = fgetc(device);
 	int snakeResult = SNAKE_MOVE_OK;
+	char eat = 0;
+	if(sMan.body[0] == food[0] && sMan.body[1] == food[1]){
+		eat = 1;
+		food[0] = food[0] -1;
+		food[1]--;
+	}
 	if(input == 191){
-		snakeResult = makeMove(&sMan, 0);
+		snakeResult = makeMove(&sMan, 0, eat);
 	}
 	else if(input == 127){
-		snakeResult = makeMove(&sMan, 1);
+		snakeResult = makeMove(&sMan, 1, eat);
 	}
 	else if(input == 239){
-		snakeResult = makeMove(&sMan, 2);
+		snakeResult = makeMove(&sMan, 2, eat);
 	}
 	else if(input == 223){
-		snakeResult = makeMove(&sMan, 3);
+		snakeResult = makeMove(&sMan, 3, eat);
 	}
 	if(snakeResult == SNAKE_GAME_OVER){
 		restartGame();
@@ -80,6 +89,10 @@ void restartGame(){
 	clearScreen();
 	setupSnake();
 	
+	food[0] = 12;
+	food[1] = 10;
+	
+	
 }
 
 void updateGraphics()
@@ -87,6 +100,12 @@ void updateGraphics()
 	writeToScreen(SNAKE_HEAD, sMan.body[0], sMan.body[1]);
 	writeToScreen(SNAKE_BODY, sMan.body[2], sMan.body[3]);
 	writeToScreen(SNAKE_BG, sMan.shadow[0], sMan.shadow[1]);
+	writeToScreen(SNAKE_FOOD, food[0], food[1]);
+}
+
+void updateFood()
+{
+
 }
 
 void setupSnake(){

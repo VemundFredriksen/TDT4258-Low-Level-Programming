@@ -20,7 +20,7 @@ typedef struct snake
 } snake;
 
 snake snakeInit();
-int makeMove(snake* s, char direction);
-int updateSnakePosition(snake* s);
+int makeMove(snake* s, char direction, char eat);
+int updateSnakePosition(snake* s, char eat);
 
 #endif

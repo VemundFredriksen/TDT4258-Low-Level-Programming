@@ -26,7 +26,7 @@ snake snakeInit(){
 	return s;
 }
 
-int makeMove(snake* s, char direction)
+int makeMove(snake* s, char direction, char eat)
 {
 	if(direction == 0 && s->direction != 2){
 		s->direction = 0;
@@ -40,13 +40,19 @@ int makeMove(snake* s, char direction)
 	else if(direction == 3 && s->direction != 1){
 		s->direction = 3;
 	}
-	return updateSnakePosition(s);
+	return updateSnakePosition(s, eat);
 }
 
-int updateSnakePosition(snake* s){
-
-	s->shadow[0] = s->body[s->length * 2 - 2];
-	s->shadow[1] = s->body[s->length *2 - 1];
+int updateSnakePosition(snake* s, char eat){
+	
+	if(!eat){
+		s->shadow[0] = s->body[s->length * 2 - 2];
+		s->shadow[1] = s->body[s->length * 2 - 1];
+	}
+	else{
+		s->length++;
+	}
+	
 	
 	unsigned int i;
 	for(i = (s->length * 2 - 1); i > 1; i -= 2){
@@ -90,5 +96,4 @@ int updateSnakePosition(snake* s){
 	
 	return SNAKE_MOVE_OK;
 }
-
 
