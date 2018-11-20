@@ -1,47 +1,33 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <linux/fb.h>
-#include <sys/time.h>
-#include <sys/mman.h>
-#include <unistd.h>
-#include <signal.h>
-#include <fcntl.h>
-#include <time.h>
+#include "game.h"
 
-#include "graphics.h"
-#include "snake.h"
-
-#define TICK_RATE 8
-
-void input_handler(int sig);
-void game_tick();
-int setup_gamepad();
-void setup_timer();
-
+FILE* device;
 struct sigaction sa;
 struct itimerval timer;
+struct timespec sp;
 
 snake sMan;
 unsigned char reqDirection = 0;
-
-FILE* device;
-
-//TODO always feedSnake before requesting move
-
 unsigned short gameBoard[15*20];
 unsigned short food[2];
 
 int main(int argc, char *argv[])
 {
-	printf("Welcome to Travelling Snakesman!\n");
 	int result = setup_gamepad();
+	if(result == EXIT_FAILURE){
+		printf("Driver could not be initialized... Snakesman can't travel :(");
+		exit(EXIT_FAILURE);
+	}
+	
+	printf("Welcome to Travelling Snakesman!\n");
+	
 	graphicsInit();
 	setup_timer();
-	srand(time(NULL));
+	setup_sleep();
 	restartGame();
 	
 	while(1){
-		
+		//nanosleep(&sp, NULL);
+		//sleep(3);
 	}
 	exit(EXIT_SUCCESS);
 }
@@ -88,8 +74,9 @@ void input_handler(int sig)
 }
 
 void restartGame(){
-	food[0] = 12;
-	food[1] = 10;
+	srand(time(NULL));
+	food[0] = 10;
+	food[1] = 8;
 	reqDirection = 0;
 	clearGameBoard();
 	clearScreen();
@@ -171,7 +158,6 @@ void clearGameBoard()
 
 void setup_timer()
 {
-	 /* Install timer_handler as the signal handler for SIGVTALRM. */
 	 memset (&sa, 0, sizeof (sa));
 	 sa.sa_handler = &game_tick;
 	 sigaction (SIGVTALRM, &sa, NULL);
@@ -181,7 +167,12 @@ void setup_timer()
 
 	 timer.it_interval.tv_sec = 0;
 	 timer.it_interval.tv_usec = 1000000 / TICK_RATE;
-	 /* Start a virtual timer. It counts down whenever this process is
-	   executing. */
+	 
 	 setitimer (ITIMER_VIRTUAL, &timer, NULL);
+}
+
+void setup_sleep()
+{
+	sp.tv_sec = 1;
+	sp.tv_nsec = 0;
 }
