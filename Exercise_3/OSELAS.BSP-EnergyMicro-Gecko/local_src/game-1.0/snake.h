@@ -9,6 +9,14 @@
 #define SNAKE_GAME_OVER 0
 #define SNAKE_MOVE_OK 1
 
+
+/*
+	Every odd indexes in body array corresponds to x-coordinates
+	Even indexes corresponds to y-coordinates. First two indexes 
+	keeps track of snake head, the rest keeps track of the body.
+	Shadow keeps track of where the snakes tail was previouse tick,
+	is used to clear correct pixel.
+*/
 typedef struct snake
 {
 	char lastDir;
@@ -16,7 +24,6 @@ typedef struct snake
 	unsigned char body[600];
 	unsigned int length;
 	unsigned short shadow[2];
-
 } snake;
 
 snake snakeInit();

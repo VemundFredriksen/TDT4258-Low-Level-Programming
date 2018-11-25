@@ -1,5 +1,6 @@
 #include "graphics.h"
 
+//========== Local Variable Declartions ==========//
 int screenDriver;
 unsigned short* screenBuffer;
 struct fb_copyarea area;
@@ -13,14 +14,15 @@ void graphicsInit()
 	area.height = 16;
 }
 
+
+//x and y map to game-coordinates rather than screen coordinates
 void writeToScreen(unsigned short val, unsigned int x, unsigned int y)
 {
-
 	unsigned int a;
 	unsigned int b;
 	
-	for(a = y * 16; a < (y*16 + 16); a++){
-		for(b = x * 16; b < (x*16 + 16); b++){
+	for (a = y * 16; a < (y*16 + 16); a++) {
+		for (b = x * 16; b < (x*16 + 16); b++) {
 			screenBuffer[a * 320 + b] = val;
 		}
 	}
@@ -31,6 +33,7 @@ void writeToScreen(unsigned short val, unsigned int x, unsigned int y)
 	ioctl(screenDriver, 0x4680, &area);
 }
 
+//Turn whole screen black
 void clearScreen()
 {
 	area.dx = 0;
@@ -39,7 +42,7 @@ void clearScreen()
 	area.height = 240;
 	
 	unsigned int i;
-	for(i = 0; i < 2*38400; i++){
+	for (i = 0; i < 2*38400; i++) {
 		screenBuffer[i] = 0x0000;
 	}
 	

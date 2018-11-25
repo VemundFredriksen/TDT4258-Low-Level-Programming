@@ -10,6 +10,7 @@
 #include "graphics.h"
 #include "snake.h"
 
+// Number of game updates per second
 #define TICK_RATE 8
 
 void input_handler(int sig);
