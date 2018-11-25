@@ -26,11 +26,13 @@ static int driver_open (struct inode *inode, struct file *filp);
 static int driver_release (struct inode *inode, struct file *filep);
 static int driver_fasync_helper(int fd, struct file *filp, int mode);
 
+//========== Local Variable Declarations ==========//
 struct cdev driver_cdev;
 struct class* class;
 struct fasync_struct* queue;
 dev_t device_number;
 
+// Maps the file operations to local functions
 static struct file_operations driver_fops = {
     .owner = THIS_MODULE,
     .read = driver_read,
@@ -71,50 +73,42 @@ static int __init setup(void)
 	ioremap(GPIO_PC_DIN, 1);
 	ioremap(GPIO_PC_DOUT, 1);
 	
-	//GPIO Button Setup
+	// GPIO Button Setup
 	iowrite32(0x33333333, GPIO_PC_MODEL);
 	iowrite32(0xFF, GPIO_PC_DOUT);
 	
-	//Add driver to OS interrupt list
+	// Add driver to OS interrupt list
 	request_irq(GPIO_IRQ_EVEN, (irq_handler_t) gpio_interrupt_handler, 0, DRIVER_NAME, &driver_cdev);
-    request_irq(GPIO_IRQ_ODD, (irq_handler_t) gpio_interrupt_handler, 0, DRIVER_NAME, &driver_cdev);
+	request_irq(GPIO_IRQ_ODD, (irq_handler_t) gpio_interrupt_handler, 0, DRIVER_NAME, &driver_cdev);
 	
-	//Initializing cdev and add to kernel driver list
+	// Initializing cdev and add to kernel driver list
 	cdev_init(&driver_cdev, &driver_fops);
 	driver_cdev.owner = THIS_MODULE;
 	cdev_add(&driver_cdev, device_number, 1);
 	
-	//Enable interrupts
+	// Enable interrupts
 	iowrite32(0x22222222, GPIO_EXTIPSELL);
 	iowrite32(0xFF, GPIO_EXTIFALL);
 	iowrite32(0xFF, GPIO_IEN);
 	
 	class = class_create(THIS_MODULE, DRIVER_NAME);
-    device_create(class, NULL, device_number, NULL, DRIVER_NAME);
+	device_create(class, NULL, device_number, NULL, DRIVER_NAME);
 	
 	printk("Setting up TDT4258 Gamepad Driver Complete!\n");
 	return 0;
 }
 
-/*
- * template_cleanup - function to cleanup this module from kernel space
- *
- * This is the second of two exported functions to handle cleanup this
- * code from a running kernel
- */
-
 static void __exit teardown(void)
 {
-	//TODO scull_p_async 
-	 printk("Tearing down TDT4258 Gamepad Driver...\n");
+	printk("Tearing down TDT4258 Gamepad Driver...\n");
 }
 
 irqreturn_t gpio_interrupt_handler(int irq, void* dev_id, struct pt_regs* regs)
 {
 	iowrite32(ioread32(GPIO_IF), GPIO_IFC);
-   	if (queue) {
-        kill_fasync(&queue, SIGIO, POLL_IN);
-    }
+	if (queue) {
+		kill_fasync(&queue, SIGIO, POLL_IN);
+	}
     
     return IRQ_HANDLED;
 }
@@ -122,7 +116,7 @@ irqreturn_t gpio_interrupt_handler(int irq, void* dev_id, struct pt_regs* regs)
 static ssize_t driver_read(struct file *filp, char __user *buff, size_t count, loff_t *offp)
 {
 	int value = ioread32(GPIO_PC_DIN);
-    copy_to_user(buff, &value, 4);
+	copy_to_user(buff, &value, 4);
 	return 1;
 }
 
@@ -135,7 +129,7 @@ static int driver_open (struct inode *inode, struct file *filp)
 	return 0;
 }
 
-static int driver_release (struct inode *inode, struct file *filep)
+static int driver_release (struct inode *inode, struct file *filp)
 {
 	return 0;
 }
