@@ -79,8 +79,8 @@ void input_handler(int sig)
 	}
 }
 
-void restartGame(){
-	
+void restartGame()
+{
 	srand(time(NULL));
 	food[0] = 10;
 	food[1] = 8;
