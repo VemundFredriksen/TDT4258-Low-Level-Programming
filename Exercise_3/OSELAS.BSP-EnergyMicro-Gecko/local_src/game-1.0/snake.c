@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include "snake.h"
 
-snake snakeInit(){
+snake snakeInit()
+{
 	snake s = {
 		.direction = 0,
 		
