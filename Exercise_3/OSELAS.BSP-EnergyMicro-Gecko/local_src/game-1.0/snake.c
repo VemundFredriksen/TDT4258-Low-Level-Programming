@@ -37,13 +37,13 @@ int makeMove(snake* s, char direction, char eat)
 	return updateSnakePosition(s, eat);
 }
 
-int updateSnakePosition(snake* s, char eat){
-	
+int updateSnakePosition(snake* s, char eat)
+{
 	if (!eat) {
 		s->shadow[0] = s->body[s->length * 2 - 2];
 		s->shadow[1] = s->body[s->length * 2 - 1];
 	}
-	else{
+	else {
 		s->length++;
 	}
 	
@@ -82,7 +82,7 @@ int updateSnakePosition(snake* s, char eat){
 	
 	// Collision in self
 	
-	for (i = 1; i < s->length; i++){
+	for (i = 1; i < s->length; i++) {
 		if (s->body[0] == s->body[i*2] && s->body[1] == s->body[i*2 +1]) {
 			return SNAKE_GAME_OVER;
 		}
